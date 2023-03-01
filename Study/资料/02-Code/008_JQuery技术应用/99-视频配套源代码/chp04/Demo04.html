@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>animate()自定义动画</title>
+		<style type="text/css">
+			#myImg{ position: relative;}
+		</style>
+		<script src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				$("#myButton").click(function(){
+					$("#myImg").animate({
+						"width":"400px",
+						"top":"100px",
+						"left":"200px"
+					},2000)
+					.animate({"opacity":"0.5"},2000)
+					.animate({"opacity":"1"},2000);
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<input id="myButton" type="button" value="变大和移动"  /><br/><br/>
+		<img id="myImg" src="img/two.jpg" width="200" />	
+	</body>
+</html>
+

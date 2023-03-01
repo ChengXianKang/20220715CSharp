@@ -1,0 +1,75 @@
+/* CSS Document */
+body,div,ul,li,table,tr,td,img,input,p{ margin:0px; padding:0px; font-size:12px; list-style-type:none;}
+a{ text-decoration:none;}
+body{ background-image:url(../images/qmsht/body_bg.jpg);}
+#container{ width:798px; margin:0px auto 0px auto; background-image:url(../images/qmsht/content_bg.jpg); background-position:0px 320px;}
+#globallink{ padding-top:320px; background-image:url(../images/qmsht/banner.jpg); background-repeat:no-repeat;}
+#menu{ width:574px; height:33px; background-image:url(../images/qmsht/toplink.jpg); background-repeat:no-repeat; margin-left:112px; padding-top:5px;}
+#menu ul{ margin-left:5px;}
+#menu li{ width:94px; float:left; height:25px; line-height:25px; text-align:center;}
+#menu a{ color:#FFF;}
+
+#blogbody{ width:564px; margin:0px auto 0px auto;}
+#links{ float:right; width:163px;}
+#main{ float:left; width:390px;}
+
+#link1{ background-image:url(../images/qmsht/lstatistics.jpg); padding-top:34px; background-repeat:no-repeat; color:#e1ad80;}
+#link1 ul{ margin-left:10px;}
+#link1 li{ background-image:url(../images/qmsht/arrow1.gif); background-repeat:no-repeat; background-position:left center; height:20px; line-height:20px; padding-left:10px;}
+
+#link2{ background-image:url(../images/qmsht/lhotblog.jpg); padding-top:34px; background-repeat:no-repeat; color:#e1ad80;}
+#link2 ul{ margin-left:10px;}
+#link2 li{ background-image:url(../images/qmsht/arrow1.gif); background-repeat:no-repeat; background-position:left center; height:18px; line-height:18px; padding-left:10px;}
+#link2 a{ color:#e1ad80; text-decoration:none;}
+#link2 p{ margin-right:10px; text-align:right; height:18px; line-height:18px;}
+
+#link3{ background-image:url(../images/qmsht/lrecent.jpg); padding-top:34px; background-repeat:no-repeat; color:#e1ad80;}
+#link3 ul{ margin-left:10px;}
+#link3 li{ background-image:url(../images/qmsht/arrow1.gif); background-repeat:no-repeat; background-position:left center; height:18px; line-height:18px; padding-left:10px;}
+#link3 a{ color:#e1ad80; text-decoration:none;}
+#link3 p{ margin-right:10px; text-align:right; height:18px; line-height:18px;}
+
+#link4{ background-image:url(../images/qmsht/lapply.jpg); padding-top:34px; background-repeat:no-repeat; color:#e1ad80;}
+#link4 ul{ margin-left:10px;}
+#link4 li{ background-image:url(../images/qmsht/arrow1.gif); background-repeat:no-repeat; background-position:left center; height:18px; line-height:18px; padding-left:10px;}
+#link4 a{ color:#e1ad80; text-decoration:none;}
+#link4 p{ margin-right:10px; text-align:right; height:18px; line-height:18px;}
+
+#main1{ height:133px; background-image:url(../images/qmsht/recommendblog.jpg); background-repeat:no-repeat; background-position:left top; background-color:#5f3817; clear:both;}
+#main1 ul,#main1 p{ margin-left:40px;}
+#main1 p{ padding-top:10px;  }
+#main1 ul{ margin-top:6px;}
+#main1 p a{color:#ea733e; font-weight:bold;}
+#main1 p .jenniferColor2{ margin-left:80px;}
+#main1 li{ height:18px; line-height:18px; background-image:url(../images/qmsht/arrow6.gif); background-repeat:no-repeat; background-position:left center; padding-left:10px;}
+#main1 li a{ color:#e1ad80;}
+
+#main2{ padding:10px; clear:both; background-color:#6c401b; overflow:auto;}
+#main2 p{ color:#bf8128; display:inline; height:30px; line-height:30px;}
+#main2 li{ width:22px; float:left; height:18px; line-height:18px;}
+#main2 li a{ color:#e1ad80;}
+
+#main3{ clear:both; height:34px; line-height:34px;  background-color:#5f3817; color:#c86615;}
+#main3 ul{ margin-left:4px;}
+#main3 li{ float:left; margin-left:6px;}
+#main3 li .myTxtStyle{ border:solid 1px #c86615; background-color:#5f3817;}
+#main3 li .myBtnStyle{ border:solid 1px #c86615; background-color:#5f3817; color:#c86615;}
+
+#main4{ clear:both;  line-height:20px; background-color:#6c401b; color:#c86615; padding:8px 0px 8px 0px;}
+#main4 ul{ margin-left:4px;}
+#main4 li{ margin-left:6px;}
+#main4 li .myTxtStyle{ border:solid 1px #c86615; background-color:#5f3817;}
+#main4 li .myBtnStyle{ border:solid 1px #c86615; background-color:#5f3817; color:#c86615;}
+
+#main5{ background-color:#663f1d; background-image:url(../images/qmsht/recommendart.jpg); background-repeat:no-repeat; background-position:left top; padding-top:30px; clear:both; padding-bottom:10px;}
+#main5 ul{ margin-left:10px;}
+#main5 li{ height:18px; line-height:18px; background-image:url(../images/qmsht/arrow6.gif); background-repeat:no-repeat; background-position:left center; padding-left:10px;}
+#main5 a{ color:#e1ad80;}
+
+#main6{ background-color:#5f3817; background-image:url(../images/qmsht/newnode.jpg); background-repeat:no-repeat; background-position:left top; padding-left:40px; clear:both; color:#e1ad80;}
+#main6 li{ height:18px; line-height:18px; background-image:url(../images/qmsht/arrow6.gif); background-repeat:no-repeat; background-position:left center; padding-left:10px;}
+#main6 a{ color:#e1ad80;}
+
+#foot{ clear:both; color:#e1ad80; text-align:center; height:42px; background-image:url(../images/qmsht/footer_bg.jpg); padding-top:6px;}
+#foot p{ height:18px; line-height:18px;}
+#foot a{color:#e1ad80; text-decoration:none;}

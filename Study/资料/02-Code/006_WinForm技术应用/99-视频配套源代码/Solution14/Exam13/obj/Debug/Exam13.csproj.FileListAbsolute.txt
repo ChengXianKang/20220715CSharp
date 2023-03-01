@@ -1,0 +1,10 @@
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\bin\Debug\Exam13.exe.config
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\bin\Debug\Exam13.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\bin\Debug\Exam13.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\obj\Debug\Exam13.csprojResolveAssemblyReference.cache
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\obj\Debug\Exam13.FrmAdd.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\obj\Debug\Exam13.MainForm.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\obj\Debug\Exam13.Properties.Resources.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\obj\Debug\Exam13.csproj.GenerateResource.Cache
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\obj\Debug\Exam13.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution14\Exam13\obj\Debug\Exam13.pdb

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>层次选择器</title>
+		<style type="text/css">
+			div{margin: 0px; padding: 0px; height: auto; overflow: auto; text-align: center;}
+			.team{clear: both; border: solid 1px black; background-color: pink;}
+			.liubei,.caocao,.sunquan{ width: 250px; height: 100px; margin: 20px; float: left;
+			border: solid 1px black; line-height: 30px; background-color: pink;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#allSelect").click(function(){
+					$("*").removeAttr("style");
+					$("body div").css("backgroundColor","green");
+				})
+				$("#sonSelect").click(function(){
+					$("*").removeAttr("style");
+					$("body>div").css("backgroundColor","green");
+				})
+				$("#nextSelect").click(function(){
+					$("*").removeAttr("style");
+					$("#dianwei+div").css("backgroundColor","green");
+				})
+				$("#nextAllSelect").click(function(){
+					$("*").removeAttr("style");
+					$("#dianwei~div").css("backgroundColor","green");
+				})	
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="button" id="allSelect" value="选择body内所有DIV">
+			<input type="button" id="sonSelect" value="选择body内的子元素(儿子)DIV">
+			<input type="button" id="nextSelect" value="选择id为dianwei的下一个DIV兄弟">
+			<input type="button" id="nextAllSelect" value="选择id为dianwei的后面所有DIV兄弟">
+		</div>
+		<h2>刘备军团(h2标签)</h2>
+			<div id="lbUl" class="team">
+				<div id="guanyu" class="liubei">关羽<br>(id=guanyu,class=liubei)</div>
+				<div id="zhangfei" class="liubei">张飞<br>(id=zhangfei,class=liubei)</div>
+				<div id="zhaoyun" class="liubei">赵云<br>(id=zhaoyun,class=liubei)</div>
+				<div id="machao" class="liubei">马超<br>(id=machao,class=liubei)</div>
+			</div>
+		<h2>曹操军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="dianwei" class="caocao">典韦<br>(id=dianwei,class=caocao)</div>
+				<div class="caocao">曹丕<br>(id=caopi,class=caocao)</div>
+				<div class="caocao">曹植<br>(id=caozhi,class=caocao)</div>
+				<div class="caocao">曹仁<br>(id=caoren,class=caocao)</div>			
+			</div>
+		<h2>孙权军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="huanggai" class="sunquan">黄盖<br>(id=huanggai,class=sunquan)</div>
+				<div id="zhouyu" class="sunquan">周瑜<br>(id=zhouyu,class=sunquan)</div>
+				<div id="lusu" class="sunquan">鲁肃<br>(id=lusu,class=sunquan)</div>
+				<div id="taishici" class="sunquan">太史慈<br>(id=taishici,class=sunquan)</div>			
+			</div>			
+	</body>
+</html>

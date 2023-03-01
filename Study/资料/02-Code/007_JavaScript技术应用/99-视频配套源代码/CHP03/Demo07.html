@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取网页元素</title>
+		<style type="text/css">
+			#txtTitle{ width: 100%;}
+			#txtContent{ width: 100%; height: 80px;}
+		</style>
+		<script type="text/javascript">
+			function SetArticle()
+			{
+				var objTitle = document.getElementById("txtTitle");
+				var objContent = document.getElementById("txtContent");
+				var strContent = objContent.value;
+				while(true)
+				{
+					strContent = strContent.replace("\n","<br />");
+					if(strContent.indexOf("\n") == -1)
+						break;
+				}
+				document.getElementById("lblTitle").innerHTML = objTitle.value;
+				document.getElementById("lblContent").innerHTML = strContent;
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		故事标题:<input type="text" id="txtTitle">
+		<br>
+		故事内容:<br>
+		<textarea id="txtContent"></textarea><br>
+		<input type="button" value="确定" onclick="SetArticle();" />
+		<br><br>
+		<h1 id="lblTitle"></h1>
+		<div id="lblContent"></div>		
+	</body>
+</html>

@@ -1,0 +1,6 @@
+set identitY_insert [PostReplys] OFF,
+INSERT INTO [PostReplys]([Id], [PostId], [ReplyContent], [CreateTime], [CreateUserId], [EditTime], [EditUserId], [Up], [Down]) VALUES (13, 1, '<p>测试测试</p>', '2020-10-02 22:32:55.317', 2, NULL, 2, '2', '1'); 
+INSERT INTO [PostReplys]([Id], [PostId], [ReplyContent], [CreateTime], [CreateUserId], [EditTime], [EditUserId], [Up], [Down]) VALUES (14, 1, '[quote]<p>测试测试</p>[/quote]<br/><p>回复测试</p><br/>', '2020-10-02 23:24:01.270', 2, NULL, 2, '1', NULL); go
+INSERT INTO [PostReplys]([Id], [PostId], [ReplyContent], [CreateTime], [CreateUserId], [EditTime], [EditUserId], [Up], [Down]) VALUES (15, 1, '[quote]<span style="border:1px solid #e5e5e5;background-color: #f5f5f5; font-size: 13px;  font-style: italic ;padding:5px;display: block;"><p>测试测试</p></span><br/><p>回复测试</p><br/>[/quote]<br/>二次回复测试<br/>', '2020-10-02 23:24:12.703', 2, NULL, 2, NULL, NULL); go
+INSERT INTO [PostReplys]([Id], [PostId], [ReplyContent], [CreateTime], [CreateUserId], [EditTime], [EditUserId], [Up], [Down]) VALUES (16, 1, '<p>aaaaa</p>', '2021-03-17 21:41:44.807', 2, NULL, 2, NULL, NULL); go
+INSERT INTO [PostReplys]([Id], [PostId], [ReplyContent], [CreateTime], [CreateUserId], [EditTime], [EditUserId], [Up], [Down]) VALUES (17, 1, '<p>asdasdasdasdasd</p>', '2021-03-17 21:45:22.820', 2, NULL, 2, NULL, NULL); go

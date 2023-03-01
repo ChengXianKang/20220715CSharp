@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS背景</title>
+		<style type="text/css">
+			#myDiv{ width: 600px; height: 600px; border: solid 1px black;
+			/*background-color: pink;*/
+			/*background-image: url(img/beijing0001.jpg);*/
+			/*background-position: center center;*/
+			/*background-position:100px 100px;
+			background-repeat: no-repeat;*/
+			
+			/*设置背景图片，并且定位水平居中，垂直居中，设置不平铺*/
+			background: url(img/beijing0001.jpg) no-repeat center center;
+			/*background-size: 200px 200px;*/
+			/*容器宽度和高度的50%，不代表图片原始大小的50%*/
+			/*background-size:50% 50%;*/ 
+			background-size:cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="myDiv">
+			
+		</div>
+	</body>
+</html>

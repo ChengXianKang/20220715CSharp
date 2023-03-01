@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Demo06.aspx" title="我的门户首页"  description="我的门户首页">
+        <siteMapNode url="Demo06_Sport.aspx" title="体育频道"  description="体育频道">
+            <siteMapNode url="Demo06_Basketball.aspx" title="篮球"  description="篮球" />
+            <siteMapNode url="Demo06_Football.aspx" title="足球"  description="足球" />
+        </siteMapNode>
+        <siteMapNode url="Demo06_Play.aspx" title="娱乐频道"  description="娱乐频道">
+          <siteMapNode url="Demo06_Movie.aspx" title="电影"  description="电影" />
+          <siteMapNode url="Demo06_Music.aspx" title="音乐"  description="音乐" />
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

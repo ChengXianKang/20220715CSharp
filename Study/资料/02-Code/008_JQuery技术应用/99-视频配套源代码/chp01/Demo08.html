@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>可见性过滤选择器</title>
+		<style type="text/css">
+			div{margin: 0px; padding: 0px; height: auto; overflow: auto; text-align: center;}
+			.team{clear: both; border: solid 1px black; background-color: pink;}
+			.liubei,.caocao,.sunquan{ width: 250px; height: 100px; margin: 20px; float: left;
+			border: solid 1px black; line-height: 30px; background-color: pink;}
+			#zhangfei,#caopi,#zhouyu{display: none;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#visibleSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:visible").css("backgroundColor","green");
+				});
+				$("#hideSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:hidden").css("backgroundColor","green");
+					$("div:hidden").show(1000);
+				});				
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="button" id="visibleSelect" value="选择所有的可见DIV">
+			<input type="button" id="hideSelect" value="选择所有的不可见DIV">
+		</div>
+		<h2>刘备军团(h2标签)</h2>
+			<div id="lbUl" class="team">
+				<div id="guanyu" class="liubei">关羽<br>(id=guanyu,class=liubei)</div>
+				<div id="zhangfei" class="liubei">张飞<br>(id=zhangfei,class=liubei)</div>
+				<div id="zhaoyun" class="liubei">赵云<br>(id=zhaoyun,class=liubei)</div>
+				<div id="machao" class="liubei">马超<br>(id=machao,class=liubei)</div>
+			</div>
+		<h2>曹操军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="dianwei" class="caocao">典韦<br>(id=dianwei,class=caocao)</div>
+				<div id="caopi" class="caocao">曹丕<br>(id=caopi,class=caocao)</div>
+				<div id="caozhi" class="caocao">曹植<br>(id=caozhi,class=caocao)</div>
+				<div id="caoren" class="caocao">曹仁<br>(id=caoren,class=caocao)</div>			
+			</div>
+		<h2>孙权军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="huanggai" class="sunquan">黄盖<br>(id=huanggai,class=sunquan)</div>
+				<div id="zhouyu" class="sunquan">周瑜<br>(id=zhouyu,class=sunquan)</div>
+				<div id="lusu" class="sunquan">鲁肃<br>(id=lusu,class=sunquan)</div>
+				<div id="taishici" class="sunquan">太史慈<br>(id=taishici,class=sunquan)</div>			
+			</div>			
+	</body>
+</html>

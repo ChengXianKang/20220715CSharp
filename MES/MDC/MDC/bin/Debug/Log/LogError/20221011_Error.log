@@ -1,0 +1,90 @@
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:22:27,109 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 312
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:22:27,128 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 317
+   在 MDC.frmLCDPrinter.ClientStart() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\MDC\frmLCDPrinter.cs:行号 542
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:23:53,510 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 312
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:23:53,528 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 317
+   在 MDC.frmLCDPrinter.ClientStart() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\MDC\frmLCDPrinter.cs:行号 556
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:25:39,871 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 312
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:25:39,890 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 317
+   在 MDC.frmLCDPrinter.ClientStart() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\MDC\frmLCDPrinter.cs:行号 556
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:27:15,509 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 312
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:27:15,527 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 317
+   在 MDC.frmLCDPrinter.ClientStart() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\MDC\frmLCDPrinter.cs:行号 557
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:32:24,323 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 312
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-10-11 14:32:24,343 
+异常级别：ERROR
+异常内容：端口“COM5”不存在。
+System.IO.IOException: 端口“COM5”不存在。
+   在 Utils.SerialPortUtil.OpenPort() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\Utils\Common\SerialPortUtil.cs:行号 317
+   在 MDC.frmLCDPrinter.ClientStart() 位置 F:\WorkSpace\显示MES\生产数据采集程序\MDC\MDC\frmLCDPrinter.cs:行号 558

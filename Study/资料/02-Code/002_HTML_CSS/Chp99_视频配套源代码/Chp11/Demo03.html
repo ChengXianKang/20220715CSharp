@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>@media媒体查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<style type="text/css">
+			*{ margin: 0px; padding: 0px;}
+			ul,li{ list-style-type: none;}
+			/*手机*/
+			@media only screen and (max-width: 700px) {
+				#top{ height: 160px; background-color: black; width: 100%;}
+				#top #menu{ width: 100%; margin: 0px auto; color: white;
+				font-weight: bold; font-size: 16px;}
+				#top #menu li{ width: 100%; text-align: center;
+				height: 39px; line-height: 39px; border-bottom: solid 1px white;}
+				#banner{ width: 100%; margin: 0px auto;}
+				#banner #imgLyh{ display: none;}	
+				#banner #imgCz{ display: block; max-width: 100%;}						
+			}
+			/*平板*/
+			@media only screen and (max-width: 1024px) and (min-width: 701px){
+				#top{ height: 40px; background-color: black; width: 100%;}
+				#top #menu{ width: 900px; margin: 0px auto; color: white;
+				font-weight: bold; font-size: 16px;}
+				#top #menu li{ width: 180px; float: left;
+				height: 40px; line-height: 40px;}
+				#banner{ width: 900px; margin: 0px auto;}
+				#banner #imgLyh{ width: 900px; display: block;}	
+				#banner #imgCz{ display: none;}					
+			}
+			/*电脑*/
+			@media only screen and (min-width: 1025px) {
+				#top{ height: 50px; background-color: black; width: 100%;}
+				#top #menu{ width: 1200px; margin: 0px auto; color: white;
+				font-weight: bold; font-size: 20px;}
+				#top #menu li{ width: 200px; float: left;
+				height: 50px; line-height: 50px;}
+				#banner{ width: 1200px; margin: 0px auto;}
+				#banner #imgLyh{ display: block;}
+				#banner #imgCz{ display: none;}				
+			}						
+			
+			
+
+		</style>
+	</head>
+	<body>
+		<div id="top">
+			<div id="menu">
+				<ul>
+					<li>锤子科技</li>
+					<li>Smartisan T1</li>
+					<li>Smartisan T2</li>
+					<li>Smartisan T3</li>
+				</ul>
+			</div>
+		</div>
+		<div id="banner">
+			<img id="imgLyh" src="img/lyh.jpg" />
+			<img id="imgCz" src="img/chuizi.jpg" />
+		</div>
+	</body>
+</html>

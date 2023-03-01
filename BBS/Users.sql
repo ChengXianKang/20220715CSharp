@@ -1,0 +1,3 @@
+INSERT INTO [Users]([Id], [UserNo], [UserName], [UserLevel], [Password], [IsDelete], [Token], [AutoLoginTag], [AutoLoginLimitTime]) VALUES (2, N'2251610468', N'aa', 36, N'123456', '0', '49C861B6-0F33-42EB-84BA-8570F63A61D3', 'EB474BCF-FF07-4E2F-8314-1FF2CA72D328', '2021-07-01 21:32:55.610'); 
+INSERT INTO [Users]([Id], [UserNo], [UserName], [UserLevel], [Password], [IsDelete], [Token], [AutoLoginTag], [AutoLoginLimitTime]) VALUES (22, N'2222222222', N'aa', 16, N'123456', '0', '38F990F3-907A-4A59-BD2D-C8DACCEF460B', 'EB474BCF-FF07-4E2F-8314-1FF2CA72D328', '2021-07-01 21:32:55.610'); 
+SET IDENTITY_INSERT [Users] ON

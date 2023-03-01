@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>深入理解各绑定事件方式的区别</title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script>
+			$(function(){
+				$("#divTest1 input:button").click(function(){
+					$(this).after(" <input type=\"button\" value=\"新按钮\" />");
+				});
+				
+				$("#divTest2 input:button").bind("click",function(){
+					$(this).after(" <input type=\"button\" value=\"新按钮\" />");
+				});
+
+				$("#divTest3 input:button").one("click",function(){
+					$(this).after(" <input type=\"button\" value=\"新按钮\" />");
+				});
+
+				$("#divTest4 input:button").on("click",function(){
+					$(this).after(" <input type=\"button\" value=\"新按钮\" />");
+				});	
+						
+				$("#divTest5").on("click","input:button",function(){
+					$(this).after(" <input type=\"button\" value=\"新按钮\" />");
+				});
+				
+				//live在高版本已经被弃用，新版本使用on进行了替换
+				
+								
+			});
+		</script>
+	</head>
+	<body>
+	    <div id="divTest1">
+	        <input type="button" value="点我这里click" />
+	    </div>
+	    <br />
+	    <div id="divTest2">
+	        <input type="button" value="点我这里bind" />
+	    </div>
+	    <br />
+	    <div id="divTest3">
+	        <input type="button" value="点我这里one" />
+	    </div>
+		<br />
+	    <div id="divTest4">
+	        <input type="button" value="点我这里on(1)" />
+	    </div>
+	    <br />
+	    <div id="divTest5">
+	        <input type="button" value="点我这里on(2)" />
+	    </div>
+	    <br />		
+	    <div id="divTest6">
+	        <input type="button" value="点我这里live" />
+	    </div>
+	    <br />
+	</body>
+</html>

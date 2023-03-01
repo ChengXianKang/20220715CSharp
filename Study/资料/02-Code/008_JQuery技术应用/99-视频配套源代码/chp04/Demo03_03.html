@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>鼠标事件扩展</title>
+		<script src="js/jquery.js"></script>
+		<script>
+			//mouseover:无论鼠标穿过被选元素或其子元素，都会触发
+			//mouseout：无论鼠标离开被选元素或其子元素，都会触发
+			
+			//mouseenter:只有在鼠标穿过被选元素的时候才会触发
+			//mouseleave:只有在鼠标离开被选元素的时候才会触发
+			$(function(){
+				// $("#myTable").mouseover(function(){
+				// 	console.log("mouseover");
+				// })
+				// $("#myTable").mouseout(function(){
+				// 	console.log("mouseout");
+				// })
+				
+				$("#myTable").mouseenter(function(){
+					console.log("mouseover");
+				})
+				$("#myTable").mouseleave(function(){
+					console.log("mouseout");
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<table width="800" align="center" border="1" id="myTable">
+			<tr height="100">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr height="100">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+	</body>
+</html>
+

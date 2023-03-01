@@ -1,0 +1,5 @@
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp04\bin\Debug\Chp04.exe.config
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp04\bin\Debug\Chp04.exe
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp04\bin\Debug\Chp04.pdb
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp04\obj\Debug\Chp04.exe
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp04\obj\Debug\Chp04.pdb

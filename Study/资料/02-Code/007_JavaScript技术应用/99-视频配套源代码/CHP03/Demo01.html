@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function myAlert()
+			{
+				alert('您好!');
+			}
+			function myPrompt()
+			{
+				var sex = prompt("请输入您的性别:","男");
+				if(sex == "男")
+					alert("小哥哥，你好!");
+				else if(sex == "女")
+					alert("小姐姐，你好!");
+				else
+					alert("你是妖怪吗？");
+			}
+			function myConfirm()
+			{
+				var result = confirm("您确定要删除数据吗，删除之后无法恢复!");
+				if(result == true)
+				{
+					alert('数据删除成功!');
+				}
+			}
+			function myOpen()
+			{
+				open("Demo01_adv.html","adv","width=800,height=500");
+			}
+			function myClose()
+			{
+				close();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="alert" onclick="myAlert()" /> <br /><br />
+		<input type="button" value="prompt" onclick="myPrompt()" /> <br /><br />
+		<input type="button" value="删除数据" onclick="myConfirm()" /> <br /><br />
+		<input type="button" value="打开广告" onclick="myOpen()" /> <br /><br />
+		<input type="button" value="关闭" onclick="myClose()" /> <br /><br />
+	</body>
+</html>

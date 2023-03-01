@@ -1,0 +1,26 @@
+*{ margin: 0px; padding: 0px;}
+#head ul{ list-style-type: none;}
+#head{ height: 70px; width: 100%;}
+#menu{ width: 80%; float: left;}
+#skin{ width: 20%; float: left;}
+#head li{ float: left;}
+#menu li{ text-align: center; height: 70px; line-height: 70px;}
+#menu li a{ padding: 0px 20px; text-decoration: none; color: white;}
+#skin ul{ float: right; margin-top: 24px;}
+
+#skin li{ width: 15px; height: 15px; margin-right: 5px;
+background-image: url(../img/theme.gif);}
+
+#skin1{ background-position: 0px 0px;}
+#skin2{ background-position: -20px 0px;}
+#skin3{ background-position: -40px 0px;}
+#skin4{ background-position: -60px 0px;}
+#skin5{ background-position: -80px 0px;}
+#skin6{ background-position: -100px 0px;}
+
+#skin1.selected{ background-position: 0px -15px;}
+#skin2.selected{ background-position: -20px -15px;}
+#skin3.selected{ background-position: -40px -15px;}
+#skin4.selected{ background-position: -60px -15px;}
+#skin5.selected{ background-position: -80px -15px;}
+#skin6.selected{ background-position: -100px -15px;}

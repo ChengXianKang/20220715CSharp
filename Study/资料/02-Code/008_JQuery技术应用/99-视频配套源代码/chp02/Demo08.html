@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>元素内部插入子节点</title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#bt1").click(function(){
+					//方案一
+					//$("#myUl").append("<li>"+$("#myTxt").val()+"</li>");
+					//方案二
+					 var $li = $("<li>"+$("#myTxt").val()+"</li>");
+					 $("#myUl").append($li);
+					//方案三
+					//var $li = $("<li>"+$("#myTxt").val()+"</li>");
+					//$li.appendTo($("#myUl"));					
+				})
+				$("#bt2").click(function(){
+					//方案一
+					//$("#myUl").prepend("<li>"+$("#myTxt").val()+"</li>");
+					//方案二
+					 var $li = $("<li>"+$("#myTxt").val()+"</li>");
+					 $("#myUl").prepend($li);
+					//方案三
+					//var $li = $("<li>"+$("#myTxt").val()+"</li>");
+					//$li.prependTo($("#myUl"));					
+				})				
+			});
+		</script>
+	</head>
+	<body>
+		<h2>班级通讯录</h2>
+		<input id="myTxt" type="text"  />
+		<input id="bt1" type="button" value="在最后面添加元素"  />
+		<input id="bt2" type="button" value="在最前面添加元素"  />
+		<ul id="myUl">
+			<li>刘德华-13558785478</li>
+			<li>张学友-13558785478</li>
+		</ul>
+	</body>
+</html>

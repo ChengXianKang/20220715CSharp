@@ -1,0 +1,17 @@
+1、简述public、private、protected、internal 修饰符的访问权限。（5分）
+public：公有的，任何位置都可以访问。
+private：私有的，只有类的自身才能访问。
+protected：受保护的，只有类的自身及其派生类才能访问。
+internal：内部的，同一个程序集里面的任何位置都能访问。
+protected internal ：内部受保护的，同一个程序集里面的任何位置，或者不同程序集中的派生类可以访问。
+
+2、在ADO.NET中，DataSet和DataReader的区别是什么？（5分）
+
+DataSet：数据集，表示内存中的“数据库”。DataSet在从数据库中读取数据时是“面向非连接的”，即DataSet在读取数据的那一刻会与数据库进行连接，然后会一次性把数据库中所有的表以及数据读取到内存中，然后便断开数据库连接
+。
+DataReader：数据读取器。DataReader在从数据库中读取数据时是“面向连接的”，即DataReader在读取数据时是从数据库中一行一行读取，每次只会从数据库中读取一行数据（类似于数据库游标的行为），直到读完最后一行之后，才断开数据库连接。在整个读取的过程中，必须保持与数据库的连接处于打开状态。
+
+
+3、员工表Emp中有一列为员工所属部门编号DeptID，请用一条SQL语句把各DeptID和该DeptID对应的员工总数查询出来。（5分）
+select DeptID 部门编号,count(*) 员工总数 from Emp group by DeptID
+

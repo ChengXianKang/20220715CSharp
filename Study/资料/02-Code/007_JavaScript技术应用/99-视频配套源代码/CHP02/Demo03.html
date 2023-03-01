@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>有参数，有返回值</title>
+		<script type="text/javascript">
+			//编写两个函数，一个接受长方形的长和宽，计算长方形面积；
+			//一个接受半径，计算出圆面积。
+			//分别调用函数求长方形面积，圆面积，和总面积：
+	
+			//接受长方形长和宽，计算长方形面积
+			function getCfxArea(width,height)
+			{
+				var area = width*height;
+				return area;
+			}
+			//接受半径，求圆面积
+			function getYuanArea(r)
+			{
+				var area = 3.14*r*r;
+				return area;
+			}
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var cfx = getCfxArea(10,20);
+			var yuan = getYuanArea(10);		
+			var sum = cfx + yuan;
+			alert('长方形面积:' + cfx);
+			alert('圆面积为：' + yuan);
+			alert('总面积为:' + sum);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单对象属性选择器</title>
+		<style type="text/css">
+			div{line-height: 40px;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#bt1").click(function(){
+					$(":text:enabled").val("看我七十二变！！！");
+				});
+				$("#bt2").click(function(){
+					$(":text:disabled").val("看我七十二变！！！");
+				});
+				$("#bt3").click(function(){
+					var str = "";
+					str += "一共选中:"+$("input:checked").length + "项\n";
+					str += "性别:"+$("input:checked[name=sex]").val() + "\n";
+					str += "爱好:";
+					var strHobby = "";
+					$("input:checked[name=hobby]").each(function(){
+						if(strHobby.length != 0)
+							strHobby += ",";
+						strHobby += $(this).val();
+					})
+					str += strHobby + "\n";
+					alert(str);
+				});
+				$("#bt4").click(function(){
+					var str = "";
+					str += "一共选中:"+$(":selected").length + "项\n";
+					str += "专业:"+$("select[name=selProfessional] option:selected").val() + "\n";
+					str += "地区:";
+					var strArea = "";
+					$("select[name=selArea] option:selected").each(function(){
+						if(strArea.length != 0)
+							strArea += ",";
+						strArea += $(this).val();
+					});
+					str += strArea + "\n";
+					alert(str);
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="button" id="bt1" value="对可用文本框赋值">
+			<input type="button" id="bt2" value="对不可用文本框赋值">
+		</div>
+		<div>
+			可用元素:<input type="text"  />
+			不可用元素:<input type="text" disabled="disabled"  />
+			可用元素:<input type="text"  />
+			不可用元素:<input type="text" disabled="disabled" />
+		</div>
+		<br /><br />
+		<div>
+			<input type="button" id="bt3" value="所有被选中的checked属性">
+		</div>
+		<div>
+			性别:
+			<input type="radio" name="sex"  value="男">男
+			<input type="radio" name="sex"  value="女">女	
+			&nbsp;&nbsp;&nbsp;&nbsp;爱好:
+			<input type="checkbox" name="hobby" value="抽烟" />抽烟
+			<input type="checkbox" name="hobby" value="喝酒" />喝酒
+			<input type="checkbox" name="hobby" value="打游戏" />打游戏
+			<input type="checkbox" name="hobby" value="烫头发" />烫头发
+			<input type="checkbox" name="hobby" value="足球" />足球
+			<input type="checkbox" name="hobby" value="篮球" />篮球
+		</div>
+		<br /><br />
+		<div>
+			<input type="button" id="bt4" value="被选中的option选项">
+		</div>
+		<div>
+			专业:
+			<select id="selProfessional" name="selProfessional">
+				<option value="">--请选择--</option>
+				<option value="软件开发">软件开发</option>
+				<option value="电子商务">电子商务</option>
+				<option value="国际贸易">国际贸易</option>
+				<option value="工商管理">工商管理</option>
+				<option value="高级护理">高级护理</option>
+			</select>
+			地区:
+			<select id="selArea" name="selArea" multiple="multiple">
+				<option value="">--请选择--</option>
+				<option value="北京">北京</option>
+				<option value="上海">上海</option>
+				<option value="广州">广州</option>
+				<option value="深圳">深圳</option>
+				<option value="珠海">珠海</option>
+			</select>
+		</div>
+	</body>
+</html>

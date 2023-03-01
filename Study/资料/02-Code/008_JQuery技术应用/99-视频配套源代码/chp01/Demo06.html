@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本过滤选择器</title>
+		<style type="text/css">
+			div{margin: 0px; padding: 0px; height: auto; overflow: auto; text-align: center;}
+			#myButtons{ border: solid 1px black; height: 80px; line-height: 40px;}
+			.team{clear: both; border: solid 1px black; background-color: pink;}
+			.liubei,.caocao,.sunquan{ width: 250px; height: 100px; margin: 20px; float: left;
+			border: solid 1px black; line-height: 30px; background-color: pink;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			function MyAnimation()
+			{
+				$("#machao").toggle(2000);
+			}
+			$(function(){
+				setInterval("MyAnimation()",2000);
+				$("#firstSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:first").css("backgroundColor","green");
+				})
+				$("#laseSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:last").css("backgroundColor","green");
+				})
+				$("#notSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:not(.liubei)").css("backgroundColor","green");
+				})
+				$("#evenSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:even").css("backgroundColor","green");
+				})
+				$("#oddSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:odd").css("backgroundColor","green");
+				})
+				$("#eqSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:eq(3)").css("backgroundColor","green");
+				})	
+				$("#notEqSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:not(:eq(3))").css("backgroundColor","green");
+				})	
+				$("#gtSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:gt(3)").css("backgroundColor","green");
+				})	
+				$("#ltSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:lt(3)").css("backgroundColor","green");
+				})
+				$("#hSelect").click(function(){
+					$("*").removeAttr("style");
+					$(":header").css("backgroundColor","green");
+				})
+				$("#AnimateSelect").click(function(){
+					$("*").removeAttr("style");
+					$(":animated").css("backgroundColor","green");
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div id="myButtons">
+			<input type="button" id="firstSelect" value="选择第一个DIV元素">
+			<input type="button" id="laseSelect" value="选择最后一个DIV元素">
+			<input type="button" id="notSelect" value="选择class不为liubei的元素">
+			<input type="button" id="evenSelect" value="选择索引为偶数的DIV元素">
+			<input type="button" id="oddSelect" value="选择索引为奇数的DIV元素">
+			<input type="button" id="eqSelect" value="选择索引为3的DIV元素">
+			<input type="button" id="notEqSelect" value="选择索引不为3的DIV元素">
+			<input type="button" id="gtSelect" value="选择索引大于3的DIV元素">
+			<input type="button" id="ltSelect" value="选择索引小于3的DIV元素">
+			<input type="button" id="hSelect" value="选择所有的标题元素H1-H6">
+			<input type="button" id="AnimateSelect" value="选择当前正在执行动画的元素">
+		</div>
+		<h2>刘备军团(h2标签)</h2>
+			<div id="lbUl" class="team">
+				<div id="guanyu" class="liubei">关羽<br>(id=guanyu,class=liubei)</div>
+				<div id="zhangfei" class="liubei">张飞<br>(id=zhangfei,class=liubei)</div>
+				<div id="zhaoyun" class="liubei">赵云<br>(id=zhaoyun,class=liubei)</div>
+				<div id="machao" class="liubei">马超<br>(id=machao,class=liubei)</div>
+			</div>
+		<h2>曹操军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="dianwei" class="caocao">典韦<br>(id=dianwei,class=caocao)</div>
+				<div id="caopi" class="caocao">曹丕<br>(id=caopi,class=caocao)</div>
+				<div id="caozhi" class="caocao">曹植<br>(id=caozhi,class=caocao)</div>
+				<div id="caoren" class="caocao">曹仁<br>(id=caoren,class=caocao)</div>			
+			</div>
+		<h2>孙权军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="huanggai" class="sunquan">黄盖<br>(id=huanggai,class=sunquan)</div>
+				<div id="zhouyu" class="sunquan">周瑜<br>(id=zhouyu,class=sunquan)</div>
+				<div id="lusu" class="sunquan">鲁肃<br>(id=lusu,class=sunquan)</div>
+				<div id="taishici" class="sunquan">太史慈<br>(id=taishici,class=sunquan)</div>			
+			</div>			
+	</body>
+</html>

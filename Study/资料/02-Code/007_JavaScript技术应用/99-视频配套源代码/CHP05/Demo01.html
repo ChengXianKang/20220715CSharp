@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>正则表达式test方法</title>
+</head>
+<body style="text-align: center;">
+	<textarea id="txt" style=" width: 80%; height: 100px;"></textarea>
+	<br /><br />
+	<input type="button" value="测  试" onclick="MyTest();">
+</body>
+</html>
+<script type="text/javascript">
+	function MyTest()
+	{
+		//test方法：匹配成功返回true,匹配失败返回false
+		
+		//判断是否含有敏感词：fuck  
+		// var str = document.getElementById("txt").value;
+		// //var exp = new RegExp("fuck","i"); //i:忽略大小写,g:全局匹配,m:多行匹配
+		// var exp = /fuck/i;
+		// if(exp.test(str))
+		// {
+		// 	alert("不要说脏话!");
+		// 	return;
+		// }
+		// alert("提交成功");
+		
+		//判断是否含有敏感词：fuck|垃圾
+		// var str = document.getElementById("txt").value;
+		// var exp = /fuck|垃圾/i;
+		// if(exp.test(str))
+		// {
+		// 	alert("不要说脏话!");
+		// 	return;
+		// }
+		// alert("提交成功");		
+		
+		//判断内容是能是男或女
+		// var str = document.getElementById("txt").value;
+		// var exp = /^男$|^女$/;
+		// if(!exp.test(str))
+		// {
+		// 	alert("请认真输入!");
+		// 	return;
+		// }
+		// alert("提交成功");
+		
+		//判断QQ号码的合法性(QQ规则：5-12位之间的数字)
+		// var str = document.getElementById("txt").value;
+		// var exp = /^\d{5,12}$/;
+		// if(!exp.test(str))
+		// {
+		// 	alert("QQ号码格式错误!");
+		// 	return;
+		// }	
+		// alert("提交成功!");
+		
+		//多行匹配:正则含有^和$的时候，会把匹配的字符串的每一行进行匹配；
+		//任意一行符合要求，都认为是匹配成功
+		var str = document.getElementById("txt").value;
+		var exp = /^\d{5,12}$/m;
+		if(!exp.test(str))
+		{
+			alert("QQ号码格式错误!");
+			return;
+		}	
+		alert("提交成功!");	
+			
+	}
+</script>
+

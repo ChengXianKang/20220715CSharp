@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单验证</title>
+		<script type="text/javascript">
+			function CheckAcc()
+			{
+				var acc = document.getElementById("txtAccount").value;
+				var objSpan = document.getElementById("spanAcc");
+				if(acc.length == 0)
+				{
+					objSpan.innerHTML = "<img src='img/li_err.gif'> 用户名不能为空!";
+					return false;
+				}
+				else if(acc.length < 6 || acc.length > 12)
+				{
+					objSpan.innerHTML = "<img src='img/li_err.gif'> 用户名长度必须6-12位之间!";
+					return false;
+				}
+				else
+				{
+					objSpan.innerHTML = "<img src='img/li_ok.gif'>";
+					return true;
+				}
+			}
+			function CheckPwd()
+			{
+				var pwd = document.getElementById("txtPwd").value;
+				var objSpan = document.getElementById("spanPwd");
+				if(pwd.length == 0)
+				{
+					objSpan.innerHTML = "<img src='img/li_err.gif'> 密码不能为空!";
+					return false;
+				}
+				else if(pwd.length < 6 || pwd.length > 12)
+				{
+					objSpan.innerHTML = "<img src='img/li_err.gif'> 密码长度必须6-12位之间!";
+					return false;
+				}
+				else
+				{
+					objSpan.innerHTML = "<img src='img/li_ok.gif'>";
+					return true;
+				}
+			}
+			function CheckPwdOk()
+			{
+				var pwd = document.getElementById("txtPwd").value;
+				var pwdOk = document.getElementById("txtPwdOk").value;
+				var objSpan = document.getElementById("spanPwdOk");
+				if(pwdOk.length == 0)
+				{
+					objSpan.innerHTML = "<img src='img/li_err.gif'> 密码确认不能为空!";
+					return false;
+				}
+				else if(pwd != pwdOk)
+				{
+					objSpan.innerHTML = "<img src='img/li_err.gif'> 密码和密码确认必须相同!";
+					return false;
+				}
+				else
+				{
+					objSpan.innerHTML = "<img src='img/li_ok.gif'>";
+					return true;
+				}
+			}
+			function CheckSex()
+			{
+				var objBoy = document.getElementById("rdBoy");
+				var objGirl = document.getElementById("rdGirl");
+				var objSpan = document.getElementById("spanSex");
+				if(objBoy.checked == false && objGirl.checked == false)
+				{
+					objSpan.innerHTML = "<img src='img/li_err.gif'> 请选择性别!";
+					return false;
+				}
+				else
+				{
+					objSpan.innerHTML = "<img src='img/li_ok.gif'>";
+					return true;
+				}
+			}
+			function CheckPro()
+			{
+				var pro = document.getElementById("selProfessional").value;
+				var objSpan = document.getElementById("spanPro");
+				if(pro.length == 0)
+				{
+					objSpan.innerHTML = "<img src='img/li_err.gif'> 请选择专业!";
+					return false;
+				}
+				else
+				{
+					objSpan.innerHTML = "<img src='img/li_ok.gif'>";
+					return true;
+				}
+			}
+			function CheckHobby()
+			{
+				var hobbys = document.getElementsByName("hobby");
+				var objSpan = document.getElementById("spanHobby");
+				var result = false;  //假设爱好一个都没有选中
+				for(var i = 0;i < hobbys.length;i++)
+				{
+					if(hobbys[i].checked == true)
+					{
+						result = true;
+						break;
+					}
+				}
+				if(result == false)
+				{
+					objSpan.innerHTML = "<img src='img/li_err.gif'> 请选择爱好!";
+					return false;
+				}
+				else
+				{
+					objSpan.innerHTML = "<img src='img/li_ok.gif'>";
+					return true;
+				}
+			}
+			function reg()
+			{
+				if(CheckAcc() & CheckPwd() & CheckPwdOk() & CheckSex()
+				& CheckPro() & CheckHobby())
+					return true;
+				else
+					return false;
+			}
+		</script>
+	</head>
+	<body>	
+		<form action="Demo12_01.html" onsubmit="return reg();">
+		<table width="1000" align="center">
+			<caption>用户注册</caption>
+			<tr>
+				<td width="300" align="right" height="30">用户名:</td>
+				<td width="700"><input type="text" id="txtAccount" onblur="CheckAcc();">
+					<span id="spanAcc" style="color: red;"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">密码:</td>
+				<td width="700"><input type="password" id="txtPwd" onblur="CheckPwd();">
+					<span id="spanPwd" style="color: red;"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">密码确认:</td>
+				<td width="700"><input type="password" id="txtPwdOk" onblur="CheckPwdOk();">
+					<span id="spanPwdOk" style="color: red;"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">性别:</td>
+				<td width="700">
+					<input type="radio" name="sex" id="rdBoy" value="男" onblur="CheckSex();">男
+					<input type="radio" name="sex" id="rdGirl" value="女" onblur="CheckSex();">女	
+					<span id="spanSex" style="color: red;"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">专业:</td>
+				<td width="700">
+					<select id="selProfessional" onblur="CheckPro();">
+						<option value="">--请选择--</option>
+						<option value="软件开发">软件开发</option>
+						<option value="电子商务">电子商务</option>
+						<option value="国际贸易">国际贸易</option>
+						<option value="工商管理">工商管理</option>
+						<option value="高级护理">高级护理</option>
+					</select>
+					<span id="spanPro" style="color: red;"></span>
+				</td>
+			</tr>			
+			<tr>
+				<td width="300" align="right" height="30">爱好:</td>
+				<td width="700">
+					<input type="checkbox" name="hobby" value="抽烟" onblur="CheckHobby();" />抽烟
+					<input type="checkbox" name="hobby" value="喝酒" onblur="CheckHobby();" />喝酒
+					<input type="checkbox" name="hobby" value="打游戏" onblur="CheckHobby();" />打游戏
+					<input type="checkbox" name="hobby" value="烫头发" onblur="CheckHobby();" />烫头发
+					<input type="checkbox" name="hobby" value="足球" onblur="CheckHobby();" />足球
+					<input type="checkbox" name="hobby" value="篮球" onblur="CheckHobby();" />篮球
+					<span id="spanHobby" style="color: red;"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">自我介绍:</td>
+				<td width="700">
+					<textarea id="mySelf" rows="10" cols="60"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">&nbsp;</td>
+				<td width="700">
+					<input type="submit" value="注册" />
+					<input type="reset" value="取消" />
+				</td>
+			</tr>
+		</table>	
+		</form>
+	</body>
+</html>

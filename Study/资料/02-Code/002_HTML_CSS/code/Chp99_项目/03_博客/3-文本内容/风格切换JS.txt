@@ -1,0 +1,12 @@
+<link id="cssFile" href="css/lsjd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	var myHref = window.location.href;
+	var arr = myHref.split("=");
+	var cssFileName = "lsjd";
+	if(arr.length == 1)
+		cssFileName = "lsjd";
+	else
+		cssFileName = arr[arr.length-1];
+	var cssFile = document.getElementById("cssFile");
+	cssFile.href = "css/" + cssFileName + ".css";	
+</script>

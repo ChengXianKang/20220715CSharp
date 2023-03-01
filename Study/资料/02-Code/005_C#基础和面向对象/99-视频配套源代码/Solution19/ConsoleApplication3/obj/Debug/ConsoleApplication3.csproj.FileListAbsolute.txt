@@ -1,0 +1,5 @@
+D:\temp\Solution19\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+D:\temp\Solution19\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+D:\temp\Solution19\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+D:\temp\Solution19\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+D:\temp\Solution19\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb

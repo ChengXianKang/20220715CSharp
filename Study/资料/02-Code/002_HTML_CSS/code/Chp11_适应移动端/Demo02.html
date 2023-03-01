@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>@media媒体查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<style type="text/css">
+			*{ margin: 0px; padding: 0px;}
+			ul,li{ margin: 0px; padding: 0px; list-style-type: none;}
+			@media screen and (max-width: 700px)
+			{
+				#top{display: block; height: 160px; text-align: center;
+				background-color: black; width: 100%; }
+				#top #menu{ width: 100%; margin: 0px auto;
+				color: white; font-weight: bold; font-size: 16px;}
+				#top #menu li{height: 40px; line-height: 40px; width: 100%;
+				border-bottom: solid 1px white;}
+				#banner{ width: 100%; }
+				#banner #imgLyh{ display: none;}
+				#banner #imgChuizi{display: block; max-width: 100%;}				
+			}
+			@media screen and (max-width: 1024px) and (min-width: 701px)
+			{
+				#top{display: block; height: 40px; line-height: 40px;
+				background-color: black; width: 100%;}
+				#top #menu{ width: 900px; margin: 0px auto;
+				color: white; font-weight: bold; font-size: 16px;}
+				#top #menu li{height: 40px; line-height: 40px; width: 200px; 
+				float: left;}
+				#banner{ width: 900px; margin: 0px auto; height: 400px;
+				}
+				#banner #imgLyh{ width: 900px; height: 400px; display: block;}
+				#banner #imgChuizi{display: none;}				
+			}
+			@media screen and (min-width: 1025px)
+			{
+				#top{display: block; height: 50px; line-height: 50px;
+				background-color: black; width: 100%;}
+				#top #menu{ width: 1200px; margin: 0px auto;
+				color: white; font-weight: bold; font-size: 20px;}
+				#top #menu li{height: 50px; line-height: 50px; width: 200px; 
+				float: left;}
+				#banner{ width: 1200px; margin: 0px auto; height: 599px;}
+				#banner #imgLyh{ display: block;}
+				#banner #imgChuizi{display: none;}							
+			}			
+		</style>
+	</head>
+	<body>
+		<div id="top">
+			<div id="menu">
+				<ul>
+					<li>锤子科技</li>
+					<li>Smartisan T1</li>
+					<li>Smartisan T2</li>
+					<li>Smartisan T3</li>
+				</ul>				
+			</div>
+		</div>
+		<div id="banner">
+			<img id="imgLyh" src="img/lyh.jpg" />
+			<img id="imgChuizi" src="img/chuizi.jpg" />
+		</div>
+	</body>
+</html>

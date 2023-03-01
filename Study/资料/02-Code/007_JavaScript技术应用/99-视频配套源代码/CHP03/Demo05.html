@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>location对象</title>
+		<script type="text/javascript">
+			function myRefresh()
+			{
+				location.reload();
+			}
+			function changeUrl()
+			{
+				var url = document.getElementById("webUrl").value;
+				if(url.length == 0)
+					return;
+				location.href = url;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="刷新" onclick="myRefresh();" />
+		<br /><br />
+		<select id="webUrl" onchange="changeUrl();">
+			<option value="">--请选择--</option>
+			<option value="http://www.baidu.com">百度</option>
+			<option value="http://www.alibaba.com">阿里巴巴</option>
+			<option value="http://www.qq.com">腾讯</option>
+		</select>
+	</body>
+</html>

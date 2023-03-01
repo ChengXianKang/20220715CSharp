@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>普通数组存储数据实现二级联动下拉框</title>
+		<script type="text/javascript">
+			var arrPro = ["湖北","湖南","河南"];
+			var arrCity= ["湖北,武汉","湖北,孝感","湖北,宜昌","湖北,十堰"
+					,"湖南,长沙","湖南,岳阳","湖南,常德","湖南,永州"
+					,"河南,郑州","河南,开封","河南,洛阳","河南,许昌"]
+			function BindPro()
+			{
+//				var obj = document.getElementById("province");
+//				obj.length = arrPro.length+1;
+//				obj.options[0] = new Option("--请选择--","");
+//				for(var i = 0;i< arrPro.length;i++)
+//				{
+//					obj.options[i+1] = new Option(arrPro[i],arrPro[i]);
+//				}
+				var obj = document.getElementById("province");
+				var opt = document.createElement("option");
+				opt.value = "";
+				opt.text = "--请选择--";
+				obj.appendChild(opt);
+				for(var i = 0;i< arrPro.length;i++)
+				{
+					var opt = document.createElement("option");
+					opt.value = arrPro[i];
+					opt.text = arrPro[i];
+					obj.appendChild(opt);
+				}
+			}
+			function BindCity()
+			{
+//				var obj = document.getElementById("city");
+//				obj.length = 1;
+//				obj.options[0] = new Option("--请选择--","");
+				var obj = document.getElementById("city");
+				var opt = document.createElement("option");
+				opt.value = "";
+				opt.text = "--请选择--";
+				obj.appendChild(opt);
+			}
+			function ChangeCity()
+			{
+				var obj = document.getElementById("city");
+				obj.innerHTML = "";
+				var opt = document.createElement("option");
+				opt.value = "";
+				opt.text = "--请选择--";
+				obj.appendChild(opt);
+				var selPro = document.getElementById("province").value;
+				if(selPro == "")
+					return;
+				for(var i = 0; i< arrCity.length;i++)
+				{
+					var pro = arrCity[i].split(',')[0];
+					var city= arrCity[i].split(',')[1];
+					if(selPro == pro)
+					{
+						var opt = document.createElement("option");
+						opt.value = city;
+						opt.text = city;
+						obj.appendChild(opt);						
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<select id="province" onchange="ChangeCity();"></select>
+		<select id="city"></select>
+	</body>
+	<script type="text/javascript">
+		BindPro();
+		BindCity();
+	</script>
+</html>

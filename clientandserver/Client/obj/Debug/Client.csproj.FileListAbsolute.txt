@@ -1,0 +1,11 @@
+E:\Demos\winForm小程序\Client\bin\Debug\Client.exe.config
+E:\Demos\winForm小程序\Client\bin\Debug\Client.exe
+E:\Demos\winForm小程序\Client\bin\Debug\Client.pdb
+E:\Demos\winForm小程序\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+E:\Demos\winForm小程序\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+E:\Demos\winForm小程序\Client\obj\Debug\Client.Properties.Resources.resources
+E:\Demos\winForm小程序\Client\obj\Debug\Client.csproj.GenerateResource.cache
+E:\Demos\winForm小程序\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+E:\Demos\winForm小程序\Client\obj\Debug\Client.exe
+E:\Demos\winForm小程序\Client\obj\Debug\Client.pdb
+E:\Demos\winForm小程序\Client\obj\Debug\Client.Form1.resources

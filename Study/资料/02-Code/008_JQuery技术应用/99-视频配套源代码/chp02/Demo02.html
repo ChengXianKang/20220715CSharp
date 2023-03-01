@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jQuery对象和DOM对象的相互转换</title>
+		<style type="text/css">
+			#myDiv{width: 200px; height: 200px; line-height: 200px; background-color:deeppink;
+			margin: 20px; text-align: center;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				//dom-->jquery
+				$("#bt1").click(function(){
+					var domobj = document.getElementById("myDiv"); //dom对象
+					alert("dom对象的内容："+domobj.innerText);
+					var jqobj = $(domobj); //dom对象转换成jquery对象
+					alert("jquery对象的内容："+jqobj.text());
+				});
+				//jquery-->dom
+				$("#bt2").click(function(){
+					var jqobj = $("#myDiv");  //jquery对象
+					alert("jquery对象的内容："+jqobj.text());
+					var domobj = jqobj[0]; //jquery对象转换成dom对象
+					alert("dom对象的内容："+domobj.innerText);
+				});				
+			})
+		</script>
+	</head>
+	<body>
+		<div>
+			<input id="bt1" type="button" value="DOM对象转Jquery对象" />
+			<input id="bt2" type="button" value="Jquery对象转DOM对象" />
+		</div>
+		<div id="myDiv">我爱Jquery!</div>
+	</body>
+</html>

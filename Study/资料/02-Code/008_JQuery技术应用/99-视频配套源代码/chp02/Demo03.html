@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实现鼠标点击h标题标签,使其变化颜色的效果</title>
+		<style type="text/css">
+			div,ul,li{margin: 0px; padding: 0px; list-style-type: none;}
+			div,h2,ul{clear: both; height: auto; overflow: auto;}
+			li{width: 250px; height: 100px; line-height: 30px; 
+			float: left; text-align: center; border: solid 1px black; margin-left: 20px;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("h2").click(function(){
+					$(this).css("color","red");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>刘备军团(h2标签)</h2>
+			<ul id="lbUl">
+				<li id="guanyu" class="liubei">关羽<br>(id=guanyu,class=liubei)</li>
+				<li id="zhangfei" class="liubei">张飞<br>(id=zhangfei,class=liubei)</li>
+				<li id="zhaoyun" class="liubei">赵云<br>(id=zhaoyun,class=liubei)</li>
+				<li id="machao" class="liubei">马超<br>(id=machao,class=liubei)</li>
+			</ul>
+		<h2>曹操军团(h2标签)</h2>
+			<ul id="ccUl">
+				<li id="dianwei" class="caocao">典韦<br>(id=dianwei,class=caocao)</li>
+				<li id="caopi" class="caocao">曹丕<br>(id=caopi,class=caocao)</li>
+				<li id="caozhi" class="caocao">曹植<br>(id=caozhi,class=caocao)</li>
+				<li id="caoren" class="caocao">曹仁<br>(id=caoren,class=caocao)</li>			
+			</ul>
+		<h2>孙权军团(h2标签)</h2>
+			<ul id="ccUl">
+				<li id="huanggai" class="sunquan">黄盖<br>(id=huanggai,class=sunquan)</li>
+				<li id="zhouyu" class="sunquan">周瑜<br>(id=zhouyu,class=sunquan)</li>
+				<li id="lusu" class="sunquan">鲁肃<br>(id=lusu,class=sunquan)</li>
+				<li id="taishici" class="sunquan">太史慈<br>(id=taishici,class=sunquan)</li>			
+			</ul>			
+	</body>
+</html>
+

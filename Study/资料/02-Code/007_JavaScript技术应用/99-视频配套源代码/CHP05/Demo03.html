@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>String对象的match方法</title>
+	</head>
+	<body style="text-align: center;">
+		<textarea id="txt" style=" width: 80%; height: 100px;"></textarea>
+		<br /><br />
+		<input type="button" value="测  试" onclick="MyTest();">
+	</body>
+</html>
+<script type="text/javascript">
+	//match:
+	//(1)匹配成功返回匹配成功的字符串
+	//(2)匹配不成功返回null
+	//(3)全局匹配匹配成功直接返回所有的匹配成功的字符串数组
+	
+	//判断敏感字符串
+	function MyTest()
+	{
+		var str = document.getElementById("txt").value;
+		var exp = /fuck|垃圾|笨蛋/ig;
+		var result = str.match(exp);
+		if(result != null)
+		{
+			alert(result + "属于敏感内容，不要说脏话!");
+			return;
+		}
+		alert("提交成功!");
+	}
+</script>

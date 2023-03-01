@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>结构性伪类选择器</title>
+		<style type="text/css">
+			/*#div1 p:first-child{ background-color: red;}
+			#div1 p:last-child{ background-color: gold;}
+			#div1 p:nth-child(2){ background-color: blue;}*/
+			
+			/*#div1 p:nth-child(even){ background-color: green;}*/
+			
+			#div1 p:first-of-type{ background-color: red;}
+			#div1 p:last-of-type{ background-color: gold;}
+			#div1 p:nth-of-type(2){ background-color: blue;}
+			
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div>我是第一个段落</div>
+			<p>我是第一个段落</p>
+			
+			<div>我是第二个段落</div>
+			<p>我是第二个段落</p>
+			
+			<div>我是第三个段落</div>
+			<p>我是第三个段落</p>
+			
+			<div>我是第四个段落</div>
+			<p>我是第四个段落</p>
+		</div>
+	</body>
+</html>

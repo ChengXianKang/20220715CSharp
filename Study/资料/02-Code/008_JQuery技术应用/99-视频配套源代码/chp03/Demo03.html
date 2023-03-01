@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定事件介绍</title>	
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script>
+			$(function(){
+				// $("#bt1").click(function(){
+				// 	alert("我被点击了");
+				// })
+				
+				//jquery3之后不推荐使用
+				// $("#bt1").bind("click",function(){
+				// 	alert("我被点击了");
+				// })
+				
+				//jquery低版本live,高版本on
+				//on绑定事件支持Jquery新添加元素的事件绑定
+				// $("#bt1").on("click",function(){
+				// 	alert("我被点击了");
+				// })
+				
+				//绑定的事件触发一次
+				$("#bt1").one("click",function(){
+					alert("我被点击了");
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<input id="bt1" type="button" value="点击我"  />
+	</body>
+</html>

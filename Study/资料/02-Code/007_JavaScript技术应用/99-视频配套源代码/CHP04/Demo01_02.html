@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模拟现实时钟</title>
+		<style type="text/css">
+		#clock{width: 400px; height: 400px; margin: 30px auto;
+		position: relative; background-image: url(img/clock.jpg);}
+		
+		#hour{position: absolute; width: 5px; height: 200px;
+		top:100px; left: 198px; z-index: 5;}
+		#halfHour{width: 5px; height: 100px; background-color: red;}
+		
+		#minute{position: absolute; width: 5px; height: 240px;
+		top:80px; left: 198px; z-index: 4;}
+		#halfMinute{width: 5px; height: 120px; background-color: green;}
+		
+		#seconed{position: absolute; width: 5px; height: 280px;
+		top:60px; left: 198px; z-index: 3;}
+		#halfSeconed{width: 5px; height: 140px; background-color: black;}
+		</style>
+	</head>
+	<body>
+		<div id="clock">
+			<div id="hour">
+				<div id="halfHour"></div>
+			</div>
+			<div id="minute">
+				<div id="halfMinute"></div>
+			</div>
+			<div id="seconed">
+				<div id="halfSeconed"></div>
+			</div>
+		</div>
+	<script type="text/javascript">
+		function setTime()
+		{
+			var now = new Date();
+			var myHour = now.getHours();
+			var myMinute = now.getMinutes();
+			var mySeconds = now.getSeconds();
+			if(myHour > 12)
+				myHour = myHour - 12;
+			//计算时针旋转角度
+			var houdeg = (360/12)*myHour;
+			//添加分针的影响
+			houdeg += (30/60)*myMinute;
+			var objHour = document.getElementById("hour");
+			objHour.style.transform = "rotate("+houdeg+"deg)";
+			
+			//计算分针旋转角度
+			var minutedeg = (360/60)*myMinute;
+			//添加秒针的影响
+			minutedeg += 6/60*mySeconds;
+			var objMinute = document.getElementById("minute");
+			objMinute.style.transform = "rotate("+minutedeg+"deg)";
+			
+			//计算秒针旋转角度
+			var seconeddeg = (360/60)*mySeconds;
+			var objSeconede = document.getElementById("seconed");
+			objSeconede.style.transform = "rotate("+seconeddeg+"deg)";			
+			
+		}
+		setTime();
+		setInterval("setTime()",1000);
+	</script>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>查找筛选</title>
+		<style type="text/css">
+			div{margin: 0px; padding: 0px; height: auto; overflow: auto; text-align: center;}
+			.team{clear: both; border: solid 1px black; background-color: pink;}
+			.liubei,.caocao,.sunquan{ width: 250px; height: 100px; margin: 20px; float: left;
+			border: solid 1px black; line-height: 30px; background-color: pink;}
+			#myButtons{line-height: 30px;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#bt1").click(function(){
+					$("*").removeAttr("style");
+					$("body").find("div.caocao").css("backgroundColor","green");
+				});
+				$("#bt2").click(function(){
+					$("*").removeAttr("style");
+					$("body").children("div.team").css("backgroundColor","green");
+				});
+				$("#bt3").click(function(){
+					$("*").removeAttr("style");
+					$("div#zhaoyun").parent().css("backgroundColor","green");
+				});
+				$("#bt4").click(function(){
+					$("*").removeAttr("style");
+					$("div.caocao").parent().css("backgroundColor","green");
+				});
+				$("#bt5").click(function(){
+					$("*").removeAttr("style");
+					$("div#zhaoyun").parents().css("backgroundColor","green");
+				});
+				$("#bt6").click(function(){
+					$("*").removeAttr("style");
+					$("div#dianwei").next().css("backgroundColor","green");
+				});
+				$("#bt7").click(function(){
+					$("*").removeAttr("style");
+					$("div#dianwei").nextAll().css("backgroundColor","green");
+				});
+				$("#bt8").click(function(){
+					$("*").removeAttr("style");
+					$("div#dianwei").nextAll("div").css("backgroundColor","green");
+				});	
+				$("#bt9").click(function(){
+					$("*").removeAttr("style");
+					$("div#machao").prev().css("backgroundColor","green");
+				});
+				$("#bt10").click(function(){
+					$("*").removeAttr("style");
+					$("div#machao").prevAll().css("backgroundColor","green");
+				});
+				$("#bt11").click(function(){
+					$("*").removeAttr("style");
+					$("div#zhangfei").siblings().css("backgroundColor","green");
+				});
+				$("#bt12").click(function(){
+					$("*").removeAttr("style");
+					$("div#zhangfei").siblings().addBack().css("backgroundColor","green");
+				});
+			});
+
+		</script>
+		
+	</head>
+	<body>
+		<div id="myButtons">
+			<input type="button" id="bt1" value="从body中查找他所有的后代div中class为caocao的子元素">
+			<input type="button" id="bt2" value="从body中查找他所有的子元素div中class为team的子元素">
+			<input type="button" id="bt3" value="查找id为zhaoyun的div元素的父元素">
+			<input type="button" id="bt4" value="查找class为caocao的div元素的父元素">
+			<input type="button" id="bt5" value="查找id为zhaoyun的div元素的祖先元素">
+			<input type="button" id="bt6" value="查找id为dianwei的后一个同辈元素">
+			<input type="button" id="bt7" value="查找id为dianwei的后面所有同辈元素">
+			<input type="button" id="bt8" value="查找id为dianwei的后面所有同辈div元素">
+			<input type="button" id="bt9" value="查找id为machao的上一个同辈元素">
+			<input type="button" id="bt10" value="查找id为machao的前面所有同辈元素">
+			<input type="button" id="bt11" value="查找id为zhangfei的所有同辈元素">
+			<input type="button" id="bt12" value="查找id为zhangfei的所有同辈元素(包括自己)">
+		</div>
+		<h2>刘备军团(h2标签)</h2>
+			<div id="lbUl" class="team">
+				<div id="guanyu" class="liubei" title="guanyu">关羽<br>(id=guanyu,class=liubei)</div>
+				<div id="zhangfei" class="liubei">张飞<br>(id=zhangfei,class=liubei)</div>				
+				<div id="zhaoyun" class="liubei">赵云<br>(id=zhaoyun,class=liubei)</div>
+				<div id="machao" class="liubei">马超<br>(id=machao,class=liubei)</div>
+			</div>
+		<h2>曹操军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="dianwei" class="caocao">典韦<br>(id=dianwei,class=caocao)</div>
+				<div id="caopi" class="caocao">曹丕<br>(id=caopi,class=caocao)</div>
+				<div id="caozhi" class="caocao">曹植<br>(id=caozhi,class=caocao)</div>
+				<div id="caoren" class="caocao">曹仁<br>(id=caoren,class=caocao)</div>
+				<span>我是Span标签的内容</span>
+			</div>
+		<h2>孙权军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="huanggai" class="sunquan">黄盖<br>(id=huanggai,class=sunquan)</div>
+				<div id="zhouyu" class="sunquan">周瑜<br>(id=zhouyu,class=sunquan)</div>
+				<div id="lusu" class="sunquan">鲁肃<br>(id=lusu,class=sunquan)</div>
+				<div id="taishici" class="sunquan">太史慈<br>(id=taishici,class=sunquan)</div>			
+			</div>			
+	</body>
+</html>
+

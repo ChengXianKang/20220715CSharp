@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>setInterval实现时钟效果</title>
+
+	</head>
+	<body>
+
+		<h1 id="lblTime">当前时间:</h1>
+	</body>
+</html>
+<script type="text/javascript">
+	function ShowTime()
+	{
+		var now = new Date(); //获取当前时间
+		var myYear = now.getFullYear(); //取年
+		var myMonth = now.getMonth()+1; //取月
+		var myDate = now.getDate(); //取日
+		var myHour = now.getHours(); //时
+		var myMinute = now.getMinutes(); //分
+		var mySeconds = now.getSeconds(); //秒
+		var myWeek = now.getDay(); //取一个星期的第几天
+		var strWeek = "";  //表示汉字内容星期几
+		if(myWeek == 0)
+			strWeek = "星期日";
+		if(myWeek == 1)
+			strWeek = "星期一";
+		if(myWeek == 2)
+			strWeek = "星期二";
+		if(myWeek == 3)
+			strWeek = "星期三";
+		if(myWeek == 4)
+			strWeek = "星期四";
+		if(myWeek == 5)
+			strWeek = "星期五";
+		if(myWeek == 6)
+			strWeek = "星期六";
+		var strTime = myYear+"年"+myMonth+"月"+myDate+"日"+
+		"&nbsp;"+strWeek+"&nbsp;"+myHour+":"+myMinute+":"+mySeconds;
+		document.getElementById("lblTime").innerHTML = "当前时间:"+strTime;
+	}
+	setInterval("ShowTime()",1000);
+</script>

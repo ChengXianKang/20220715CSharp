@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>String对象</title>
+		<script type="text/javascript">
+			function myCharAt()
+			{
+				var str = document.getElementById("txt1").value;
+				var index = document.getElementById("txt2").value;
+				var result = str.charAt(index);
+				alert(result);
+			}
+			function myIndexOf()
+			{
+				var bigStr = document.getElementById("txt3").value;
+				var smallStr = document.getElementById("txt4").value;
+				//查找子字符串在目标字符串首次出现的位置，如果找不到返回-1
+				var result = bigStr.indexOf(smallStr);
+				alert(result);
+			}
+			function MySubstr()
+			{
+				var str = document.getElementById("txt5").value;
+				var start = document.getElementById("txt6").value;
+				var len = document.getElementById("txt7").value;
+				var result = str.substr(start,len);
+				alert(result);
+			}
+			function MySubstring()
+			{
+				var str = document.getElementById("txt8").value;
+				var start = document.getElementById("txt9").value;
+				var end = document.getElementById("txt10").value;
+				var result = str.substring(start,end);
+				alert(result);
+			}
+			function myToUpper()
+			{
+				var str = document.getElementById("txt11").value;
+				var result = str.toUpperCase();
+				alert(result);
+			}
+			function myToLower()
+			{
+				var str = document.getElementById("txt12").value;
+				var result = str.toLowerCase();
+				alert(result);
+			}
+			function mySplit()
+			{
+				var str = document.getElementById("txt13").value;
+				var arr = str.split(',');
+				for(var i = 0;i< arr.length;i++)
+				{
+					alert(arr[i]);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		请输入字符串:<input type="text" id="txt1" />
+		请输入下标:<input type="text" id="txt2" size="5" />
+		<input type="button" value="求字符串该下标下的字符" onclick="myCharAt();" />
+		<br><br>
+		
+		请输入字符串:<input type="text" id="txt3" />
+		请输入子字符串:<input type="text" id="txt4" />
+		<input type="button" value="查询子字符串在目标字符串中首次出现的位置" onclick="myIndexOf();" />
+		<br><br>
+			
+		请输入字符串:<input type="text" id="txt5" />
+		请输入开始位置:<input type="text" id="txt6" size="5" />
+		请输入截取长度:<input type="text" id="txt7" size="5" />
+		<input type="button" value="查询截取后的字符串" onclick="MySubstr();" />
+		<br><br>
+		
+		请输入字符串:<input type="text" id="txt8" />
+		请输入开始位置:<input type="text" id="txt9" size="5" />
+		请输入结束位置:<input type="text" id="txt10" size="5" />
+		<input type="button" value="查询截取后的字符串" onclick="MySubstring()" />
+		<br><br>
+		
+		请输入字符串:<input type="text" id="txt11" />
+		<input type="button" value="字符串转大写" onclick="myToUpper();" />
+		<br><br>
+
+		请输入字符串:<input type="text" id="txt12"  />
+		<input type="button" value="字符串转小写" onclick="myToLower();" />
+		<br><br>
+
+		请输入多个单词(用逗号隔开):<input type="text" id="txt13" />
+		<input type="button" value="切割字符串成数组" onclick="mySplit();" />
+		<br><br>
+	</body>
+</html>

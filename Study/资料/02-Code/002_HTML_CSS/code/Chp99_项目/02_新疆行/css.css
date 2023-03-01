@@ -1,0 +1,39 @@
+/* CSS Document */
+body,div,ul,li,table,tr,td,img,input{ margin:0px; padding:0px; list-style-type:none; font-size:12px;}
+body{ background-color:#2286c6;}
+#container{ width:780px; margin:0px auto 0px auto;}
+#banner{ height:150px; background-image:url(images/banner.jpg);}
+#menu{ height:33px;}
+#menu a{ display:block; width:78px; height:33px; line-height:33px; text-align:center; float:left; background-image:url(images/button1.jpg);}
+#menu a:hover{ background-image:url(images/button1_bg.jpg);}
+#main{ margin-top:1px; overflow:auto;}
+#left{ width:190px; float:left; border:solid 5px #FFFFFF; background-color:#5ea6eb;}
+#center{ width:390px; float:left;  border:solid 5px #FFFFFF; background-color:#FFF; margin-left:1px;}
+#right{ width:168px; float:left;  border:solid 5px #FFFFFF; background-color:#5ea6eb; margin-left:1px;}
+#foot{ border:solid 5px #FFFFFF; background-color:#5ea6eb; text-align:center;}
+#tqyb{ background-image:url(images/lgcWeather.jpg); background-repeat:no-repeat; padding-top:16px;}
+#tqcxtitle{ margin-left:70px; font-weight:bold; color:#FFF;}
+#tqybcontent ul{ margin-top:20px; margin-left:10px;}
+#tqybcontent li{ height:22px; line-height:22px; color:#FFF; background-image:url(images/icon1.gif); background-repeat:no-repeat; background-position:left center; padding-left:10px;}
+
+.mywhitetitle{ color:#003973; font-weight:bold; height:20px; line-height:20px; background-color:#bbddff; background-image:url(images/icon2.gif); background-repeat:no-repeat; background-position:8px center; padding-left:18px;}
+#jrtjcontent{ color:#FFF; text-align:center; line-height:22px;}
+#xctjtitle{ margin-top:10px;}
+#xjfgcontent{ text-align:center;}
+#xjfgcontent img{ margin-top:10px;}
+#xctjcontent ul{ margin-top:10px; margin-left:10px;}
+#xctjcontent li{ height:20px; line-height:20px; background-image:url(images/icon1.gif); background-repeat:no-repeat; background-position:left center; padding-left:10px;}
+#xctjcontent a{ text-decoration:none; color:#FFF;}
+#bgjdtitle{ margin-top:10px;}
+#bgjdcontent ul{ margin-top:10px; margin-left:10px;}
+#bgjdcontent li{ height:20px; line-height:20px; background-image:url(images/icon1.gif); background-repeat:no-repeat; background-position:left center; padding-left:10px;}
+#bgjdcontent a{ text-decoration:none; color:#FFF;}
+
+#ghost{ height:260px; background-image:url(images/ghost.jpg);}
+#mjxz{ background-image:url(images/picture_h1.gif); padding-top:51px; background-repeat:no-repeat; background-position:left top; margin-top:3px;}
+#mjxz img{ margin:4px;}
+
+#xljx{ background-image:url(images/route_h1.gif); background-repeat:no-repeat; background-position:left top; margin-top:3px; padding-top:51px;}
+#xljx ul{ margin-left:20px;}
+#xljx li{ height:20px; line-height:20px; background-image:url(images/icon1.gif); background-repeat:no-repeat; background-position:left center; padding-left:10px;}
+#xljx a{ color:#004e8a; text-decoration:none;}

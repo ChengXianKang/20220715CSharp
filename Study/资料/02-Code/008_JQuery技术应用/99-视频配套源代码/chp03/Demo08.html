@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单验证</title>
+		<style type="text/css">
+			.errInfo{color: red; }
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script>
+			$(function(){
+				var errImg = "<img src='img/li_err.gif'>";
+				var okImg = "<img src='img/li_ok.gif'>";
+				var result = true; //表示可以提交
+				//用户名 
+				$("#txtAccount").blur(function(){
+					if($(this).val().length == 0)
+					{
+						$(this).next().html(errImg+" 用户名不能为空!");
+						result = false;
+					}
+					else if($(this).val().length < 6 || $(this).val().length > 12)
+					{
+						$(this).next().html(errImg+" 用户名长度必须是6-12位之间!");
+						result = false;
+					}
+					else
+					{
+						$(this).next().html(okImg);
+					}
+				});
+				//密码
+				$("#txtPwd").blur(function(){
+					if($(this).val().length == 0)
+					{
+						$(this).next().html(errImg+" 密码不能为空!");
+						result = false;
+					}
+					else if($(this).val().length < 6 || $(this).val().length > 12)
+					{
+						$(this).next().html(errImg+" 密码长度必须是6-12位之间!");
+						result = false;
+					}
+					else
+					{
+						$(this).next().html(okImg);
+					}
+				});	
+				//密码确认
+				$("#txtPwdOk").blur(function(){
+					if($(this).val().length == 0)
+					{
+						$(this).next().html(errImg+" 密码确认不能为空!");
+						result = false;
+					}
+					else if($(this).val() != $("#txtPwd").val())
+					{
+						$(this).next().html(errImg+" 两次密码输入不一致!");
+						result = false;
+					}
+					else
+					{
+						$(this).next().html(okImg);
+					}
+				});
+				//邮箱
+				$("#txtMail").blur(function(){
+					var exp = /^\w+@\w+\.[a-zA-Z]{2,3}(\.[a-zA-Z]{2,3})?$/;
+					if($(this).val().length == 0)
+					{
+						$(this).next().html(errImg+" 邮箱不能为空!");
+						result = false;
+					}
+					else if(!exp.test($(this).val()))
+					{
+						$(this).next().html(errImg+" 邮箱格式不正确!");
+						result = false;
+					}
+					else
+					{
+						$(this).next().html(okImg);
+					}
+				});
+				//电话
+				$("#txtPhone").blur(function(){
+					var exp = /^(13|15|18)\d{9}$/;
+					if($(this).val().length == 0)
+					{
+						$(this).next().html(errImg+" 电话不能为空!");
+						result = false;
+					}
+					else if(!exp.test($(this).val()))
+					{
+						$(this).next().html(errImg+" 电话格式不正确!");
+						result = false;
+					}
+					else
+					{
+						$(this).next().html(okImg);
+					}
+				});
+				//性别
+				$("input[name=sex]").blur(function(){
+					var objs = $("input[name=sex]:checked");
+					if(objs.length == 0)
+					{
+						$(this).parent().find("span").html(errImg+" 请选择性别!");
+						result = false;
+					}
+					else
+					{
+						$(this).parent().find("span").html(okImg);
+					}
+				})
+				//专业
+				$("#selProfessional").blur(function(){
+					if($(this).val().length == 0)
+					{
+						$(this).next().html(errImg+" 请选择专业!");
+						result = false;
+					}
+					else
+					{
+						$(this).next().html(okImg);
+					}
+				});				
+				//爱好
+				$("input[name=hobby]").blur(function(){
+					var objs = $("input[name=hobby]:checked");
+					if(objs.length < 3)
+					{
+						$(this).parent().find("span").html(errImg+" 爱好至少选3项!");
+						result = false;
+					}
+					else
+					{
+						$(this).parent().find("span").html(okImg);
+					}
+				});
+				//表单提交		
+				$("#myForm").submit(function(){
+					result = true;
+					$("#txtAccount").trigger("blur");
+					$("#txtPwd").trigger("blur");
+					$("#txtPwdOk").trigger("blur");
+					$("#txtMail").trigger("blur");
+					$("#txtPhone").trigger("blur");
+					$("input[name=sex]").trigger("blur");
+					$("#selProfessional").trigger("blur");
+					$("input[name=hobby]").trigger("blur");
+					return result;
+				})
+			});
+		</script>
+		
+	</head>
+	<body>
+		<form id="myForm" action="Demo08_OK.html">
+		<table width="1000" align="center">
+			<caption>用户注册</caption>
+			<tr>
+				<td width="300" align="right" height="30">用户名:</td>
+				<td width="700">
+					<input type="text" id="txtAccount" name="txtAccount">
+					<span class="errInfo"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">密码:</td>
+				<td width="700"><input type="password" id="txtPwd" name="txtPwd">
+					<span class="errInfo"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">密码确认:</td>
+				<td width="700"><input type="password" id="txtPwdOk" name="txtPwdOk">
+					<span class="errInfo"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">邮箱:</td>
+				<td width="700"><input type="text" id="txtMail" name="txtMail">
+					<span class="errInfo"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">联系电话:</td>
+				<td width="700"><input type="text" id="txtPhone" name="txtPhone">
+					<span class="errInfo"></span>
+				</td>
+			</tr>			
+			<tr>
+				<td width="300" align="right" height="30">性别:</td>
+				<td width="700">
+					<input type="radio" name="sex" id="rdBoy" value="男">男
+					<input type="radio" name="sex" id="rdGirl" value="女">女	
+					<span class="errInfo"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">专业:</td>
+				<td width="700">
+					<select id="selProfessional" name="selProfessional">
+						<option value="">--请选择--</option>
+						<option value="软件开发">软件开发</option>
+						<option value="电子商务">电子商务</option>
+						<option value="国际贸易">国际贸易</option>
+						<option value="工商管理">工商管理</option>
+						<option value="高级护理">高级护理</option>
+					</select>
+					<span class="errInfo"></span>
+				</td>
+			</tr>			
+			<tr>
+				<td width="300" align="right" height="30">爱好:</td>
+				<td width="700" >
+					<input type="checkbox" name="hobby" value="抽烟" />抽烟
+					<input type="checkbox" name="hobby" value="喝酒" />喝酒
+					<input type="checkbox" name="hobby" value="打游戏" />打游戏
+					<input type="checkbox" name="hobby" value="烫头发" />烫头发
+					<input type="checkbox" name="hobby" value="足球" />足球
+					<input type="checkbox" name="hobby" value="篮球" />篮球
+					<span class="errInfo"></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">自我介绍:</td>
+				<td width="700">
+					<textarea id="mySelf" rows="10" cols="60" name="mySelf"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">&nbsp;</td>
+				<td width="700">
+					<input type="submit" value="注册" />
+					<input type="reset" value="取消" />
+				</td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>

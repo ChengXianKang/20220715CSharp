@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Image对象</title>
+		<script type="text/javascript">
+			function ChangeImg(url)
+			{
+				var obj = document.getElementById("myImg");
+				obj.src = "img/" + url;
+			}
+		</script>
+	</head>
+	<body>
+		<div style="text-align: center;">
+			<img id="myImg" width="300" height="300" src="img/bkhm.jpg" />
+		</div>
+		<div style="text-align: center;">
+			<input type="button" value="男神" onclick="ChangeImg('bkhm.jpg');" />
+			<input type="button" value="女神" onclick="ChangeImg('glm.jpg');" />
+			<input type="button" value="斗图" onclick="ChangeImg('ym.jpg');" />
+		</div>
+	</body>
+</html>

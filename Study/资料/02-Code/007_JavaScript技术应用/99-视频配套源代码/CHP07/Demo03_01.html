@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的日历</title>
+		<style type="text/css">
+			body{ text-align: center;}
+			#year,#month{ width: 60px;}
+			.myTable{border-collapse: collapse; margin: 10px auto;}
+			.myTable td,.myTable th{ width: 50px; height: 50px;
+			border: solid 1px #9999EE;}
+			.myTable th{ background-color: #EEEEFF;}
+			.grayFont{ color: #999999;}
+			.redback{ background-color: red;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input id="year" type="number" min="1900" onchange="ShowCalendar();" /> 年
+			<input id="month" type="number" min="1" max="12" onchange="ShowCalendar();" /> 月
+		</div>
+		<div id="myCalendar">
+			
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function GetMaxDays(y,m) //根据年份月份求天数
+	{
+		if(m==1 || m==3 || m==5 || m==7 || m==8 || m==10 || m==12)
+			return 31;
+		if(m==4 || m==6 || m==9 || m==11)
+			return 30;
+		if(m == 2)
+		{
+			//下列两个条件有一个成立就是闰年
+			//（1）年可以被4整除，但是不能被100整除
+			//（2）年可以被400整除
+			if((y%4==0 && y%100!=0) || y%400==0)
+				return 29;
+			else
+				return 28;
+		}
+	}
+	function ShowCalendar()
+	{
+		var year = document.getElementById("year").value; //年份
+		var month = document.getElementById("month").value //月份
+		var nowStart = 1; //本月开始数字
+		var nowEnd = GetMaxDays(year,month); //本月结束
+		var nextStart = 1; //下月开始数字
+		//求上月结束数字
+		var prevEnd = 0; //上月结束数字
+		if(month == 1)
+			prevEnd = GetMaxDays(year-1,12);
+		else
+			prevEnd = GetMaxDays(year,month-1);
+		//求上月开始数字(上月结束数字-当月的第一天的星期几+1)
+		//(当月的第一天的星期天除外)
+		var weekday = (new Date(year,month-1,1)).getDay(); //当月的第一天的星期几
+		var prevStart = 0; //上月的开始数字
+		if(weekday == 0)
+			prevStart = prevEnd-6;
+		else
+			prevStart = prevEnd-weekday+1;
+		var str =  ""; //保存日历的table表格里面的HTML代码
+		str += "<table class=\"myTable\">";
+		str += "<tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>";
+		for(var i=1;i<=6;i++)
+		{
+			str += "<tr>";
+			for(var j=1;j<=7;j++)
+			{
+				if(prevStart <= prevEnd)
+					str += "<td class=\"grayFont\">"+(prevStart++)+"</td>";
+				else if(nowStart <= nowEnd)
+				{
+					var nowDate = new Date();
+					if(year == nowDate.getFullYear() && month == nowDate.getMonth()+1
+						&& nowStart == nowDate.getDate())
+						str += "<td class=\"redback\">"+(nowStart++)+"</td>";
+					else
+						str += "<td>"+(nowStart++)+"</td>";
+				}
+					
+				else
+					str += "<td class=\"grayFont\">"+(nextStart++)+"</td>";
+			}
+			str += "</tr>";
+		}
+		str += "</table>";	
+		document.getElementById("myCalendar").innerHTML = str;		
+	}
+	var now = new Date();
+	document.getElementById("year").value = now.getFullYear();
+	document.getElementById("month").value = now.getMonth()+1;
+	document.getElementById("year").max = now.getFullYear()+100;
+	ShowCalendar();
+</script>
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS中数据类型和变量</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//undefined类型
+			//alert(typeof a);
+//			var a;
+//			alert(a);
+//			alert(typeof a);
+
+			//number类型
+//			var a = 666.66;
+//			alert(a);
+//			alert(typeof a);
+			
+//			var x = 2;
+//			var y = 'abc';
+//			var z = x * 'abc';
+//			alert(z);  //NaN(not a number)
+//			alert(typeof z); //number类型
+			
+			//boolean类型：只能是true或false
+//			var b = false;
+//			alert(b);
+//			alert(typeof b);
+
+			//string：字符串（支持"",也支持''）
+//			var str1 = "hello,JS";
+//			var str2 = 'Hello,JS';
+//			alert(typeof str1);
+//			alert(typeof str2);
+
+			//object:对象类型
+//			var now = new Date();
+//			alert(now);
+//			alert(typeof now);
+
+//			var a = null;
+//			alert(a);
+//			alert(typeof a);
+
+//			var arr = [1,2,3,4,5];
+//			alert(arr);
+//			alert(typeof arr);
+
+
+//创建你自己的个人资料，把各项资料放入相应变量中，并使用表格打印出来。
+//个人资料包括 学号、姓名、出身年月、身份证号码、HTML考试成绩
+			var num = '32646654';
+			var name = '刘德华';
+			var birth = '1984-9';
+			var code = '420105458745896574';
+			var html = 95;
+			document.write("<table border='1' align='center'>");
+				document.write("<tr>");
+					document.write("<td>学号</td><td>姓名</td><td>出身年月</td><td>身份证号</td><td>成绩</td>");
+				document.write("</tr>");
+				document.write("<tr>");
+					document.write("<td>"+num+"</td>");
+					document.write("<td>"+name+"</td>");
+					document.write("<td>"+birth+"</td>");
+					document.write("<td>"+code+"</td>");
+					document.write("<td>"+html+"</td>");
+				document.write("</tr>");
+			document.write("</table>");
+			
+		</script>
+	</body>
+</html>

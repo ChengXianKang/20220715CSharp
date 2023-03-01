@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MyBBSWebApi.Models</id>
+    <version>1.3.2</version>
+    <authors>Ace</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="c:\Users\Ace\Desktop\B站BBS\MyBBSWebApi\MyBBSWebApi.Models\bin\Debug\net5.0\MyBBSWebApi.Models.dll" target="lib\net5.0\MyBBSWebApi.Models.dll" />
+  </files>
+</package>

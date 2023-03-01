@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用attr修改元素的属性</title>
+		<style type="text/css">
+			div{line-height: 30px;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#bt1").click(function(){
+					var imgWidth = parseInt($("#myImg").attr("width"));
+					$("#myImg").attr("width",imgWidth+20);
+				});
+				$("#bt2").click(function(){
+					var imgWidth = parseInt($("#myImg").attr("width"));
+					$("#myImg").attr("width",imgWidth-20);					
+				});				
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<input id="bt1" type="button" value="放大" />
+			<input id="bt2" type="button" value="缩小" />
+		</div>
+		<div>
+			<img id="myImg" width="200" src="img/dog.jpg">
+		</div>
+	</body>
+</html>

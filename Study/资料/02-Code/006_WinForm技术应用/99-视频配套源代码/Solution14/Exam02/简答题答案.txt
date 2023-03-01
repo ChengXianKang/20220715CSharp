@@ -1,0 +1,16 @@
+1、什么是装箱和拆箱？（5分）
+装箱：将值类型转换为 object 类型或由此值类型实现的任何接口类型。
+拆箱：将object类型或接口类型转换为实际的值类型。
+
+2、列举ADO.NET在操作数据库时，常用的对象及作用。（5分）
+SqlConnection：连接对象，用于执行与数据库的连接。
+SqlCommand：命令对象，用于对数据库执行SQL语句。
+SqlDataAdapter：适配器对象，用于填充数据集和更新数据库。
+SqlParameter：参数对象，用于执行参数化SQL语句。
+SqlDataReader：读取器对象，用于从数据库中快速逐行读取数据。
+SqlTransaction：事务对象，用于执行数据库事务。
+
+3、员工表Emp中有一列为员工所属部门编号DeptID，有一列为员工年龄Age，请用一条SQL语句查询出各DeptID和该DeptID对应的员工平均年龄。（5分）
+select DeptID 部门编号,avg(Age) 平均年龄 from Emp group by DeptID
+
+ 

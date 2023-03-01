@@ -1,0 +1,81 @@
+<!--jQuery对象.trigger(type);
+其中参数type为触发事件的类型。trigger()方法的功能是在所选择的元素上触发指定类型的事件。-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>trigger()</title>
+		<style type="text/css">
+			#foot{ width: 900px; margin: 0px auto; }
+			#myTable{ width: 900px; margin: 0px auto; 
+			 border-collapse: collapse;}
+			#myTable th,#myTable td{border:solid 1px green;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script>
+			$(function(){
+				$("#selAll").click(function(){
+					var isChecked = $(this).prop("checked");
+					$("input[name=stuItem]").prop("checked",isChecked);
+				})
+				$("#myASelAll").click(function(){
+					$("#selAll").trigger("click");
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<table cellspacing="1" id="myTable">
+			<tr>
+				<th width="20"><input type="checkbox" id="selAll" /></th>
+				<th width="200">姓名</th>
+				<th width="200">性别</th>
+				<th width="200">专业</th>
+				<th width="200">爱好</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="stuItem" /></td>
+				<td>刘备</td>
+				<td>男</td>
+				<td>软件开发</td>
+				<td>抽烟</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="stuItem" /></td>
+				<td>关羽</td>
+				<td>男</td>
+				<td>国际贸易</td>
+				<td>喝酒</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="stuItem" /></td>
+				<td>张飞</td>
+				<td>男</td>
+				<td>园林设计</td>
+				<td>烫头发</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="stuItem" /></td>
+				<td>赵云</td>
+				<td>男</td>
+				<td>平面设计</td>
+				<td>抽烟</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="stuItem" /></td>
+				<td>黄忠</td>
+				<td>男</td>
+				<td>影视制作</td>
+				<td>玩游戏</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="stuItem" /></td>
+				<td>小乔</td>
+				<td>女</td>
+				<td>高级护理</td>
+				<td>唱歌</td>
+			</tr>
+		</table>
+		<div id="foot"><a id="myASelAll" href="javascript:void(0);">全选</a></div>
+	</body>
+</html>

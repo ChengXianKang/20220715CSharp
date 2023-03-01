@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>正则表达式exec方法</title>
+</head>
+<body style="text-align: center;">
+	<textarea id="txt" style=" width: 80%; height: 100px;"></textarea>
+	<br /><br />
+	<input type="button" value="测  试" onclick="myTest();">
+</body>
+</html>
+<script type="text/javascript">
+	//test方法：匹配成功返回true,匹配失败返回false
+	//exec方法：返回值很复杂
+	//(1)直接通过返回值得到匹配成功的字符串
+	//(2)返回值index属性可以取到匹配成功的字符串的位置
+	//(3)匹配失败，返回null
+	
+	//判断敏感字符串
+	function myTest()
+	{
+		//普通匹配模式
+		// var str = document.getElementById("txt").value;
+		// var exp = /fuck|垃圾|笨蛋/i;
+		// var result = exp.exec(str);
+		// if(result != null)
+		// {
+		// 	alert("在"+result.index+"处，发现了脏话："+result);
+		// 	return;
+		// }
+		// alert("提交成功!");
+		
+		//全局匹配：
+		//在exec方法执行中，代表可以经过反复调用exec来遍历所有字符串中匹配成功的文本
+		var str = document.getElementById("txt").value;
+		var exp = /fuck|垃圾|笨蛋/ig;
+		var count = 0;
+		while(true)
+		{
+			var result = exp.exec(str);
+			if(result == null)
+				break;
+			alert("在"+result.index+"处，发现了脏话："+result);
+			count++;
+		}
+		alert("一共说脏话"+count+"次");
+		
+	}
+</script>

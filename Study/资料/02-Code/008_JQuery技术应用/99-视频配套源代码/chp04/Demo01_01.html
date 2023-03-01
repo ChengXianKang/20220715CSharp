@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>toggle()方法进行显示隐藏</title>
+		<style type="text/css">
+			*{ margin: 0px; padding: 0px; list-style-type: none;}
+			#menu{ margin: 30px; width: 120px;}
+			#menu li{ text-align: center; height: 30px; line-height: 30px;
+			border: solid 1px hotpink; border-bottom: none;
+			}
+			#menu li a{ text-decoration: none;}
+			#menu li.title{ background-color: orange;}
+			#menu li.lastItem{border: none; border-top: solid 1px hotpink;;
+			background: url(img/up.jpg) no-repeat center top;}
+			#menu li.down{background: url(img/down.jpg) no-repeat center top;}
+		</style>
+		<script src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				$("#menu li.lastItem").click(function(){
+					$("#menu li:gt(5):not(.lastItem)").toggle();
+					$(this).toggleClass("down");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="menu">
+		  <ul>
+		    <li class="title">商品服务分类</li>
+		    <li><a href="#">鞋包配饰</a></li>
+		    <li><a href="#">运动户外</a></li>
+		    <li><a href="#">珠宝手表</a></li>
+		    <li><a href="#">手机数码</a></li>
+		    <li><a href="#">家电办公</a></li>
+		    <li><a href="#">护肤彩妆</a></li>
+		    <li><a href="#">母婴用品</a></li>
+		    <li><a href="#">家纺居家</a></li>
+		    <li class="lastItem"></li>
+		  </ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册表单验证</title>
+		<script type="text/javascript">
+			function reg()
+			{
+				var msg = ""; //保存所有的提示信息
+				//用户名验证
+				var acc = document.getElementById("txtAccount").value;
+				if(acc.length == 0)
+					msg += "用户名不能为空!\n";
+				if(acc.length < 6 || acc.length > 12)
+					msg += "用户名长度必须6-12位之间!\n";
+				//密码验证
+				var pwd = document.getElementById("txtPwd").value;
+				var pwdok = document.getElementById("txtPwdOk").value;
+				if(pwd.length == 0)
+					msg += "密码不能为空!\n";
+				if(pwd.length < 6 || pwd.length > 12)
+					msg += "密码长度必须6-12位之间!\n";
+				if(pwd != pwdok)
+					msg += "两次输入密码不一致!\n";
+				//性别验证
+				var objBoy = document.getElementById("rdBoy");
+				var objGirl = document.getElementById("rdGirl");
+				if(objBoy.checked == false && objGirl.checked == false)
+					msg += "必须选择性别!\n";
+				//专业验证 
+				var pro = document.getElementById("selProfessional").value;
+				if(pro.length == 0)
+					msg += "必须选择专业!\n";
+				//爱好验证
+				var hobbys = document.getElementsByName("hobby");
+				var selHobby = false; //假设一个都没选
+				for(var i=0;i<hobbys.length;i++)
+				{
+					if(hobbys[i].checked == true)
+					{
+						selHobby = true;
+						break;
+					}						
+				}
+				if(selHobby == false)
+					msg += "至少选择一个爱好!\n";
+				
+				if(msg.length != 0)
+				{
+					alert(msg);
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		
+		<form action="Demo12_01.html" onsubmit="return reg();">
+		<table width="1000" align="center">
+			<caption>用户注册</caption>
+			<tr>
+				<td width="300" align="right" height="30">用户名:</td>
+				<td width="700"><input type="text" id="txtAccount">
+					<span style="color: red;">*</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">密码:</td>
+				<td width="700"><input type="password" id="txtPwd">
+					<span style="color: red;">*</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">密码确认:</td>
+				<td width="700"><input type="password" id="txtPwdOk">
+					<span style="color: red;">*</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">性别:</td>
+				<td width="700">
+					<input type="radio" name="sex" id="rdBoy" value="男">男
+					<input type="radio" name="sex" id="rdGirl" value="女">女	
+					<span style="color: red;">*</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">专业:</td>
+				<td width="700">
+					<select id="selProfessional">
+						<option value="">--请选择--</option>
+						<option value="软件开发">软件开发</option>
+						<option value="电子商务">电子商务</option>
+						<option value="国际贸易">国际贸易</option>
+						<option value="工商管理">工商管理</option>
+						<option value="高级护理">高级护理</option>
+					</select>
+					<span style="color: red;">*</span>
+				</td>
+			</tr>			
+			<tr>
+				<td width="300" align="right" height="30">爱好:</td>
+				<td width="700">
+					<input type="checkbox" name="hobby" value="抽烟" />抽烟
+					<input type="checkbox" name="hobby" value="喝酒" />喝酒
+					<input type="checkbox" name="hobby" value="打游戏" />打游戏
+					<input type="checkbox" name="hobby" value="烫头发" />烫头发
+					<input type="checkbox" name="hobby" value="足球" />足球
+					<input type="checkbox" name="hobby" value="篮球" />篮球
+					<span style="color: red;">*</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">自我介绍:</td>
+				<td width="700">
+					<textarea id="mySelf" rows="10" cols="60"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">&nbsp;</td>
+				<td width="700">
+					<input type="submit" value="注册" />
+					<input type="reset" value="取消" />
+				</td>
+			</tr>
+		</table>	
+		</form>
+	
+	</body>
+</html>

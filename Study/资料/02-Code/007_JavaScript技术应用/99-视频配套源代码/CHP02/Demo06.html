@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>常用事件</title>
+		<script type="text/javascript">
+			function ClickFun()
+			{
+				alert('我被你点中了!');	
+			}
+			function focusFun()
+			{
+				alert('我获得焦点了!');
+			}
+			function blurFun()
+			{
+				alert('不要离开我!');
+			}
+			function changeFun()
+			{
+				alert('下拉框选中的项被改变！');
+			}
+			function overFun()
+			{
+				alert('别摸我!');
+			}
+			function outFun()
+			{
+				alert('不要离开我!');
+			}
+			function submitFun()
+			{
+				alert('表单数据马上要提交了!');
+			}
+		</script>
+	</head>
+	<body onload="alert('页面被加载！');">
+		<input type="button" value="快来点击我吧" onclick="ClickFun();" />
+		<input type="text"  onblur="blurFun()" />
+		<input type="text" onchange="changeFun();" />
+		<select onchange="changeFun();">
+			<option>A站</option>
+			<option>B站</option>
+			<option>C站</option>
+			<option>D站</option>
+		</select>
+		<br /><br />
+		<img src="img/1.jpg" onmouseover="overFun()" onmouseout="outFun()" />
+		<form onsubmit="submitFun();">
+			用户名：<input type="text" /> <br /><br />
+			密    码：<input type="password" /> <br /><br />
+			<input type="submit" value="登  录"  />
+		</form>
+	</body>
+</html>

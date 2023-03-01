@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4*4数字华容道游戏</title>
+		<style type="text/css">
+			#main{width: 750px; height: auto; overflow: hidden; margin: 5px auto;}
+			#left{ width: 362px; float: left;}
+			#right{ width: 362px; float: right;}
+			.myTitle{ text-align: center; height: 40px; line-height: 40px;
+			font-size: 16px; font-weight: bold;}
+			#myContainer,#myAnswerContainer{ width: 360px; height: 360px;
+			border: solid 1px #8B0000;}
+			#myAnswerContainer div,#myContainer div{ width: 80px; height: 80px; margin: 5px;
+			float: left; background-color: #8B0000; line-height: 80px;
+			color: white; font-size: 30px; text-align: center;
+			}
+			#result{ font-size: 40px; font-weight:bold; text-align: center;}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="left">
+				<div class="myTitle">
+					<input type="button" value="重新开始游戏" onclick="window.location.reload();" />
+					(上下左右来移动$)
+				</div>
+				<div id="myContainer">
+					11111
+				</div>
+			</div>
+			<div id="right">
+				<div class="myTitle">
+					正确答案
+				</div>
+				<div id="myAnswerContainer">
+					
+				</div>				
+			</div>
+		</div>
+		<div id="result">
+			游戏进行中......
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var myArr = [["1", "2", "3", "4"],
+				 ["5", "6", "7", "8"]
+				,["9","10","11","12"],
+				 ["13","14","15","$"]];
+	var rowIndex = 3; //记录$行号
+	var colIndex = 3; //记录$列号
+	//二维数组两个元素交换(row1,col1-第一个数下标，row2,col2-第二个数小标)
+	function swapArr(row1,col1,row2,col2)
+	{
+		var temp = myArr[row1][col1];
+		myArr[row1][col1] = myArr[row2][col2];
+		myArr[row2][col2] = temp;
+	}
+	//由正确答案让$不停移动多次，将myArr数组元素顺序进行打乱
+	function SetRndNumber()
+	{
+		for(var i=1;i<=1000;i++)
+		{
+			var myRnd = Math.ceil(Math.random()*4);
+			//myRnd;1-上，2-右，3-下，4-左
+			if(myRnd == 1) //上
+			{
+				//myArr[rowIndex][colIndex]<==>myArr[rowIndex-1][colIndex]
+				if(rowIndex == 0) 
+					continue;
+				swapArr(rowIndex,colIndex,rowIndex-1,colIndex);
+				rowIndex--;
+			}
+			if(myRnd == 2) //右
+			{
+				//myArr[rowIndex][colIndex]<==>myArr[rowIndex][colIndex+1]
+				if(colIndex == 3) 
+					continue;
+				swapArr(rowIndex,colIndex,rowIndex,colIndex+1);
+				colIndex++;
+			}
+			if(myRnd == 3) //下
+			{
+				//myArr[rowIndex][colIndex]<==>myArr[rowIndex+1][colIndex]
+				if(rowIndex == 3) 
+					continue;
+				swapArr(rowIndex,colIndex,rowIndex+1,colIndex);
+				rowIndex++;
+			}
+			if(myRnd == 4) //左
+			{
+				//myArr[rowIndex][colIndex]<==>myArr[rowIndex][colIndex-1]
+				if(colIndex == 0) 
+					continue;
+				swapArr(rowIndex,colIndex,rowIndex,colIndex-1);
+				colIndex--;
+			}
+		}
+	}
+	//生成左边DIV容器的HTML内容
+	function createUI()
+	{
+		var objContainer = document.getElementById("myContainer");
+		objContainer.innerHTML="";
+		for(var i=0; i<= 3;i++)
+		{
+			for(var j=0; j<= 3;j++)
+			{
+				var obj = document.createElement("div");
+				obj.innerHTML = myArr[i][j];
+				if(i==rowIndex && j==colIndex)
+					obj.style.backgroundColor = "green";
+				objContainer.appendChild(obj);
+			}			
+		}
+	}
+	//生成答案DIV里面的HTML内容
+	function createAnswerUI()
+	{
+		var objContainer = document.getElementById("myAnswerContainer");
+		objContainer.innerHTML="";
+		for(var i=0; i<= 3;i++)
+		{
+			for(var j=0; j<= 3;j++)
+			{
+				var obj = document.createElement("div");
+				obj.innerHTML = myArr[i][j];
+				if(i==3 && j==3)
+					obj.style.backgroundColor = "green";
+				objContainer.appendChild(obj);
+			}			
+		}
+	}
+	//判断移动之后游戏是否胜利
+	function IsWin()
+	{
+		if(rowIndex !=3 || colIndex != 3)
+			return false;
+		for(var i=0;i<=3;i++)
+		{
+			for(var j=0;j<=3;j++)
+			{
+				if(i==3 && j==3)  //最后一个格子不需要判断
+					break;
+				if(myArr[i][j] != i*4+j+1)
+				{
+					return fasle;
+				}
+			}
+		}
+		return true;
+	}
+	document.onkeydown = function(e)
+	{
+		if(e.keyCode != 38 && e.keyCode != 40 && e.keyCode !=37 && e.keyCode !=39)
+			return;
+		//上：38 下：40	左：37	右：39
+		if(e.keyCode == 38)
+		{
+			if(rowIndex == 0)
+				return;
+			swapArr(rowIndex,colIndex,rowIndex-1,colIndex);
+			rowIndex--;
+		}
+		if(e.keyCode == 40)
+		{
+			if(rowIndex == 3)
+				return;
+			swapArr(rowIndex,colIndex,rowIndex+1,colIndex);
+			rowIndex++;			
+		}
+		if(e.keyCode == 37)
+		{
+			if(colIndex == 0)
+				return;
+			swapArr(rowIndex,colIndex,rowIndex,colIndex-1);
+			colIndex--;		
+		}
+		if(e.keyCode == 39)
+		{
+			if(colIndex == 3)
+				return;
+			swapArr(rowIndex,colIndex,rowIndex,colIndex+1);
+			colIndex++;			
+		}
+		createUI();
+		//判断游戏是否胜利
+		var result = IsWin();
+		if(result == true)
+		{
+			document.getElementById("result").innerHTML = "游戏胜利！";
+			document.getElementById("result").style.color = "darkred";
+		}
+		else
+		{
+			document.getElementById("result").innerHTML = "游戏进行中......";
+			document.getElementById("result").style.color = "black";			
+		}
+	}	
+	createAnswerUI();
+	SetRndNumber();
+	createUI();
+</script>

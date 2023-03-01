@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>贪吃蛇</title>
+		<style type="text/css">
+			#main{ width: 800px; height:auto; margin: 5px auto; text-align: center;}
+			#startDiv{ width: 100px; height: 26px; margin: 5px auto;}
+			#startGame{ width: 100px; height: 26px;}
+			#map{ width: 800px; height: 600px; border: solid 2px pink; 
+			position: relative;}
+			#map div{ border-radius: 36%; position: absolute;}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="startDiv">
+				<input id="startGame" type="button" value="开始游戏" onclick="StartGame();" />
+			</div>
+			<div id="map">
+				
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var map = document.getElementById("map");
+	var snakeBody = []; //保存蛇位置
+	var cakePosition = []; //保存豆子位置
+	var width = 20;  var height = 20;  //规定每节蛇的大小
+	var direction = 4; //1,2,3,4:上右下左
+	var myInterval;
+	function prepareGame()  //进行初始状态数据准备
+	{
+		clearInterval(myInterval);
+		map.innerHTML = "";
+		direction = 4;
+		snakeBody = [{x:800-width*3,y:0,color:GetRndColor()},
+					{x:800-width*2,y:0,color:GetRndColor()},
+					{x:800-width,y:0,color:GetRndColor()}];
+		cakePosition = {x:width*Math.floor(Math.random()*40),
+						y:height*Math.floor(Math.random()*30),
+						color:GetRndColor()};
+	}
+	function showSnakeAndCake()
+	{
+		map.innerHTML = "";
+		//显示蛇
+		for(var i = 0; i < snakeBody.length;i++)
+		{
+			var snake = document.createElement("div");
+			snake.style.width = width+"px";
+			snake.style.height = height+"px";
+			snake.style.left = snakeBody[i].x+"px";
+			snake.style.top = snakeBody[i].y+"px";
+			snake.style.backgroundColor = snakeBody[i].color;
+			map.appendChild(snake);
+		}
+		//显示豆子
+		var cake = document.createElement("div");
+		cake.style.width = width+"px";
+		cake.style.height = height+"px";
+		cake.style.left = cakePosition.x+"px";
+		cake.style.top = cakePosition.y+"px";
+		cake.style.backgroundColor = cakePosition.color;
+		map.appendChild(cake);
+	}
+	function moveSnake()
+	{
+		//移动之前记录尾巴的位置
+		var snakeTail = {x:snakeBody[snakeBody.length-1].x,
+					y:snakeBody[snakeBody.length-1].y,
+					color:cakePosition.color}
+		//除了蛇头之外其他节点的移动
+		for(var i = snakeBody.length-1;i > 0;i--)
+		{
+			snakeBody[i].x = snakeBody[i-1].x;
+			snakeBody[i].y = snakeBody[i-1].y;
+		}
+		switch(direction)
+		{
+			case 1: snakeBody[i].y -= height; break;
+			case 2: snakeBody[i].x += width; break;
+			case 3:	snakeBody[i].y += height; break;
+			case 4:	snakeBody[i].x -= width; break;
+		}
+		if(snakeBody[0].x==cakePosition.x && snakeBody[0].y==cakePosition.y)
+		{
+			snakeBody.push(snakeTail);
+			cakePosition.color = GetRndColor();
+			cakePosition.x = width*Math.floor(Math.random()*40);
+			cakePosition.y = height*Math.floor(Math.random()*30);
+		}
+		showSnakeAndCake();
+		//撞墙死
+		if(snakeBody[0].x < 0 || snakeBody[0].x > 800-width
+			|| snakeBody[0].y < 0 || snakeBody[0].y > 600-height)
+		{
+			CloseGame("撞墙了!");
+			return;
+		}
+		//自己吃自己
+		for(var i = 1;i < snakeBody.length;i++)
+		{
+			if(snakeBody[0].x == snakeBody[i].x && 
+				snakeBody[0].y == snakeBody[i].y)
+			{
+				CloseGame("自己把自己吃了!");
+				return;
+			}
+		}
+		
+	}
+	function CloseGame(dieInfo)
+	{
+		clearInterval(myInterval);
+		map.innerHTML = "";
+		alert(dieInfo + ",Game Over!");
+	}
+	document.onkeydown = function(e)
+	{
+		//上：38 下：40	左：37	右：39
+		switch(e.keyCode)
+		{
+			case 38:
+				if(snakeBody[0].x != snakeBody[1].x)
+					direction = 1;
+				break;
+			case 40:
+				if(snakeBody[0].x != snakeBody[1].x)
+					direction = 3;
+				break;
+			case 37:
+				if(snakeBody[0].y != snakeBody[1].y)
+					direction = 4;
+				break;				
+			case 39:
+				if(snakeBody[0].y != snakeBody[1].y)
+					direction = 2;
+				break;	
+		}
+	}
+	function GetRndColor()
+	{
+		var red = Math.floor(Math.random()*200);
+		var green = Math.floor(Math.random()*200);
+		var blue = Math.floor(Math.random()*200);
+		return "RGB("+red+","+green+","+blue+")";
+	}
+
+	function StartGame()
+	{
+		prepareGame();
+		showSnakeAndCake();
+		myInterval = setInterval("moveSnake()",100);
+	}
+</script>

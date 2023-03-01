@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用on绑定事件详解</title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script>
+			$(function(){
+				//直接使用click
+				// $("input:button").click(function(){
+				// 	alert("我被点击了!");
+				// });
+				
+				//使用on绑定事件
+				// $("input:button").on("click",function(){
+				// 	alert("我被点击了!");
+				// });
+				
+				$("body").on("click","input:button",function(){
+					alert("我被点击了!");
+				})
+				
+				
+				$("body").append("<input type=\"button\" value=\"点击我\"/>");
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" value="点击我"  />		
+	</body>
+</html>

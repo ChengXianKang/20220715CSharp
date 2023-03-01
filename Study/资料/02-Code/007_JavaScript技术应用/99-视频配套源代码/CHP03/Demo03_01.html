@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>setInterval实现图片的自动切换</title>
+		<script type="text/javascript">
+			var myInterval;
+			function ChangeImg()
+			{
+				var obj = document.getElementById("myImg");
+				if(obj.src.indexOf("536.jpg") >= 0)
+					obj.src = "img/knfd.jpg";
+				else if(obj.src.indexOf("knfd.jpg") >= 0)
+					obj.src = "img/ym.jpg";
+				else if(obj.src.indexOf("ym.jpg") >= 0)
+					obj.src = "img/51.jpg";
+				else if(obj.src.indexOf("51.jpg") >= 0)
+					obj.src = "img/536.jpg";					
+			}
+			function MyPlay()
+			{
+				myInterval = setInterval("ChangeImg()",1000);
+			}
+			function myStop()
+			{
+				clearInterval(myInterval);
+			}
+		</script>
+	</head>
+	<body>
+		<img id="myImg" src="img/536.jpg" width="300" height="300"><br><br>
+		<input type="button" value="播放" onclick="MyPlay();">
+		<input type="button" value="停止" onclick="myStop();">
+	</body>
+</html>

@@ -1,0 +1,161 @@
+﻿body,div,ul,dl,dd,h1,p { padding:0; margin:0;}/*设置内外边距均为0*/
+ul,ol {list-style:none;}/*无序列表*/
+img {border:0px;}/*图片的边框为0*/
+a {color:#8a8a8a; text-decoration:none;}/*默认链接的颜色为#8a8a8a，无下划线*/
+a:hover {color:#4f4f4f; text-decoration:underline;}/*默认链接当鼠标放上去的颜色为#4f4f4f，有下划线*/
+
+/*头部样式*/
+#head-color{ 
+	background-color:#7b1c00; 
+	width:100%; 
+	height:110px;}
+#head{
+	width:1000px;
+	margin:0 auto;
+	background-image:url(../images/head-bg.jpg);
+	height:110px;
+}
+
+#logo{ 
+	float:left; 
+	width:207px; 
+	margin-left:35px; 
+	margin-top:38px;
+	}
+
+.menu{float: left; width: 580px; height: 110px;  font-family: "microsoft yahei"; }
+.menu li{ float: left; width: 111px; height: 110px; text-align: center;  line-height: 60px; font-weight: bold; padding-top:35px; }
+.menu li a{ color: white; padding: 5px; }
+.menu li.hover{ color: white !important;}
+.menu li.lihover{ background: url(../images/menu_li_bg_0.png) no-repeat center bottom; }
+.menu li.c_menu{ background: url(../images/menu_li_bg_1.png) no-repeat center bottom; }
+
+.language{ float:right; width: 150px; height: 16px; line-height: 16px; font-size: 12px; color: #cca294; font-family: "微软雅黑"; margin-top:60px;}
+.language a{ color: #cca294; }
+.language a:hover{ color: white; }
+.language span{ margin: 0 4px; }
+
+/*banner样式*/
+#banner-bg{
+	width:100%;
+	height:545px;
+	background-repeat: repeat-x;
+	background-image: url(../images/banner-bg.jpg);
+}
+#banner0{
+	width:1000px;
+	height:545px;
+	background-image:url(../images/banner.jpg);
+	margin:0 auto;
+	padding-top:390px;
+	background-repeat: no-repeat;
+}
+
+#banner-ico{
+	width:328px;
+	height:80px;
+	background-image:url(../images/icon-bg.png);
+	background-repeat: no-repeat;
+	
+}
+#banner-ico ul li{ float:left; width:154px; text-align:center; line-height:80px;font-family: "微软雅黑";font-size: 20px;  }
+.to_rom {padding-left: 14px;  }
+.to_rom a{ color: #c34000; }
+.to_rom a:hover{ color:#F00;}
+.to_discuz{left: 164px;  color: #5f5f5f;}
+
+
+/*video样式*/
+#video-bg{ width:100%; height:200px; background-color:#e5e5e5; border-bottom:1px #cecece solid; border-top:1px #cecece solid;}
+#video{ width:1000px; margin:0 auto;}
+#video ul li{ float:left; width:250px; text-align:center; padding-top:30px;}
+#video ul li h3{font-size: 12px; color: #909091; padding-top: 5px; }
+/*icon样式*/
+.icon{ width:1000px; margin:60px auto;}
+.funcs li{
+	float:left;
+	width:179px;
+	height:90px;
+	margin: 0 30px;
+	margin-bottom:20px;
+	padding-top:110px;
+	font-size:12px;
+	text-align:center;
+	display: inline;
+}
+.funcs li.func_0{ background:url(../images/ico-1.jpg) 40px 0 no-repeat;}
+.funcs li.func_1{ background:url(../images/ico-2.jpg) 40px 0 no-repeat;}
+.funcs li.func_2{ background:url(../images/ico-3.jpg) 40px 0 no-repeat; }
+.funcs li.func_3{  background:url(../images/ico-4.jpg) 40px 0 no-repeat;}
+.funcs li.func_4{  background:url(../images/ico-5.jpg) 40px 0 no-repeat;}
+.funcs li.func_5{ background:url(../images/ico-6.jpg) 40px 0 no-repeat; }
+.funcs li.func_6{  background:url(../images/ico-7.jpg) 40px 0 no-repeat; }
+.funcs li.func_7{ background:url(../images/ico-8.jpg) 40px 0 no-repeat; }
+.funcs li.funcs li img{width:120px;height:108px;}
+.funcs li h3{font-size:16px;color:#494949;margin:-2px auto 5px;_margin-top:0;}
+.funcs li a:hover{ background-color:#000;}
+.more{ text-align:center;}
+
+/*footer样式*/
+.footer{
+	background-color:#2f2f2f; 
+	width:100%;
+	}
+.footer-text{
+	width:800px;
+	padding-top:50px;
+	padding-bottom:20px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+.footer li{
+	float:left;
+	}
+.mid-li{ 
+	margin-left:230px; 
+	margin-right:240px;}
+.footer h4{
+	font-size:14px;
+	color:white;
+	line-height:16px;
+	border-left:4px solid #ec6117;
+	width:100px;
+	margin-left:-11px;
+	padding-left: 7px;
+	margin-bottom:30px;
+}
+.footer dd a{
+	color:white;
+	font-size:12px;
+	line-height:30px;
+	}
+.footer dd a:hover{
+	text-decoration:underline;
+	}
+.copyright {
+	color: #bfbfbf;
+	font-size: 12px;
+	margin: 32px auto;
+	text-align: center;
+	}
+.copyright span {
+	margin: 0 4px;
+	}
+.footer_copy_img {
+	text-align: center;
+	 padding-bottom:30px;
+	 }
+
+
+
+
+
+
+
+
+
+
+
+

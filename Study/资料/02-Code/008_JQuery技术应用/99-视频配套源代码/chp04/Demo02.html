@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>fadeIn()方法与fadeOut()方法与fadeToggle()方法</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				$("#myButton").click(function(){
+					//fadeIn和fadeOut来实现
+					// if($(this).val() == "显示")
+					// {
+					// 	$("#myImg").fadeIn(2000,function(){
+					// 		$(this).css("border","solid 1px gray");
+					// 		$(this).css("padding","3px");
+					// 	});
+					// 	$(this).val("隐藏");
+					// }
+					// else
+					// {
+					// 	$("#myImg").fadeOut(2000);
+					// 	$(this).val("显示");						
+					// }
+					
+					//fadeToggle来实现
+					$("#myImg").fadeToggle(2000,function(){
+						$(this).css("border","solid 1px gray");
+						$(this).css("padding","3px");
+						if($("#myButton").val() == "显示")
+							$("#myButton").val("隐藏");
+						else
+							$("#myButton").val("显示");	
+					});		
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<img id="myImg" src="img/two.jpg" style="display: none;"  /><br/>
+		<input id="myButton" type="button" value="显示"  />
+	</body>
+</html>
+

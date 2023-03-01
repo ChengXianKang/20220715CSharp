@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单选择器</title>
+		<style type="text/css">
+			#myButtons{line-height: 30px;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#bt1").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $(":input").length);
+					$(":input").css("border","solid 2px red");
+				});
+				$("#bt2").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $("input:text").length);
+					$("input:text").css("border","solid 2px red");
+				});
+				$("#bt3").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $(":password").length);
+					$(":password").css("border","solid 2px red");
+				});
+				$("#bt4").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $(":radio").length);
+					//$(":password").css("border","solid 2px red");
+				});
+				$("#bt5").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $(":checkbox").length);
+					//$(":password").css("border","solid 2px red");
+				});	
+				$("#bt6").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $(":image").length);
+					$(":image").css("border","solid 2px red");
+				});
+				$("#bt7").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $(":file").length);
+					$(":file").css("border","solid 2px red");
+				});
+				$("#bt8").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $("input:hidden").length);
+					//$(":file").css("border","solid 2px red");
+				});
+				$("#bt9").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $(":button").length);
+					$(":button").css("border","solid 2px red");
+				});
+				$("#bt10").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $(":submit").length);
+					$(":submit").css("border","solid 2px red");
+				});
+				$("#bt11").click(function(){
+					$("*").removeAttr("style");
+					alert("数量:" + $(":reset").length);
+					$(":reset").css("border","solid 2px red");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="myButtons">
+			<input type="button" id="bt1" value="获取<input><textarea><select><button>元素">
+			<input type="button" id="bt2" value="获取符合[type=text]的<input>元素">
+			<input type="button" id="bt3" value="获取符合[type=password]的<input>元素">
+			<input type="button" id="bt4" value="获取符合[type=radio]的<input>元素">
+			<input type="button" id="bt5" value="获取符合[type=checkbox]的<input>元素">
+			<input type="button" id="bt6" value="获取符合[type=image]的<input>元素">
+			<input type="button" id="bt7" value="获取符合[type=file]的<input>元素">
+			<input type="button" id="bt8" value="获取符合[type=hidden]的<input>元素">
+			<input type="button" id="bt9" value="获取<button>元素和符合[type=button]的<input>元素">
+			<input type="button" id="bt10" value="获取符合[type=submit]的<input>元素">
+			<input type="button" id="bt11" value="获取符合[type=reset]的<input>元素">
+		</div>
+		<br /><br />
+		<form action="#">
+		<table width="1000" align="center">
+			<caption>用户注册</caption>
+			<tr>
+				<td width="300" align="right" height="30">用户名:</td>
+				<td width="700">
+					<input type="text">
+					<input type="button" value="检查是否重名" />
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">密码:</td>
+				<td width="700">
+					<input type="password">
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">密码确认:</td>
+				<td width="700">
+					<input type="password">
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">照片:</td>
+				<td width="700">
+					<input type="file" />
+					<input type="hidden" />
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">性别:</td>
+				<td width="700">
+					<input type="radio" name="sex" value="男">男
+					<input type="radio" name="sex" value="女">女	
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">专业:</td>
+				<td width="700">
+					<select >
+						<option value="">--请选择--</option>
+						<option value="软件开发">软件开发</option>
+						<option value="电子商务">电子商务</option>
+						<option value="国际贸易">国际贸易</option>
+						<option value="工商管理">工商管理</option>
+						<option value="高级护理">高级护理</option>
+					</select>
+				</td>
+			</tr>			
+			<tr>
+				<td width="300" align="right" height="30">爱好:</td>
+				<td width="700" >
+					<input type="checkbox" name="hobby" value="抽烟" />抽烟
+					<input type="checkbox" name="hobby" value="喝酒" />喝酒
+					<input type="checkbox" name="hobby" value="打游戏" />打游戏
+					<input type="checkbox" name="hobby" value="烫头发" />烫头发
+					<input type="checkbox" name="hobby" value="足球" />足球
+					<input type="checkbox" name="hobby" value="篮球" />篮球
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">自我介绍:</td>
+				<td width="700">
+					<textarea rows="10" cols="60"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">&nbsp;</td>
+				<td width="700">
+					<input type="image" src="img/zc.jpg" />
+					<input type="submit" value="注册" />
+					<input type="reset" value="取消" />
+				</td>
+			</tr>
+		</table>
+		
+		</form>	
+	</body>
+</html>

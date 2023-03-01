@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>摇骰子</title>
+		<script type="text/javascript">
+			var i = 1;
+			var myInterval;
+			//实现图片替换
+			function ImgChange()
+			{
+				var rnd = Math.ceil(Math.random()*6);
+				var objImg = document.getElementById("myImg");
+				objImg.src = "img/" + rnd + ".jpg";
+				if(i>=30)
+				{
+					clearInterval(myInterval);
+					var userSelect = document.getElementById("selGuess").value;
+					var objInfo = document.getElementById("myInfo");
+					if(userSelect == "大")
+					{
+						if(rnd <= 3)
+							objInfo.innerHTML = "很遗憾，您输了!";
+						else
+							objInfo.innerHTML = "恭喜您，您赢了!";
+					}
+					if(userSelect == "小")
+					{
+						if(rnd <= 3)
+							objInfo.innerHTML = "恭喜您，您赢了!";
+						else
+							objInfo.innerHTML = "很遗憾，您输了!";						
+					}
+				}
+				
+				i++;
+			}
+			function myFun()
+			{
+				i = 1;
+				if(document.getElementById("selGuess").value.length == 0)
+				{
+					alert('请选择大小');
+					return;
+				}
+				myInterval = setInterval("ImgChange()",100);
+			}
+		</script>
+	</head>
+	<body>
+		<div style="text-align: center; height: 30px; line-height: 30px;">
+			<select name="selGuess" id="selGuess">
+				<option value="">请选择</option>
+				<option value="大">大</option>
+				<option value="小">小</option>
+			</select>
+			<input type="button" value="确定" onclick="myFun();">
+			<span style="color: red;" id="myInfo"></span>
+		</div>
+		<br><br>
+		<div style="text-align: center; height: 30px; line-height: 30px;">
+			<img id="myImg" src="img/3.jpg" width="200" height="200" />
+		</div>		
+	</body>
+</html>

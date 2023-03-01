@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "fmXDh1sPZlrbTqQHQpDzfWSOUjEYRh1HpXapuHr6XcDQ71yt0Rbg11kNNnczYwwaPLe0L1KHKNsMLjKDdiedbw==",
+  "success": true,
+  "projectFilePath": "D:\\desktop\\B站BBS\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\48134\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\48134\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\48134\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

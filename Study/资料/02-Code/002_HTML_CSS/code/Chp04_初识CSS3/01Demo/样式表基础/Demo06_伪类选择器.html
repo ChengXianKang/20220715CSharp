@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪类选择器</title>
+		<style type="text/css">
+			/*link:正常状态，hover:鼠标经过 active:鼠标正在点击 visited:访问之后*/
+			#liubei a:link{ color: black;} 
+			#liubei a:hover{ color: green;}
+			#liubei a:active{ color: red;}
+			#liubei a:visited{ color: blue;}
+		</style>
+	</head>
+	<body>
+		<p>
+			1.将所有的人变成超级链接<br>
+			2.超级链接颜色为黑色<br>
+			3.超级链接，当鼠标移动上去的时候颜色变成绿色<br>
+			4.超级链接，当鼠标正在点击的时候变成红色<br>
+			5.超级链接被访问之后颜色变成蓝色<br>
+		</p>
+		<table width="1000" border="1" id="liubei">
+			<tr>
+				<td width="200"><a href="guany.html">关羽</a></td>
+				<td width="200"><a href="zgl.html">诸葛亮</a></td>
+				<td width="200"><a href="zf.html">张飞</a></td>
+				<td width="200"><a href="xw.html">徐伟</a></td>
+				<td width="200"><a href="hezi.html">赵云</a></td>
+			</tr>
+		</table>
+	</body>
+</html>

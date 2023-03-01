@@ -1,0 +1,27 @@
+<!-- 
+数据平台：https://www.fastmock.site
+返回数据：{"result":"hello,world"} 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ajax请求helloworld</title>
+	</head>
+	<body>
+		<h1 id="result" style="margin: 50px; text-align: center;"></h1>
+		<script type="text/javascript">
+			var ajax = new XMLHttpRequest(); //XMLHttpRequest对象访问后端
+			ajax.open("POST","https://www.fastmock.site/mock/06492f38e791d869ea222ba9698d7a5e/API/hello");
+			ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			ajax.send();
+			ajax.onreadystatechange = function()
+			{
+				if(ajax.readyState==4 && ajax.status==200)
+				{
+					document.getElementById("result").innerHTML = ajax.responseText
+				}
+			}
+		</script>
+	</body>
+</html>

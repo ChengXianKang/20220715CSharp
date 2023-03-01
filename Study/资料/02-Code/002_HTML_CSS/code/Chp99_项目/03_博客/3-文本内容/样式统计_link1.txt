@@ -1,0 +1,5 @@
+                <ul>
+                    <li>用户:&nbsp;<b>893</b>&nbsp;人</li>
+                    <li>日志:&nbsp;<b>4397</b>&nbsp;个</li>
+                    <li>评论:&nbsp;<b>4596</b>&nbsp;篇</li>
+                </ul>

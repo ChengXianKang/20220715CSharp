@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>无限极导航</title>
+		<style type="text/css">
+			div,ul,li{ margin:0px; padding:0px; list-style-type:none;}
+			#content{width:800px; margin:0px auto; height:100px; background-color:#CCC;}
+			#menu{ width:800px; margin:10px auto 0px auto; height:30px; line-height:30px; background-color:#dd2727}
+			#menu li{width:100px; height:30px; line-height:30px; text-align:center; background-color:#dd2727;}
+			#menu a{font-size:14px; color:#FFF; font-weight:bold; text-decoration:none;}
+			#menu > ul > li{  float:left; }
+			/*二级*/
+			#menu > ul > li > ul{ display:none; position:relative; top:0px; z-index:999}
+			/*三级*/
+			#menu > ul > li > ul > li ul{display:none; position:relative; top:-30px; left: 100px; z-index:999}
+			
+			#menu li:hover>ul{display:block;}
+		</style>
+
+	</head>
+	<body>
+		<div id="menu">
+			<ul>
+		    	<li><a href="#">天猫超市</a>
+		        	<ul>
+		             	<li><a href="#">男装/女装</a></li>
+		                <li><a href="#">珍宝饰品</a></li>
+		                <li><a href="#">生鲜水果</a></li>
+		                <li><a href="#">家具建材</a></li>
+		                <li><a href="#">医药保健</a></li>
+		                <li><a href="#">图书影响</a></li>
+		                <li><a href="#">汽车配件</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="#">天猫国际</a>
+		            <ul>
+		             	<li><a href="#">男装/女装2</a></li>
+		                <li><a href="#">珍宝饰品2</a>
+		                	<ul>
+		                		<li><a href="#">项链</a></li>
+		                		<li><a href="#">戒指</a></li>
+		                		<li><a href="#">耳环</a></li>
+		                	</ul>
+		                </li>
+		                <li><a href="#">生鲜水果2</a></li>
+		                <li><a href="#">家具建材2</a></li>
+		                <li><a href="#">医药保健2</a></li>
+		                <li><a href="#">图书影响2</a></li>
+		                <li><a href="#">汽车配件2</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="#">天猫会员</a></li>
+		        <li><a href="#">品牌街</a></li>
+		        <li><a href="#">电器城</a></li>
+		        <li><a href="#">医药馆</a></li>
+		        <li><a href="#">营业厅</a></li>
+		        <li><a href="#">天猫旅行</a></li>
+		    </ul>
+		</div>
+		<div id="content">
+			网页正文内容
+		</div>
+
+	</body>
+</html>

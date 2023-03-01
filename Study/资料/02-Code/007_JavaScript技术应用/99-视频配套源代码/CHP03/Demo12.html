@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滚动图片一</title>
+		<style type="text/css">
+			#container{ width:640px; height: 160px; border: solid 3px red;
+			margin: 30px auto; font-size:0px; overflow:hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container" onmouseover="StopInterval();" onmouseout="StartInterval();">
+			<div style="width: 5000px;">
+				<img src="MoveImg/1.jpg" />
+				<img src="MoveImg/2.jpg" />
+				<img src="MoveImg/3.jpg" />
+				<img src="MoveImg/4.jpg" />
+				<img src="MoveImg/5.jpg" />
+				<img src="MoveImg/6.jpg" />
+				<img src="MoveImg/7.jpg" />
+				<img src="MoveImg/1.jpg" />
+				<img src="MoveImg/2.jpg" />
+				<img src="MoveImg/3.jpg" />
+				<img src="MoveImg/4.jpg" />				
+			</div>			
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var myInterval;
+	function myMove()
+	{
+		var container = document.getElementById("container");
+		container.scrollLeft+=2;
+		if(container.scrollLeft >= 160*7)
+			container.scrollLeft = 0;
+		
+	}
+	myInterval = setInterval("myMove()",20);
+	
+	
+	function StartInterval()
+	{
+		myInterval = setInterval("myMove()",20);
+	}
+	function StopInterval()
+	{
+		clearInterval(myInterval);
+	}
+</script>

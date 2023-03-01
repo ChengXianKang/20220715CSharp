@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>广告索引切换</title>
+		<style type="text/css">
+			#adIndex{ width: 400px; height: 40px; text-align: right;}
+			#adIndex li{
+				list-style-type: none; float: left; margin: 6px 0px 0px 6px;
+				width: 22px; height: 22px; line-height: 22px; text-align: center;
+				background-color: #FFC0CB; color: white;
+			}
+			#adIndex li.big{
+				list-style-type: none; float: left; margin: 4px 0px 0px 6px;
+				width: 26px; height: 26px; line-height: 26px; text-align: center;
+				background-color:#FF0000; color: white;
+			}			
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+
+			$(function(){
+				var currIndex = 1;
+				setInterval(function(){
+					var AllIndex = $("#adIndex ul li"); //匹配所有li
+					AllIndex.eq(currIndex).addClass("big").siblings().removeClass("big");
+					currIndex++;
+					if(currIndex >= AllIndex.length)
+						currIndex = 0;
+				},3000);
+			})
+		</script>
+	</head>
+	<body>
+		<div id="adIndex">
+			<ul>
+				<li class="big">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html style="font-size: 62.5%">
+	<head>
+		<meta charset="UTF-8">
+		<title>px_em_rem</title>
+	</head>
+	<body>
+		<!--
+			px:像素;
+			
+			1em:父级容器的字体大小
+			假设一个div里面有文字,这个div设置字体20px,1em = (20px)div设置字体大小
+			
+			1rem:HTML根元素的字体大小
+			假设HTML标签上设置字体20px,那么1rem = 20px
+			
+			如果字体大小为16px;
+			1rem = 16px
+			0.625rem = 10px
+			当字体大小为62.5%
+			1rem = 10px
+			
+			应用场景：
+			（1）样式相对需要固定的时候，使用PX;
+			(2)样式大小需要跟随设备的设置而进行改变的时候，使用rem;
+		-->
+		<p style="font-size: 20px;">我是PX像素单位</p>
+		<p style="font-size: 2rem;">我是rem单位</p>
+	</body>
+</html>

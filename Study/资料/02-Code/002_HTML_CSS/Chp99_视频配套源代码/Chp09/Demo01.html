@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>制作位置平移效果</title>
+		<style type="text/css">
+			/*transition:
+			 第一个参数：过渡效果生效的样式属性
+			 第二个参数：过渡时间
+			 第三个参数：过渡效果样式
+			   （1）linear:匀速
+			   （2）ease:慢-》快-》慢
+			   （3）ease-in:慢->快
+			   （4）ease-out:快->慢
+			  (5)ease-in-out:慢-》中-》慢
+			 * */
+			
+			#myImg{
+				transition: all 1s ease-in-out;
+			}
+			#myImg:hover{
+				transform: translate(60px,60px);
+			}
+		</style>
+	</head>
+	<body>
+		<img id="myImg" src="img/timg.png" width="200" height="200" />
+	</body>
+</html>

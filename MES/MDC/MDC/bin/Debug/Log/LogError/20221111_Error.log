@@ -1,0 +1,81 @@
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-11-11 10:26:08,853 
+异常级别：ERROR
+异常内容：窗体加载失败
+System.Exception: 获取产线在制品信息失败. ---> System.Exception: 本机IP【192.168.124.137】未在MES系统中配置
+   在 MDC.BaseUI.GetLineModelProcedure(String ipAddress) 位置 D:\desktop\MDC\MDC\BaseUI.cs:行号 591
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 724
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 728
+   在 MDC.frmManualScan.frmManualScan_Load(Object sender, EventArgs e) 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 349
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-11-11 10:26:13,183 
+异常级别：ERROR
+异常内容：窗体加载失败
+System.Exception: 获取产线在制品信息失败. ---> System.Exception: 本机IP【192.168.124.137】未在MES系统中配置
+   在 MDC.BaseUI.GetLineModelProcedure(String ipAddress) 位置 D:\desktop\MDC\MDC\BaseUI.cs:行号 591
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 724
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 728
+   在 MDC.frmManualScan.frmManualScan_Load(Object sender, EventArgs e) 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 349
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-11-11 10:26:22,788 
+异常级别：ERROR
+异常内容：窗体加载失败
+System.Exception: 获取产线在制品信息失败. ---> System.Exception: 本机IP【192.168.124.137】未在MES系统中配置
+   在 MDC.BaseUI.GetLineModelProcedure(String ipAddress) 位置 D:\desktop\MDC\MDC\BaseUI.cs:行号 591
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 724
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 728
+   在 MDC.frmManualScan.frmManualScan_Load(Object sender, EventArgs e) 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 349
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-11-11 10:26:26,008 
+异常级别：ERROR
+异常内容：窗体加载失败
+System.Exception: 获取产线在制品信息失败. ---> System.Exception: 本机IP【192.168.124.137】未在MES系统中配置
+   在 MDC.BaseUI.GetLineModelProcedure(String ipAddress) 位置 D:\desktop\MDC\MDC\BaseUI.cs:行号 591
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 724
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 728
+   在 MDC.frmManualScan.frmManualScan_Load(Object sender, EventArgs e) 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 349
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-11-11 10:26:29,091 
+异常级别：ERROR
+异常内容：窗体加载失败
+System.Exception: 获取产线在制品信息失败. ---> System.Exception: 本机IP【192.168.124.137】未在MES系统中配置
+   在 MDC.BaseUI.GetLineModelProcedure(String ipAddress) 位置 D:\desktop\MDC\MDC\BaseUI.cs:行号 591
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 724
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 728
+   在 MDC.frmManualScan.frmManualScan_Load(Object sender, EventArgs e) 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 349
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-11-11 10:33:40,303 
+异常级别：ERROR
+异常内容：窗体加载失败
+System.Exception: 获取产线在制品信息失败. ---> System.Exception: 本机IP【192.168.124.137】未在MES系统中配置
+   在 MDC.BaseUI.GetLineModelProcedure(String ipAddress) 位置 D:\desktop\MDC\MDC\BaseUI.cs:行号 591
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 724
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MDC.frmManualScan.Initialize() 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 728
+   在 MDC.frmManualScan.frmManualScan_Load(Object sender, EventArgs e) 位置 D:\desktop\MDC\MDC\frmManualScan.cs:行号 349
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-11-11 10:45:54,962 
+异常级别：ERROR
+异常内容：本机IP【192.168.1.221】未在MES系统中配置
+System.Exception: 本机IP【192.168.1.221】未在MES系统中配置
+   在 MDC.BaseUI.GetLineModelProcedure(String ipAddress) 位置 D:\desktop\MDC\MDC\BaseUI.cs:行号 591
+   在 MDC.frmAuto.Initialize() 位置 D:\desktop\MDC\MDC\frmAuto.cs:行号 465
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-11-11 10:45:54,979 
+异常级别：ERROR
+异常内容：本机IP【192.168.1.221】未在MES系统中配置
+System.Exception: 本机IP【192.168.1.221】未在MES系统中配置
+   在 MDC.frmAuto.Initialize() 位置 D:\desktop\MDC\MDC\frmAuto.cs:行号 470

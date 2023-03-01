@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*****************
+右边部分——本站快讯部分div
+*****************/
+#right_latest{
+	width:518px;											/*根据图片尺寸设置div的宽度*/
+	background-image:url(../images/latest.jpg);				/*将"本站快讯"图片设置为登录部分div的背景图片*/
+	background-repeat:no-repeat;							/*当背景图片无法覆盖全部div时，也不会使用平铺*/
+	/*
+	background:url(../images/latest.jpg) no-repeat;
+	以上两个css属性可用此css属性取代
+	*/	
+	background-color:#FFF;									/*设置此div的背景色为白色*/
+	padding-top:40px;										/*设置此div的上部内边距，将图片下移*/
+	overflow:auto;											/*容器大小的自适应，设置此属性后，无论此div内的内容是否有浮动的，div的边框都能自动调整到恰好包含著所有内容*/
+	zoom:1;													/*在IE6下，overflow属性可能无效，必须把这条属性加上才能解决这个问题*/
+}
+
+/*****************
+右边部分——鲜花推荐部分div的特殊css样式
+*****************/
+#right_recommend{
+	background-image:url(../images/recommend.jpg);			/*将"鲜花推荐"图片设置为登录部分div的背景图片*/
+
+}
+
+/*****************
+右边部分——新品上市部分div的特殊css样式
+*****************/
+#right_new{
+	background-image:url(../images/new.jpg);				/*将"新品上市"图片设置为登录部分div的背景图片*/
+}
+
+/*****************
+右边部分——鲜花导购部分div的css样式
+*****************/
+#right_tips{
+	height:140px;											/*根据左边部分调整本div的高度，以使左右两边对齐*/
+	margin-bottom:100px;									/*设置下部外边距，使底部留出一些空白*/
+	background-image:url(../images/tips.jpg);				/*将"鲜花导购"图片设置为登录部分div的背景图片*/
+	background-repeat:no-repeat;							/*当背景图片无法覆盖全部div时，也不会使用平铺*/
+	/*
+	background:url(../images/tips.jpg) no-repeat;
+	以上两个css属性可用此css属性取代
+	*/
+	
+	background-color:#FFF;									/*设置此div的背景色为白色*/
+	padding:38px 33px 0px 33px;								/*设置此div的上部内边距，将图片下移*/
+	margin-top:4px;											/*设置此div的上部外边距，使其和"本站快讯"部分有一定的间隙*/
+	overflow:auto;											/*容器大小的自适应，设置此属性后，无论此div内的内容是否有浮动的，div的边框都能自动调整到恰好包含著所有内容*/
+	zoom:1;													/*在IE6下，overflow属性可能无效，必须把这条属性加上才能解决这个问题*/
+}
+
+/*****************
+右边部分——鲜花推荐部分div、新品上市部分div两个div的通用css样式
+*****************/
+#right_recommend,#right_new{
+	width:518px;											/*根据图片尺寸设置div的宽度*/
+	background-repeat:no-repeat;							/*当背景图片无法覆盖全部div时，也不会使用平铺*/
+	/*
+	background:url(../images/recommend.jpg) no-repeat;
+	以上两个css属性可用此css属性取代
+	*/
+	
+	background-color:#FFF;									/*设置此div的背景色为白色*/
+	padding-top:40px;										/*设置此div的上部内边距，将图片下移*/
+	margin-top:4px;											/*设置此div的上部外边距，使其和"本站快讯"部分有一定的间隙*/
+	overflow:auto;											/*容器大小的自适应，设置此属性后，无论此div内的内容是否有浮动的，div的边框都能自动调整到恰好包含著所有内容*/
+	zoom:1;													/*在IE6下，overflow属性可能无效，必须把这条属性加上才能解决这个问题*/
+	padding-bottom:20px;									/*本div在内容后有一段空白，这段空白使用下部内边距来实现*/
+}
+
+/*****************
+所在容器：右边部分——本站快讯部分
+样式表对象：图片所在的无序列表的列表项
+说明：
+1、用于将图片变成横向排列
+*****************/
+#right_latest ul li{
+	float:left;												/*设置li浮动，此时可以实现图片的横向排列*/
+}
+
+/*****************
+所在容器：右边部分——鲜花推荐部分和新品上市部分
+样式表对象：图片所在的无序列表的列表项
+说明：
+1、用于将图片变成横向排列
+2、讲li中的文字部分（不影响图片）水平居中
+3、设置li的左部外边距，以使同行图片之间拥有间隔
+*****************/
+#right_recommend ul li,#right_new ul li{
+	float:left;												/*设置li浮动，此时可以实现图片的横向排列*/
+	text-align:center;										/*实现各鲜花的名字、价格居中。该属性只会设置文字的水平居中，不会影响图片*/
+	margin-left:19px;										/*设置左部外边距，实现同行图片之间*/
+}
+
+/*****************
+所在容器：右边部分——鲜花推荐部分和新品上市部分——无序列表的列表项
+样式表对象：无序列表中的超链接
+说明：
+1、修改超链接文字字色
+*****************/
+#right_recommend ul li a,#right_new ul li a{
+	color:#74686C;											/*设置超链接文字的字色*/
+}
+
+
+/*****************
+所在容器：右边部分——鲜花导购部分
+样式表对象：超链接文字所在的无序列表的列表项
+说明：
+1、为li添加背景图片并设置为不平铺，背景图片作为列表的列表符
+用于将图片变成横向排列
+*****************/
+#right_tips ul li{
+	background-image:url(../images/icon2.gif);				/*为列表设置背景图片作为列表符*/
+	background-repeat:no-repeat;							/*当背景图片无法覆盖全部div时，也不会使用平铺*/
+	/*
+	background:url(../images/icon2.gif) no-repeat;
+	以上两个css属性可用此css属性取代
+	*/
+	background-position:0px 3px;							/*调整背景图片（此处为列表符图片）在li盒子模型中的位置*/
+	padding-left:8px;										/*调整li的左内边距，让内容（即列表项文字）右移*/
+	float:left;												/*让列表浮动，实现列表并列*/
+	width:218px;											/*设置li的宽度，使两个列表项文字刚好占满一行，剩下的列表项文字会被挤到下一行去，以此类推即可实现一行两条列表项文字的效果。*/
+	/*************
+	宽度的具体值的计算方法为  518（总宽度）-33（左内边距）-33（右内边距）-8*2（一个li中还有8px的左内边距，两个li就是16px），所得值除以2即为一个li的宽度
+	*************/
+	margin-top:10px;										/*li的上部外边距，设置后可以使不同行之间的列表文字拉开距离*/
+
+}
+

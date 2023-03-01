@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>子元素过滤选择器</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//$("div p:first").css("backgroundColor","red");
+				// :first只能匹配一个，:first-child可以匹配多个
+				
+				//$("div p:first-child").css("backgroundColor","red");
+				//$("div p:last-child").css("backgroundColor","red");
+				//$("div p:nth-child(2)").css("backgroundColor","red");
+				//$("div p:nth-child(even)").css("backgroundColor","red");
+				//$("div p:nth-child(odd)").css("backgroundColor","red");
+				//$("div p:only-child").css("backgroundColor","red");
+				
+				//$("div p:first-of-type").css("backgroundColor","red");
+				//$("div p:last-of-type").css("backgroundColor","red");
+				//$("div p:nth-of-type(2)").css("backgroundColor","red");
+				//$("div p:nth-of-type(even)").css("backgroundColor","red");
+				//$("div p:nth-of-type(odd)").css("backgroundColor","red");
+				//$("div p:only-of-type").css("backgroundColor","red");
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<p>我是第一个段落</p>
+			<p>我是第二个段落</p>
+			<p>我是第三个段落</p>
+			<p>我是第四个段落</p>
+			<p>我是第五个段落</p>
+			<p>我是第六个段落</p>
+		</div>
+		
+	</body>
+</html>
+

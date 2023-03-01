@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			p{ margin-left: 50px; background-color: gray;}
+			/*#dad p{ color: red; font-size: 30px;}*/
+			/*#dad>p{color: red; font-size: 30px;}*/
+			/*#son1+p{color: red; font-size: 30px;}*/
+			#son1~p{color: red; font-size: 30px;}
+		</style>
+	</head>
+	<body>
+		<div id="dad" style="background-color: pink;">
+			爸爸<br /><br />
+			<p id="son1">大儿子</p>
+			<p>二儿子</p>
+			<p>三儿子</p>
+			<div style="margin-left: 50px; background-color: green;">
+				四儿子<br /><br />
+				<p>大孙子</p>
+				<p>二孙子</p>
+				<p>三孙子</p>
+			</div>
+		</div>
+	</body>
+</html>

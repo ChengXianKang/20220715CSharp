@@ -1,0 +1,9 @@
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyBLL\bin\Debug\MyBLL.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyBLL\bin\Debug\MyBLL.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyBLL\obj\Debug\MyBLL.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyBLL\obj\Debug\MyBLL.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyBLL\obj\Debug\MyBLL.csprojResolveAssemblyReference.cache
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyBLL\bin\Debug\MyDAL.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyBLL\bin\Debug\MyEntity.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyBLL\bin\Debug\MyDAL.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyBLL\bin\Debug\MyEntity.pdb

@@ -1,0 +1,69 @@
+/* CSS Document */
+body,div,ul,li,table,tr,td,img,input,p{ margin:0px; padding:0px; font-size:12px; list-style-type:none;}
+body{ background-color:#ebf7ff;}
+#container{ width:880px; margin:0px auto;}
+#globallink{ width:880px; height:200px; background-image:url(../images/lsjd/banner.jpg);}
+#menu{ padding-top:178px;}
+#menu ul{ margin-left:476px;}
+#menu li{ width:67px; float:left;}
+#menu li a{ color:#FFF;}
+#blogbody{ width:880px; overflow:auto; margin-top:6px;}
+#links{ width:176px; float:right; margin-left:4px;}
+#main{ width:700px; float:right; overflow:auto;}
+#links{ background-color:#0084a9;}
+#link1{ background-image:url(../images/lsjd/lstatistics.jpg); background-position:top center; background-repeat:no-repeat; padding-top:40px; background-color:#0084a9;}
+#link1 li{ height:20px; line-height:20px; background-image:url(../images/lsjd/arrow1.gif); background-position:10px; center; background-repeat:no-repeat; padding-left:20px;}
+
+#link2{ background-image:url(../images/lsjd/lhotblog.jpg); background-position:top center; background-repeat:no-repeat; padding-top:40px; background-color:#0084a9; margin-top:10px;}
+#link2 li{ height:20px; line-height:20px; background-image:url(../images/lsjd/arrow1.gif); background-position:10px; center; background-repeat:no-repeat; padding-left:20px; color:#FFF;}
+#link2 li a{ color:#FFF;}
+#link2 p{ text-align:right; color:#FFF; padding-right:4px;}
+#link2 p a{ color:#FFF;}
+
+#link3{ background-image:url(../images/lsjd/lrecent.jpg); background-position:top center; background-repeat:no-repeat; padding-top:40px; background-color:#0084a9; margin-top:10px;}
+#link3 li{ height:20px; line-height:20px; background-image:url(../images/lsjd/arrow1.gif); background-position:10px; center; background-repeat:no-repeat; padding-left:20px; color:#FFF;}
+#link3 li a{ color:#FFF;}
+#link3 p{ text-align:right; color:#FFF; padding-right:4px;}
+#link3 p a{ color:#FFF;}
+
+#link4{ background-image:url(../images/lsjd/lapply.jpg); background-position:top center; background-repeat:no-repeat; padding-top:40px; background-color:#0084a9; margin-top:10px;}
+#link4 li{ height:20px; line-height:20px; background-image:url(../images/lsjd/arrow1.gif); background-position:10px; center; background-repeat:no-repeat; padding-left:20px; color:#FFF;}
+#link4 li a{ color:#FFF;}
+#link4 p{ text-align:right; color:#FFF; padding-right:4px;}
+#link4 p a{ color:#FFF;}
+
+
+#main1{ width:380px; height:140px; float:right; background-image:url(../images/lsjd/recommendblog.jpg); background-position:left center; background-repeat:no-repeat; border:solid 1px #003399; background-color:#a3d7ff;}
+#main1 p,#main1 ul{ margin-left:50px;}
+#main1 p{ padding-top:10px;}
+#main1 li{ height:18px; line-height:18px; background-image:url(../images/lsjd/arrow4.gif); background-position:left center; background-repeat:no-repeat; padding-left:10px;}
+#main1 .jenniferColor2{ margin-left:100px;}
+#main1 a{ color:#227086;}
+
+#main2{ width:300px; height:140px; float:left; background-image:url(../images/lsjd/time.jpg); background-position:left center; background-repeat:no-repeat; border:solid 1px #003399; background-color:#a3d7ff; margin-bottom:6px;}
+#main2 ul{ margin-left:70px;}
+#main2 p{ padding-top:10px;}
+#main2 li{ width:20px; height:18px; line-height:18px; float:left;}
+#main2 a{ color:#227086;}
+#main3{ clear:both; background-color:#a3d7ff; background-image:url(../images/lsjd/blogsearch.jpg); 
+background-position:left center; background-repeat:no-repeat; 
+height:32px; line-height:32px; margin-top:6px; border:solid 1px #003399;}
+#main3 li{ float:left; margin-left:6px;}
+#main3 ul{ margin-left:160px;}
+
+#main4{clear:both; background-color:#a3d7ff; background-position:left center; background-repeat:no-repeat; height:32px; line-height:32px; margin-top:6px; border:solid 1px #003399;}
+#main4 ul{ margin-left:10px;}
+#main4 li{ width:240px; height:32px; line-height:32px; float:left; background-image:url(../images/lsjd/arrow5.gif); background-repeat:no-repeat;  background-position:left center; padding-left:10px;}
+
+#main5{ clear:both; overflow:auto; background-color:#def1ff; background-image:url(../images/lsjd/recommendart.jpg); background-position:left top; background-repeat:no-repeat; margin-top:6px; border:solid 1px #003399; }
+#main5 ul{ margin:30px 10px 10px 10px;}
+#main5 li{ width:320px; float:left; height:28px; line-height:28px; background-image:url(../images/lsjd/arrow6.gif); background-repeat:no-repeat; background-position:left center; padding-left:10px;}
+#main5 a{color:#227086;}
+
+#main6{ clear:both; overflow:auto; background-color:#def1ff; background-image:url(../images/lsjd/newnode.jpg); background-position:left top; background-repeat:no-repeat; margin-top:6px; border:solid 1px #003399;}
+#main6 ul{ margin:10px 10px 10px 50px;}
+#main6 li{ width:300px; float:left; height:28px; line-height:28px; background-image:url(../images/lsjd/arrow6.gif); background-repeat:no-repeat; background-position:left center; padding-left:10px;}
+#main6 a{color:#227086;}
+
+#foot p{ text-align:center; line-height:24px;}
+#foot a{color:#227086;}

@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8DA3E54A-8A90-4D91-9033-0DDBF1C9FCE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Utils</RootNamespace>
+    <AssemblyName>MDC.Utils</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\MDC.Utils.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\MDC.Utils.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thrift, Version=0.11.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Thrift.dll</HintPath>
+    </Reference>
+    <Reference Include="YJ.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\YJ.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="YJ.Config, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\YJ.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="YJ.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\YJ.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AppConfig.cs" />
+    <Compile Include="Common\CCS3000.cs" />
+    <Compile Include="Common\Client.cs" />
+    <Compile Include="Common\AutoSerialPort.cs" />
+    <Compile Include="Common\DataGridViewPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\DataGridViewPlus.Designer.cs">
+      <DependentUpon>DataGridViewPlus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DGVToExcel.cs" />
+    <Compile Include="Common\dlgImageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\dlgImageView.Designer.cs">
+      <DependentUpon>dlgImageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ExcelHelper.cs" />
+    <Compile Include="Common\FailMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FailMessage.Designer.cs">
+      <DependentUpon>FailMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GetFilesHelper.cs" />
+    <Compile Include="Common\HttpHelper.cs" />
+    <Compile Include="Common\ListViewNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\ListViewNote.Designer.cs">
+      <DependentUpon>ListViewNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\LogHelper.cs" />
+    <Compile Include="Common\OutTimeManager.cs" />
+    <Compile Include="Common\Pallet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\Pallet.Designer.cs">
+      <DependentUpon>Pallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ReaderAccessor.cs" />
+    <Compile Include="Common\SerialPortEventArgs.cs" />
+    <Compile Include="Common\SerialPortUtil.cs" />
+    <Compile Include="Common\Shelf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\Shelf.Designer.cs">
+      <DependentUpon>Shelf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SuccessMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\SuccessMessage.designer.cs">
+      <DependentUpon>SuccessMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WaitMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\WaitMessage.Designer.cs">
+      <DependentUpon>WaitMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WarnMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\WarnMessage.Designer.cs">
+      <DependentUpon>WarnMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HBaseClass\AlreadyExists.cs" />
+    <Compile Include="HBaseClass\BatchMutation.cs" />
+    <Compile Include="HBaseClass\ColumnDescriptor.cs" />
+    <Compile Include="HBaseClass\GetDataFromHBase.cs" />
+    <Compile Include="HBaseClass\GetHBaseDataClass.cs" />
+    <Compile Include="HBaseClass\Hbase.cs" />
+    <Compile Include="HBaseClass\IllegalArgument.cs" />
+    <Compile Include="HBaseClass\IOError.cs" />
+    <Compile Include="HBaseClass\Mutation.cs" />
+    <Compile Include="HBaseClass\TAppend.cs" />
+    <Compile Include="HBaseClass\TCell.cs" />
+    <Compile Include="HBaseClass\TColumn.cs" />
+    <Compile Include="HBaseClass\TIncrement.cs" />
+    <Compile Include="HBaseClass\TRegionInfo.cs" />
+    <Compile Include="HBaseClass\TRowResult.cs" />
+    <Compile Include="HBaseClass\TScan.cs" />
+    <Compile Include="HuaWeiBarCode.cs" />
+    <Compile Include="HWDataPush\DAL_HuaweiUpdate.cs" />
+    <Compile Include="HWDataPush\Entity\AirParticleTest.cs" />
+    <Compile Include="HWDataPush\Entity\CDL_AppFrame_RcvMsgs.cs" />
+    <Compile Include="HWDataPush\Entity\Cell_MachineInfo.cs" />
+    <Compile Include="HWDataPush\Entity\EntConfig.cs" />
+    <Compile Include="HWDataPush\Entity\EntData.cs" />
+    <Compile Include="HWDataPush\Entity\HuaweiPushData.cs" />
+    <Compile Include="HWDataPush\Entity\HuaweiPushDataConfig.cs" />
+    <Compile Include="HWDataPush\Entity\HuaweiPushResult.cs" />
+    <Compile Include="HWDataPush\Entity\HuaweiResponse.cs" />
+    <Compile Include="HWDataPush\Entity\HuaweiUpdate.cs" />
+    <Compile Include="HWDataPush\Entity\ProcessFail.cs" />
+    <Compile Include="HWDataPush\Entity\PushResult.cs" />
+    <Compile Include="HWDataPush\Entity\TPL_ProductProcess.cs" />
+    <Compile Include="HWDataPush\GetTokenUtil.cs" />
+    <Compile Include="HWDataPush\HuaweiDataSender.cs" />
+    <Compile Include="HWDataPush\TXDPushData.cs" />
+    <Compile Include="Model\ExceptionInfo.cs" />
+    <Compile Include="Model\GlassInfo.cs" />
+    <Compile Include="Model\HB_Product_Parameter.cs" />
+    <Compile Include="Model\ProcessInfo.cs" />
+    <Compile Include="Model\ProcessLog.cs" />
+    <Compile Include="Model\ProductInfo.cs" />
+    <Compile Include="Model\StationEntity.cs" />
+    <Compile Include="Model\TPL_Glass_Delivery.cs" />
+    <Compile Include="Model\TPL_ProcessFail_Main.cs" />
+    <Compile Include="Model\TPL_ProcessFail_Sub.cs" />
+    <Compile Include="MQ.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\DataGridViewPlus.resx">
+      <DependentUpon>DataGridViewPlus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\dlgImageView.resx">
+      <DependentUpon>dlgImageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FailMessage.resx">
+      <DependentUpon>FailMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ListViewNote.resx">
+      <DependentUpon>ListViewNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Pallet.resx">
+      <DependentUpon>Pallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Shelf.resx">
+      <DependentUpon>Shelf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SuccessMessage.resx">
+      <DependentUpon>SuccessMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\WaitMessage.resx">
+      <DependentUpon>WaitMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\WarnMessage.resx">
+      <DependentUpon>WarnMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\Dapper.dll" />
+    <Content Include="DLL\log4net.dll" />
+    <Content Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="DLL\Reader.dll" />
+    <Content Include="DLL\Thrift.dll" />
+    <Content Include="DLL\YJ.Common.dll" />
+    <Content Include="DLL\YJ.Config.dll" />
+    <Content Include="DLL\YJ.Data.dll" />
+    <Content Include="DLL\YJ.Log.dll" />
+    <Content Include="Pic\Disabled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\Error.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\Idle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\Lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\Using.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\Warning.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\失败.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\成功.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\警告.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

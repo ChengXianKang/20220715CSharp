@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Json格式</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//JSON对象(表示一个学生)
+			// var json = {"stuno":"001","stuname":"张三丰","stusex":"男"};
+			// console.log(json.stuname);
+			
+			//JSON数组（多个学生）
+			// var json = [{"stuno":"001","stuname":"刘备","stusex":"男"},
+			// 	{"stuno":"002","stuname":"关羽","stusex":"男"},
+			// 	{"stuno":"003","stuname":"张飞","stusex":"男"}];
+			// console.log(json[1].stuname);
+			
+			//JSON中既包含对象也包含数组(一个老师和多个学生)
+			// var json = {
+			// 	"teacher":{"name":"张三","sex":"女"},
+			// 	"students":[{"stuno":"001","stuname":"刘备","stusex":"男"},
+			// 	{"stuno":"002","stuname":"关羽","stusex":"男"},
+			// 	{"stuno":"003","stuname":"张飞","stusex":"男"}]
+			// };
+			// console.log(json.teacher.name);
+			// console.log(json.students[2].stuname);
+			
+			//JSON对象和数组相互嵌套（公司部门(多部门)和人员数据）
+			var json = [
+				{"code":"XZB","name":"行政部","emp":
+					[
+					{"no":"001","name":"刘德华","sex":"男"},
+					{"no":"002","name":"张学友","sex":"男"},
+					{"no":"003","name":"蔡依林","sex":"女"},
+					],
+				},
+				{"code":"KFB","name":"开发部","emp":
+					[
+					{"no":"004","name":"周杰伦","sex":"男"},
+					{"no":"005","name":"蔡徐坤","sex":"男"},
+					{"no":"006","name":"王珞丹","sex":"女"},
+					],
+				}
+			];
+			console.log(json[1].name); //第二个部门的部门名称
+			console.log(json[0].emp[1].name); //第一个部门的第二个员工
+		</script>
+	</body>
+</html>

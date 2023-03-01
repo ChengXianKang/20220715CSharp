@@ -1,0 +1,11 @@
+1、简述在C#中，关于Array和ArrayList的区别？（5分）
+Array:所有数组的基类，提供创建，操作，搜索，和排序数组等的方法
+ArrayList:集合，大小可按需要动态增加的数组实现System.collections.IList接口。
+
+2、简述在SQLServer数据库中，unique和primary key约束之间最主要的区别。（5分）
+primary key：主键
+unique：唯一约束
+Primary Key不能为空，unique可以为空，并且最多只有一个为空。
+
+3、简述在C#中，序列化的作用。
+序列化将对象状态转换为可保持或传输的格式，并存储到存储媒体。

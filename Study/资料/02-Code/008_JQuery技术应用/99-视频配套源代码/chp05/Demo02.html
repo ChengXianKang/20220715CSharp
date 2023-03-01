@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>无限级下拉菜单</title>
+		<style type="text/css">
+			*{ margin: 0px; padding: 0px; list-style-type: none;}
+			#menu{ height: 35px; background-image: url(img/menubg.jpg);}
+			#menu li{ height: 35px; line-height: 35px; position: relative;}
+			#menu a{ text-decoration: none; color: black; padding: 0px 30px; 
+			font-size: 14px; font-weight: bold;}
+			#menu>ul>li ul{position: absolute; display: none; background-color:whitesmoke;}
+			
+			/* 一级 */
+			#menu>ul>li{float: left; }
+			/* 二级 */
+			#menu>ul>li>ul{ top: 35px; left: 0px;}
+			/* 三级和无限级 */
+			#menu>ul>li>ul>li ul{top:0px; width: 100%;}
+			
+			#content{ background-color: lightgray; text-align: center; padding: 200px;
+			font-size: 50px; font-weight: bold;}
+			.lihover{ background-color: dimgray;}
+		</style>
+		<script src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				$("#menu>ul>li").mouseenter(function(){
+					$(this).children("ul").stop().slideDown(500);
+				})
+				$("#menu>ul>li").mouseleave(function(){
+					$(this).children("ul").stop().slideUp(500);
+				})
+				$("#menu>ul>li>ul li").mouseenter(function(){
+					$(this).children("ul").css("left",$(this).css("width"));
+					$(this).children("ul").stop().slideDown(500);
+				})
+				$("#menu>ul>li>ul li").mouseleave(function(){
+					$(this).children("ul").stop().slideUp(500);
+				})
+								
+				$("#menu>ul>li li").mouseenter(function(){
+					$(this).addClass("lihover");
+				})
+				$("#menu>ul>li li").mouseleave(function(){
+					$(this).removeClass("lihover");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="javascript:void(0);">推荐分类</a>
+					<ul>
+						<li><a href="javascript:void(0);">英雄联盟</a></li>
+						<li><a href="javascript:void(0);">王者荣耀</a></li>
+						<li><a href="javascript:void(0);">绝地求生</a></li>
+						<li><a href="javascript:void(0);">二次元</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">游戏竞技</a>
+					<ul>
+						<li><a href="javascript:void(0);">英雄联盟</a></li>
+						<li><a href="javascript:void(0);">绝地求生</a>
+							<ul>
+								<li><a href="javascript:void(0);">三级菜单</a></li>
+								<li><a href="javascript:void(0);">三级菜单</a>
+									<ul>
+										<li><a href="javascript:void(0);">四级菜单</a></li>
+										<li><a href="javascript:void(0);">四级菜单</a></li>
+										<li><a href="javascript:void(0);">四级菜单</a></li>
+										<li><a href="javascript:void(0);">四级菜单</a></li>
+									</ul>								
+								</li>
+								<li><a href="javascript:void(0);">三级菜单</a></li>
+								<li><a href="javascript:void(0);">三级菜单</a></li>
+							</ul>						
+						</li>
+						<li><a href="javascript:void(0);">刺激战场</a></li>
+						<li><a href="javascript:void(0);">QQ飞车</a></li>
+						<li><a href="javascript:void(0);">怪物猎人</a></li>
+						<li><a href="javascript:void(0);">炉石传说</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">娱乐天地</a>
+					<ul>
+						<li><a href="javascript:void(0);">颜值</a></li>
+						<li><a href="javascript:void(0);">星娱</a></li>
+						<li><a href="javascript:void(0);">二次元</a></li>
+						<li><a href="javascript:void(0);">户外</a></li>
+						<li><a href="javascript:void(0);">音乐电台</a></li>
+					</ul>				
+				</li>
+				<li>
+					<a href="javascript:void(0);">科技教育</a>
+					<ul>
+						<li><a href="javascript:void(0);">鱼教</a></li>
+						<li><a href="javascript:void(0);">数码科技</a></li>
+						<li><a href="javascript:void(0);">军事</a></li>
+						<li><a href="javascript:void(0);">财经</a></li>
+					</ul>			
+				</li>
+				<li>
+					<a href="javascript:void(0);">语音直播</a>
+					<ul>
+						<li><a href="javascript:void(0);">FM233</a></li>
+						<li><a href="javascript:void(0);">音乐电台</a></li>
+						<li><a href="javascript:void(0);">娱乐互动</a></li>
+						<li><a href="javascript:void(0);">情感调频</a></li>
+					</ul>				
+				</li>
+				<li><a href="javascript:void(0);">其他分类</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			我是网页的主要内容
+		</div>
+	</body>
+</html>
+

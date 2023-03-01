@@ -1,0 +1,15 @@
+1、方法的重写和重载的区别？（5分）
+重写：子类对基类中的虚成员（虚方法、虚属性等）或抽象成员（抽象方法、抽象属性等）进行覆盖，重新实现。
+重载：同一个类中，同名的方法具有不同的参数签名的实现。重载的必要条件是方法具有不同的参数签名。
+方法的参数签名是指方法的参数个数、参数的数据类型、参数是否有ref、out、params修饰（方法的返回值类型不属于方法的参数签名）。
+
+2、简述ADO.NET中操作数据库时，需要用到的类及各自的作用。（5分）
+SqlConnection：连接对象，用于执行与数据库的连接。
+SqlCommand：命令对象，用于对数据库执行SQL语句。
+SqlDataAdapter：适配器对象，用于填充数据集和更新数据库。
+SqlParameter：参数对象，用于执行参数化SQL语句。
+SqlDataReader：读取器对象，用于从数据库中快速逐行读取数据。
+SqlTransaction：事务对象，用于执行数据库事务。
+
+3、部门表Dept中有部门编号DeptID，员工表Emp中有员工所属部门编号DeptID、员工年龄Age，请写一条SQL语句把表Dept和表Emp进行连接，并按员工年龄Age进行降序排序。（5分）
+select * from Emp left join Dept on Emp.DeptID = Dept.DeptID order by Age desc

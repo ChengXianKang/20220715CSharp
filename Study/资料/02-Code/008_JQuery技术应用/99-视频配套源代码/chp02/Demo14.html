@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>遮罩层对话框</title>
+		<style type="text/css">
+			.Modalbg{position:fixed;width:100%;height:100%;top:0px;left:0px;
+			background-color: gray; opacity: 0.3; display: none; z-index: 100; }
+			.myModal{position: absolute; top:150px; padding: 10px;
+			background-color: #FFC0CB; display: none; z-index: 101; }
+			.close{ text-align: right;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#bt1").click(function(){
+					$(".Modalbg").css("display","block");
+					$("#modal1").css("display","block");
+				});
+				$("#bt2").click(function(){
+					$(".Modalbg").css("display","block");
+					$("#modal2").css("display","block");
+				});
+				$("#aclose1").click(function(){
+					$(".Modalbg").css("display","none");
+					$("#modal1").css("display","none");	
+				})
+				$("#aclose2").click(function(){
+					$(".Modalbg").css("display","none");
+					$("#modal2").css("display","none");	
+				})				
+			});
+		</script>
+	</head>
+	<body>
+		<div style="margin-top: 200px; text-align: center;">
+			<input id="bt1" type="button" value="弹出内部DIV对话框" />
+			<input id="bt2" type="button" value="加载外部网页" />
+		</div>
+	</body>
+</html>
+<div class="Modalbg"></div>
+<div id="modal1" class="myModal" style="width:400px; left:50%; margin-left:-200px;">
+	<div class="close"><a href="#" id="aclose1">关闭1</a></div>
+	<form action="">
+		用户名:<input type="text" id="txtAccount"><br><br>
+		密    码:<input type="password" id="txtPwd"><br><br>
+			<input type="submit" value="登录">
+			<input type="submit" value="取消">
+			<a href="">注册</a>
+	</form>		
+</div>
+<div id="modal2" class="myModal" style="width:400px; left:50%; margin-left:-200px;">
+	<div class="close"><a href="#" id="aclose2">关闭2</a></div>
+	<iframe src="Demo14_01.html" frameborder="no"></iframe>
+</div>
+
+
+

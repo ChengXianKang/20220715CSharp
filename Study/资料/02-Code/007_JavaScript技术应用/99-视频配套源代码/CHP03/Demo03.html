@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>setInterval实现抽奖功能</title>
+		<style type="text/css">
+			#myTable{margin: 0px auto; width: 500px; height: 500px; }
+			#myTable td{border: solid 1px red;
+			width: 100px; height: 100px; 
+			text-align:center; font-weight: bold;}
+		</style>
+		<script type="text/javascript">
+			var myInterval;
+			var count = 0;
+			function GetResult()
+			{
+				for(var i=1;i<=25;i++)
+				{
+					var objAll = document.getElementById("td"+i);
+					objAll.style.backgroundColor = "white";
+				}
+				var rnd = Math.ceil(Math.random()*25);
+				var obj = document.getElementById("td"+rnd);
+				obj.style.backgroundColor = "red";
+				//符合条件的时候需要停止
+				if(count >= 20)
+				{
+					clearInterval(myInterval);
+					document.getElementById("info").innerHTML = obj.innerHTML;
+				}			
+				count++;
+			}
+			
+			function MyStart()
+			{
+				count = 1;
+				document.getElementById("info").innerHTML = "正在抽奖中...";
+				myInterval = setInterval("GetResult()",50);
+			}
+		</script>
+	</head>
+	<body>
+		<div style="text-align: center;">
+			<input type="button" value="开始抽奖" onclick="MyStart();">
+			<span id="info"></span>
+		</div>
+		<br/>
+		<table id="myTable">
+			<tr>
+				<td id="td1">谢谢参与</td>
+				<td id="td2">谢谢参与</td>
+				<td id="td3">谢谢参与</td>
+				<td id="td4">谢谢参与</td>
+				<td id="td5">谢谢参与</td>
+			</tr>
+			<tr>
+				<td id="td6">谢谢参与</td>
+				<td id="td7">谢谢参与</td>
+				<td id="td8">谢谢参与</td>
+				<td id="td9">谢谢参与</td>
+				<td id="td10">谢谢参与</td>
+			</tr>
+			<tr>
+				<td id="td11">谢谢参与</td>
+				<td id="td12">谢谢参与</td>
+				<td id="td13">500万大奖</td>
+				<td id="td14">谢谢参与</td>
+				<td id="td15">谢谢参与</td>
+			</tr>
+			<tr>
+				<td id="td16">谢谢参与</td>
+				<td id="td17">谢谢参与</td>
+				<td id="td18">谢谢参与</td>
+				<td id="td19">谢谢参与</td>
+				<td id="td20">谢谢参与</td>
+			</tr>
+			<tr>
+				<td id="td21">谢谢参与</td>
+				<td id="td22">谢谢参与</td>
+				<td id="td23">谢谢参与</td>
+				<td id="td24">谢谢参与</td>
+				<td id="td25">谢谢参与</td>
+			</tr>
+		</table>
+	</body>
+</html>

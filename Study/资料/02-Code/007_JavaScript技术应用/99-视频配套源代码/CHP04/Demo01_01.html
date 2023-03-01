@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>电子表</title>
+		<script type="text/javascript">
+			function ShowTime()
+			{
+				var now = new Date();
+				var myHour = now.getHours();
+				var myMinute = now.getMinutes();
+				var mySeconds = now.getSeconds();
+				var arrImg = document.getElementById("divClock").getElementsByTagName("img");
+				arrImg[0].src = "TimeImg/" + parseInt(myHour/10) + ".gif";
+				arrImg[1].src = "TimeImg/" + parseInt(myHour%10) + ".gif";
+				arrImg[2].src = "TimeImg/dot.gif";
+
+				arrImg[3].src = "TimeImg/" + parseInt(myMinute/10) + ".gif";
+				arrImg[4].src = "TimeImg/" + parseInt(myMinute%10) + ".gif";
+				arrImg[5].src = "TimeImg/dot.gif";
+
+				arrImg[6].src = "TimeImg/" + parseInt(mySeconds/10) + ".gif";
+				arrImg[7].src = "TimeImg/" + parseInt(mySeconds%10) + ".gif";
+				
+				if(myHour < 12)
+					arrImg[8].src = "TimeImg/cam.gif";
+				else
+					arrImg[8].src = "TimeImg/cpm.gif";			
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1>电子表</h1>
+		<div id="divClock">
+			<img /><img /><img /><img /><img /><img /><img /><img /><img />		
+		</div>
+	</body>
+	<script type="text/javascript">
+		setInterval("ShowTime()",1000);
+	</script>
+</html>

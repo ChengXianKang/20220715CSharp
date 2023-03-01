@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TreeView菜单</title>
+		<style type="text/css">
+			*{ margin: 0px; padding: 0px; font-size: 12px; list-style-type: none;}
+			#menu{ width: 200px; margin: 30px;}
+			#menu ul{}
+			#menu li{ line-height: 28px; }
+			#menu li a{ text-decoration: none; color: black;}
+			#menu ul>li ul{ display: none;}
+			.mypage{background: url(img/page.png) no-repeat left 8px; padding-left: 16px;}
+			.myplus{background: url(img/plus.png) no-repeat left 8px; padding-left: 16px;}
+			.myminus{background: url(img/minus.png) no-repeat left 8px; padding-left: 16px;}
+		</style>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $plusMenu = $("#menu>ul li:has(ul)");
+				$plusMenu.removeClass("mypage").removeClass("myminus").addClass("myplus");
+				var $pageMenu = $("#menu>ul li:not(:has(ul))");
+				$pageMenu.removeClass("myplus").removeClass("myminus").addClass("mypage");
+				
+				$plusMenu.click(function(){
+					if($(this).hasClass("myplus"))
+					{
+						$(this).removeClass("mypage").removeClass("myplus").addClass("myminus");
+						$(this).children("ul").slideDown(200);
+					}
+					else
+					{
+						$(this).removeClass("mypage").removeClass("myminus").addClass("myplus");
+						$(this).children("ul").slideUp(200);					
+					}
+					return false;
+				})
+				$pageMenu.click(function(){
+					//window.location.href = ??
+					window.open($(this).children("a").attr("href"));
+					return false;
+				})
+			})
+		</script>
+	</head>
+	<body>
+	  <div id="menu">
+	      <ul class="first" id="nav">
+	         <li><a href="http://www.baidu.com">首页</a></li>
+	         <li><a href="http://www.baidu.com">文化</a>
+	             <ul>
+	                <li><a href="http://www.baidu.com">企业文化</a></li>
+	                <li><a href="http://www.baidu.com">企业精神</a></li>
+	                <li><a href="http://www.baidu.com">经营理念</a></li>
+	             </ul>
+	         </li>
+	         <li><a href="http://www.baidu.com">新闻</a>
+				 <ul>
+	                <li><a href="http://www.baidu.com">公司新闻</a></li>
+	                <li><a href="http://www.baidu.com">产品发布新闻</a></li>
+	             </ul>
+	         </li>
+	         <li><a href="http://www.baidu.com">招聘</a>
+	            <ul>
+	                <li><a href="http://www.baidu.com">企业招聘</a></li>
+	                <li><a href="#">个人求职</a>
+						<ul>
+							<li><a href="#">java工程师</a></li>
+	                        <li><a href="#">.net工程师</a></li>
+	                    </ul>
+	                </li>
+	               <li><a href="http://www.baidu.com">联系我们</a></li>
+	               <li><a href="http://www.baidu.com">51job</a></li>
+	            </ul>
+	         </li>
+	      </ul>
+	  </div>
+	</body>
+</html>

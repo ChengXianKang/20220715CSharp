@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>固定高度解决div塌陷</title>
+		<style type="text/css">
+			#divbig{ width: 800px;
+			border: solid 3px green;
+			overflow: hidden;
+			}
+			#div1,#div2,#div3{
+				 width: 200px; height: 300px; margin: 10px;
+				 background-color: red;
+				 float: left;  				
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="divbig">
+			<div id="div1">div1</div>
+			<div id="div2">div2</div>
+			<div id="div3">div3</div>
+		</div>
+	</body>
+</html>

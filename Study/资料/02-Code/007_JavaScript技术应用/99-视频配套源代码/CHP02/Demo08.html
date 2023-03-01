@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用匿名函数简化代码</title>
+
+	</head>
+	<body>
+		<form>
+			文本框:<input type="text" id="txt1"> 
+				<input type="button" id="bt1" value="获取文本框内容" >
+			<br><br>
+		</form>	
+	</body>
+</html>
+		<script type="text/javascript">
+//			function getTxt()
+//			{
+//				var obj = document.getElementById("txt1");
+//				alert(obj.value);
+//			}
+			
+			document.getElementById("bt1").onclick = function()
+			{
+				var obj = document.getElementById("txt1");
+				alert(obj.value);
+			}
+		</script>

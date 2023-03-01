@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>编写一个简单的jQuery应用</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			function MyAnimation()
+			{
+				$("#myDiv").toggle(1500); //切换状态
+			}
+			$(function(){
+				setInterval("MyAnimation()",3000);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="myDiv">
+			<img src="img/glm1.jpg" width="500" height="400" />
+		</div>
+	</body>
+</html>

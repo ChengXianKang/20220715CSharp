@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>viewport</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<style type="text/css">
+			#myImg{max-width: 100%;}
+		</style>
+	</head>
+	<body style="text-align: center;">
+		<!--
+			使用viewport:
+			可以实现网页元素原始大小或自己控制大小的显示,但是有些区域超过浏览器大小看不见,只能通过平移的方式来查看。
+			此时我们也可以设置超出区域元素的max-width:100%,来缩放此区域解决超出的区域看不见需要平移的问题。
+		-->
+		<img id="myImg" src="img/swift.jpg" />
+		<div id="myText">
+			泰勒·斯威夫特（Taylor Swift），1989年12月13日出生于美国宾夕法尼亚州，美国流行音乐、乡村音乐创作型女歌手、音乐制作人、演员、慈善家。2006年发行首张录音室专辑《泰勒·斯威夫特》，获美国唱片业协会认证5倍白金唱片。2008年发行第二张录音室专辑《Fearless》，在美国公告牌专辑榜上获11周冠军，是2009年全美最畅销专辑，认证7倍白金唱片，专辑获第52届格莱美奖年度专辑。
+		</div>
+	</body>
+</html>

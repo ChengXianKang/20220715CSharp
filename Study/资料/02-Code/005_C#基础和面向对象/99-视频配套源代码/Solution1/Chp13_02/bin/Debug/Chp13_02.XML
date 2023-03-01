@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Chp13_02</name>
+    </assembly>
+    <members>
+        <member name="M:Chp13_02.Employee.GetSalary(System.Double,System.Int32,System.Double)">
+            <summary>
+            计算A类员工的工资
+            </summary>
+            <param name="baseSa">基本工资</param>
+            <param name="workYear">工作年限</param>
+            <param name="yearSa">工龄工资</param>
+            <returns>返回总工资</returns>
+        </member>
+        <member name="M:Chp13_02.Employee.GetSalary(System.Double,System.Int32,System.Double,System.Double)">
+            <summary>
+            计算B类员工的工资
+            </summary>
+            <param name="baseSa">基本工资</param>
+            <param name="workYear">工作年限</param>
+            <param name="yearSa">工龄工资</param>
+            <param name="ProSa">参与项目总金额</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*****************
+左边部分——用户登录部分div
+*****************/
+#left_login{
+	width:180px;									/*根据图片尺寸设置div的宽度*/
+	height:80px;									/*根据成品图片设置的用户登录部分的高度*/
+	background-image:url(../images/login.jpg);		/*将“用户登录”图片设置为登录部分div的背景图片*/
+	background-repeat:no-repeat;					/*当背景图片无法覆盖全部div时，也不会使用平铺*/
+	/*
+	background:url(../images/login.jpg) no-repeat;
+	以上两个css属性可用此css属性取代
+	*/
+	padding-top:50px;								/*设置此div的上内边距，以把表单内容移动到距离div上边框50个像素远的地方*/
+	padding-left:30px;								/*设置此div的左内边距，以把表单内容移动到距离div左边框30个像素远的地方*/
+
+}
+
+/*****************
+所在容器：左边部分——用户登录部分
+样式表对象：表单的无序列表
+说明：
+1、调整不同表单元素之间的垂直间隙。若给每个表单空间设置内、外边距来调整间隙非常麻烦，因此采用列表来辅助我们进行调整。
+2、把在同一行的表单元素放在一个li中，然后调整li的上方外边距（margin-top）
+*****************/
+#left_login ul li{
+	margin-top:5px;									/*列表项的上方外边距，用此来调整表单空间之间的垂直距离*/
+}
+
+/*****************
+所在容器：左边部分——用户登录部分——表单
+样式表对象：表单内所有输入文本框类元素
+说明：
+1、首先把边框设置为无边框。然后使用border-bottom单独添加文本输入框的下边框样式。
+*****************/
+#left_login ul li .txtstyle{
+	border:none;									/*设置上下左右都没有边框*/
+	border-bottom:solid 1px #000;					/*单独设置下边框样式：单实线、一个像素粗细，黑色边框*/	
+	width:75px;										/*设置文本输入框的宽度*/
+}
+
+/*****************
+所在容器：左边部分——用户登录部分——表单
+样式表对象：表单内所有按钮类元素
+说明：
+1、设置按钮元素的边框
+2、设置按钮元素的高和宽
+3、设置按钮元素中文字的水平、垂直居中
+*****************/
+#left_login ul li .btnstyle{
+	border:solid 1px #000;							/*设置上下左右边框样式：单实线、一个像素粗细，黑色边框*/
+	width:30px;										/*设置按钮的宽度*/
+	height:20px;									/*设置按钮的高度*/
+	text-align:center;								/*设置按钮的水平居中*/
+	line-height:20px;								/*设置按钮文字的行高，行高刚好等于按钮的高度时，文字便可实现垂直居中*/
+	background-color:#EDE5E8						/*设置按钮的背景色*/
+}
+
+/*****************
+所在容器：左边部分——用户登录部分
+样式表对象："忘记密码"
+说明：
+1、用于调整“忘记密码"这个超链接文字和左边按钮之间的距离
+*****************/
+#left_login ul li a{
+	margin-left:3px;
+}
+
+/*****************
+左边部分——鲜花分类部分div
+*****************/
+#left_category{
+	width:180px;									/*根据背景图片的尺寸设置div的宽度*/
+	background-image:url(../images/category.jpg);	/*将"鲜花分类"图片设置为div的背景图片*/
+	background-repeat:no-repeat;					/*当背景图片无法覆盖全部div时，也不会使用平铺*/
+	/*
+	background:url(../images/category.jpg) no-repeat;
+	以上两个css属性可用此css属性取代
+	*/
+	padding:40px 0px 0px 30px;						/*设置div的上、右、下、左内边距，以将文字部分调整到合适位置*/
+	
+	/*测试代码*/
+	height:500px;
+}
+/*****************
+所在容器：左边部分——鲜花分类部分
+样式表对象：鲜花分类部分的"用途"、"花材"、"价格"三个词
+说明：
+1、
+*****************/
+#left_category h3{
+	background-color:#FED8D9;						/*设置背景色*/
+	width:120px;									/*设置标题部分的宽度，可以调整背景色的宽度*/
+	margin:15px 0px 8px 0px;						/*调整标题文字的上下外边距，以拉开标题和列表文字之间的距离*/
+}
+
+/*****************
+所在容器：左边部分——鲜花分类部分
+样式表对象：鲜花分类部分详细列表文字
+说明：
+1、
+*****************/
+#left_category ul li{
+	border-bottom:dashed 1px #000;					/*为所有li设置底部边框，线型选择为虚线，1个像素粗，黑色*/
+	width:118px;									/*设置li的宽度*/
+	margin-top:5px;									/*设置所有列表项的上部外边距，调整各列表项之间的距离*/
+	padding-bottom:2px;								/*设置所有列表项的下部内边距，调整文字和虚线下边框之间的距离*/
+	background-image:url(../images/icon1.gif);		/*将列表符图片添加为li的背景图片*/
+	background-repeat:no-repeat;					/*当背景图片无法覆盖全部div时，也不会使用平铺*/
+	/*
+	background:url(../images/icon1.gif) no-repeat;
+	以上两个css属性可用此css属性取代
+	*/
+	background-position: 5px 3px;					/*调整背景图片在其所在盒子模型中的位置，第一个值代表距离其所在盒子模型的左边框的距离，第二个值代表距离其所在盒子模型的上边框的距离*/
+	padding-left:17px;								/*设置左内边距，通过该设置可以将li的内容（即列表项文字）右移*/
+}
+

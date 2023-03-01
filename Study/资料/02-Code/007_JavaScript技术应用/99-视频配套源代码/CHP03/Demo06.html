@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>修改标题,背景颜色和前景颜色</title>
+		<script type="text/javascript">
+			function ChangeTitle()
+			{
+				document.title = document.getElementById("txtTitle").value;
+			}
+			function ChangeFgColor()
+			{
+				document.fgColor = document.getElementById("selFgColor").value;
+			}	
+			function ChangeBgColor()
+			{
+				document.bgColor = document.getElementById("clBgColor").value;
+			}	
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txtTitle" /> 
+		<input type="button" value="修改标题" onclick="ChangeTitle();" />
+		文字颜色:
+		<select id="selFgColor" onchange="ChangeFgColor();">
+			<option value="white">白色</option>
+			<option value="red">红色</option>
+			<option value="green">绿色</option>
+			<option value="blue">蓝色</option>
+			<option value="yellow">黄色</option>
+			<option value="black">黑色</option>
+		</select>
+		背景颜色:
+		<input type="color" id="clBgColor" onchange="ChangeBgColor();" />
+		<br/><br/>
+		<p>
+			JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。
+			它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，
+			最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。
+		</p>		
+	</body>
+</html>

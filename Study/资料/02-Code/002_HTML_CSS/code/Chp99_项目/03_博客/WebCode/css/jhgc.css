@@ -1,0 +1,65 @@
+/* CSS Document */
+body,div,ul,li,table,tr,td,img,input,p{ margin:0px; padding:0px; font-size:12px; 
+list-style-type:none; color:#FFF;}
+
+body{ background-color:#000; }
+a:link,a:hover,a:active,a:visited{ color:#FFF; text-decoration:none;}
+#container{ width:800px; margin:0px auto; background-image:url(../images/jhgc/body_bg.jpg); background-repeat:repeat-y; background-position:center center;}
+#globallink{ width:800px; height:430px; background-image:url(../images/jhgc/banner.jpg);}
+#menu{ width:50px; float:right; margin-top:68px;}
+#menu li{ height:40px; text-align:center;}
+#menu li a{ display:block; width:25px; margin-left:13px; line-height:15px; color:#FFF; text-decoration:none; }
+
+
+#blogbody{ margin:0px;}
+#links{background-color:#3E3226; width:196px; height:auto; float:left; background-image:url(../images/jhgc/parabottom.jpg); background-position:center bottom; background-repeat:no-repeat; margin-top:-90px;}
+#link1 li{ height:20px; line-height:20px; background-image:url(../images/jhgc/arrow1.gif); background-repeat:no-repeat; background-position:14px center; padding-left:30px;}
+#link2{ background-image:url(../images/jhgc/lhotblog.jpg); background-repeat:no-repeat; background-position:left top; margin-top:10px; padding-top:40px;}
+#link2 li{ height:20px; line-height:20px; background-image:url(../images/jhgc/arrow2.gif); background-repeat:no-repeat; background-position:14px center; padding-left:30px;}
+#link2 p { text-align:right; padding-right:12px;}
+#link3{ background-image:url(../images/jhgc/lrecent.jpg); background-repeat:no-repeat; background-position:left top; margin-top:10px; padding-top:40px;}
+#link3 li{ height:20px; line-height:20px; background-image:url(../images/jhgc/arrow3.gif); background-repeat:no-repeat; background-position:14px center; padding-left:30px;}
+#link3 p { text-align:right; padding-right:12px;}
+#link4{ background-image:url(../images/jhgc/lapply.jpg); background-repeat:no-repeat; background-position:left top; margin-top:10px; padding-top:40px;}
+#link4 li{ height:20px; line-height:20px; background-image:url(../images/jhgc/arrow3.gif); 
+background-repeat:no-repeat; background-position:14px center; padding-left:30px;}
+#link4 p { text-align:right; padding-right:12px;}
+
+#main{ float:left; width:604px; background-image:url(../images/jhgc/container_bg.jpg); background-repeat:no-repeat; background-position:right bottom;}
+#main1{ height:170px; background-image:url(../images/jhgc/recommendblog.jpg); background-repeat:no-repeat; background-position:30px 0px;}
+#main1 p,#main1 ul{ margin-left:170px;}
+#main1 p{ padding-top:20px;}
+
+#main1 p a.jenniferColor1{
+	color:#C86615;
+}
+#main1 p a.jenniferColor2{
+	color:#BA4637;
+	margin-left:30px;	
+}
+
+#main1 li{ height:20px; line-height:20px;}
+#main2{ width:500px; height:40px; margin-left:30px; border:5px solid #36240C; padding:5px;}
+#main2 p{ display:inline;}
+#main2 p.pColor2{ color:#960;}
+#main2 li{ width:18px; float:left; line-height:30px;}
+#main3{ width:500px; margin-left:30px; border:5px solid #36240C; padding:5px; margin-top:10px; color:#960; height:30px; line-height:30px;}
+#main3 li{ float:left; color:#960; margin-left:6px;}
+#main3 input.myTxtStyle{ border:solid 1px #996600; background-color:#000;}
+#main3 input.myBtnStyle{ border:solid 1px #996600; background-color:#000; color:#996600;}
+#main4{ width:500px; margin-left:30px; border:5px solid #36240C; padding:5px; margin-top:10px; color:#960; height:50px; line-height:22px;}
+#main4 li{ color:#960; margin-left:6px; background-image:url(../images/jhgc/arrow5.gif); background-repeat:no-repeat; background-position:1px center; padding-left:13px;}
+#main4 input{border:solid 1px #996600; background-color:#000;}
+#main4 input.myBtnStyle{ border:solid 1px #996600; background-color:#000; color:#996600;}
+#main5{ margin-top:10px; background-image:url(../images/jhgc/recommendart.jpg); background-repeat:no-repeat; background-position:30px top; padding-top:70px;}
+#main5 ul{ margin-left:30px;}
+#main5 li{ height:20px; line-height:20px; background-image:url(../images/jhgc/arrow6.gif); background-repeat:no-repeat; background-position:4px center; padding-left:22px;}
+#main5 li a{ color:#960;}
+#main5 li a.author2{ color:#930;}
+#main6{ margin-top:10px; background-image:url(../images/jhgc/newnode.jpg); background-repeat:no-repeat; background-position:30px top; padding-left:100px;}
+#main6 li{ height:20px; line-height:20px; background-image:url(../images/jhgc/arrow6.gif); background-repeat:no-repeat; background-position:4px center; padding-left:22px; color:#930;}
+#main6 li a{ color:#960;}
+
+#foot{ clear:both; height:46px; background-image:url(../images/jhgc/footer_bg.jpg); background-repeat:no-repeat; margin-top:6px; text-align:center; padding-top:14px;}
+#foot p{ display:block; height:18px;}
+

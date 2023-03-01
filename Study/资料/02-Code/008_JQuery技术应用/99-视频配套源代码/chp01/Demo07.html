@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>内容过滤选择器</title>
+		<style type="text/css">
+			div{margin: 0px; padding: 0px; height: auto; overflow: auto; text-align: center;}
+			.team{clear: both; border: solid 1px black; background-color: pink;}
+			.liubei,.caocao,.sunquan{ width: 250px; height: 100px; margin: 20px; float: left;
+			border: solid 1px black; line-height: 30px; background-color: pink;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#containSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:contains('曹')").css("backgroundColor","green");
+				});
+				$("#containMoreSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:contains('曹'),div:contains('黄')").css("backgroundColor","green");
+				});
+				$("#parentSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:parent").css("backgroundColor","green");
+				});
+				$("#emptySelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:empty").css("backgroundColor","green");
+				});	
+				$("#hasSelect").click(function(){
+					$("*").removeAttr("style");
+					$("div:has(#zhaoyun),div:has(#zhouyu)").css("backgroundColor","green");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="button" id="containSelect" value="选择含有文本“曹”的DIV">
+			<input type="button" id="containMoreSelect" value="选择含有文本“曹”和“黄”的DIV">
+			<input type="button" id="parentSelect" value="选择包含子元素(或者文本元素)的DIV">
+			<input type="button" id="emptySelect" value="选择不包含子元素(或者文本元素)的空DIV">		
+			<input type="button" id="hasSelect" value="选择含有id为zhaoyun或zhouyu的子元素的DIV">
+		</div>
+		<h2>刘备军团(h2标签)</h2>
+			<div id="lbUl" class="team">
+				<div id="guanyu" class="liubei">关羽<br>(id=guanyu,class=liubei)</div>
+				<div id="zhangfei" class="liubei">张飞<br>(id=zhangfei,class=liubei)</div>
+				<div id="zhaoyun" class="liubei">赵云<br>(id=zhaoyun,class=liubei)</div>
+				<div id="machao" class="liubei"></div>
+			</div>
+		<h2>曹操军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="dianwei" class="caocao">典韦<br>(id=dianwei,class=caocao)</div>
+				<div id="caopi" class="caocao">曹丕<br>(id=caopi,class=caocao)</div>
+				<div id="caozhi" class="caocao">曹植<br>(id=caozhi,class=caocao)</div>
+				<div id="caoren" class="caocao"></div>
+			</div>
+		<h2>孙权军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="huanggai" class="sunquan">黄盖<br>(id=huanggai,class=sunquan)</div>
+				<div id="zhouyu" class="sunquan">周瑜<br>(id=zhouyu,class=sunquan)</div>
+				<div id="lusu" class="sunquan">鲁肃<br>(id=lusu,class=sunquan)</div>
+				<div id="taishici" class="sunquan"></div>			
+			</div>			
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>复制节点</title>
+		<style type="text/css">
+			div{text-align: center; line-height: 30px;}
+			img{ margin: 20px;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#bt1").click(function(){
+					for(var i = 1;i<=10;i++)
+					{
+						var cloneObj = $("#swk").clone();
+						$("#cloneDiv").append(cloneObj);					
+					}
+				});
+				$("#bt2").click(function(){
+					$("#cloneDiv img").remove();
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div>
+			<input id="bt1" type="button" value="变身多个孙悟空"  />
+			<input id="bt2" type="button" value="变身一个孙悟空"  />
+		</div>
+		<div><img id="swk" src="img/sunwukong.png" width="80" /></div>
+		<div id="cloneDiv">
+			
+		</div>
+	</body>
+</html>

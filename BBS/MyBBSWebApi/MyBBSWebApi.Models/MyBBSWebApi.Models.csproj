@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Ace</Authors>
+		<Company>Youshow</Company>
+		<Version>1.3.2</Version>
+  </PropertyGroup>
+
+</Project>

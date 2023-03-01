@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MyBlog</title>
+<link id="cssFile" href="css/lsjd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	var myHref = window.location.href;
+	var arr = myHref.split("=");
+	var cssFileName = "lsjd";
+	if(arr.length == 1)
+		cssFileName = "lsjd";
+	else
+		cssFileName = arr[arr.length-1];
+	var cssFile = document.getElementById("cssFile");
+	cssFile.href = "css/" + cssFileName + ".css";	
+</script>
+
+
+</head>
+
+<body>
+<div id="container"><!--最大的容器-->
+	<div id="globallink"><!--头部容器-->
+        <div id="menu"><!--菜单-->
+            <ul>
+              <li><a href="#">首页</a></li>
+              <li><a href="#">论坛</a></li>
+              <li><a href="#">推荐</a></li>
+              <li><a href="#">最新日志</a></li>
+              <li><a href="#">最新评论</a></li>
+              <li><a href="#">尚未登录</a></li>
+            </ul> 
+        </div>    
+    </div>
+    <div id="blogbody">
+    	<div id="links">
+        	<div id="link1"><!--样式统计-->
+                <ul>
+                    <li>用户:&nbsp;<b>893</b>&nbsp;人</li>
+                    <li>日志:&nbsp;<b>4397</b>&nbsp;个</li>
+                    <li>评论:&nbsp;<b>4596</b>&nbsp;篇</li>
+                </ul>
+            </div>
+            <div id="link2"><!--热门博客-->
+              <ul>
+                <li><a href="#">艾萨克</a>&nbsp;&lt;<a class="author" href="#">isaac</a>&gt;</li>
+                <li><a href="#">詹尼花儿</a>&nbsp;&lt;<a class="author" href="#">jennifer</a>&gt;</li>
+                <li><a href="#">流 觞</a>&nbsp;&lt;<a class="author" href="#">shenhuanyan</a>&gt;</li>
+                <li><a href="#">CYBERSPACE</a>&nbsp;&lt;<a class="author" href="#">cyber</a>&gt;</li>
+                <li><a href="#">小舔一下</a>&nbsp;&lt;<a class="author" href="#">LifeSucks</a>&gt;</li>
+                <li><a href="#">楚岑·洗心</a>&nbsp;&lt;<a class="author" href="#">popla</a>&gt;</li>
+                <li><a href="#">小孩儿</a>&nbsp;&lt;<a class="author" href="#">bazhuazhua</a>&gt;</li>
+                <li><a href="#">未名空间</a>&nbsp;&lt;<a class="author" href="#">sheva</a>&gt;</li>
+                <li><a href="#">Dark City</a>&nbsp;&lt;<a class="author" href="#">freax</a>&gt;</li>
+                <li><a href="#">E心E意&amp;36</a>&nbsp;&lt;<a class="author" href="#">moonbow</a>&gt;</li>
+              </ul>
+              <p><a href="#">OPML</a>&nbsp;&nbsp;<a href="#">更多</a></p>
+            </div>
+            <div id="link3"><!--最近更新-->
+              <ul>
+                <li><a href="#">托波索的小屋</a>&nbsp;&lt;<a class="author" href="#">quixote</a>&gt;</li>
+                <li><a href="#">小孩儿</a>&nbsp;&lt;<a class="author" href="#">bazhuazhua</a>&gt;</li>
+                <li><a href="#">詹尼花儿</a>&nbsp;&lt;<a class="author" href="#">jennifer</a>&gt;</li>
+                <li><a href="#">E心E意&amp;36</a>&nbsp;&lt;<a class="author" href="#">moonbow</a>&gt;</li>
+                <li><a href="#">Beyond</a>&nbsp;&lt;<a class="author" href="#">sherrielin</a>&gt;</li>
+                <li><a href="#">加州旅馆</a>&nbsp;&lt;<a class="author" href="#">zhanxiongfei</a>&gt;</li>
+                <li><a href="#">星天的博客</a>&nbsp;&lt;<a class="author" href="#">starsky</a>&gt;</li>
+                <li><a href="#">个人文集</a>&nbsp;&lt;<a class="author" href="#">sherry</a>&gt;</li>
+              </ul>
+              <p><a href="#">OPML</a>&nbsp;&nbsp;<a href="#">更多</a></p>  
+            </div>
+            <div id="link4"><!--最新申请-->
+              <ul>
+                <li><a href="#">星天的博客</a>&nbsp;&lt;<a class="author" href="#">starsky</a>&gt;</li>
+                <li><a href="#">蓝空霞彩</a>&nbsp;&lt;<a class="author" href="#">wcylester</a>&gt;</li>
+                <li><a href="#">随 缘</a>&nbsp;&lt;<a class="author" href="#">matata</a>&gt;</li>
+                <li><a href="#">大山的孩子</a>&nbsp;&lt;<a class="author" href="#">tuonene</a>&gt;</li>
+                <li><a href="#">伊的四季</a>&nbsp;&lt;<a class="author" href="#">Ifishamm</a>&gt;</li>
+                <li><a href="#">SONG, original</a>&nbsp;&lt;<a class="author" href="#">song</a>&gt;</li>
+                <li><a href="#">买买提※温和的树</a>&nbsp;&lt;<a class="author" href="#">mimiti</a>&gt;</li>
+              </ul>
+              <p><a href="#">OPML</a>&nbsp;&nbsp;<a href="#">更多</a></p>
+            </div>
+        </div>
+        <div id="main">
+        	<div id="main1">
+              <!--博客推荐-->
+              <p><a href="#" class="jenniferColor1"><b>詹尼花儿</b></a><a href="#"  class="jenniferColor2">jennifer</a></p>
+              <ul>
+                <li><a href="#">禅</a></li>
+                <li><a href="#">又地震了</a></li>
+                <li><a href="#">老李说</a></li>
+                <li><a href="#">地铁发飙记</a></li>
+                <li><a href="#">“王”者归来</a></li>
+              </ul>
+            </div>
+            <div id="main2"><!--日期时间-->
+              <ul>
+                <p>2012年2月24日&nbsp;&nbsp;星期五&nbsp;&nbsp;水瓶</p>
+                <p class="pColor2">壬辰年&nbsp;&nbsp;龙&nbsp;&nbsp;二月初三</p>
+                <br />
+                <li><a href="#">*</a></li>
+                <li><a href="#">A</a></li>
+                <li><a href="#">B</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">D</a></li>
+                <li><a href="#">E</a></li>
+                <li><a href="#">F</a></li>
+                <li><a href="#">G</a></li>
+                <li><a href="#">H</a></li>
+                <li><a href="#">I</a></li>
+                <li><a href="#">J</a></li>
+                <li><a href="#">K</a></li>
+                <li><a href="#">L</a></li>
+                <li><a href="#">M</a></li>
+                <li><a href="#">N</a></li>
+                <li><a href="#">O</a></li>
+                <li><a href="#">P</a></li>
+                <li><a href="#">Q</a></li>
+                <li><a href="#">R</a></li>
+                <li><a href="#">S</a></li>
+                <li><a href="#">T</a></li>
+                <li><a href="#">U</a></li>
+                <li><a href="#">V</a></li>
+                <li><a href="#">W</a></li>
+                <li><a href="#">X</a></li>
+                <li><a href="#">Y</a></li>
+                <li><a href="#">Z</a></li>
+              </ul>
+            </div>
+            <div id="main3">
+              <!--博客搜索-->
+              <ul>
+                <form>
+                  <li>博客搜索:
+                    <input name="keyword" type="text" class="myTxtStyle">
+                  </li>
+                  <li>
+                    <input type="radio" name="key" value="id" checked>ID</li>
+                  <li>
+                    <input type="radio" name="key" value="name">名称</li>
+                  <li>
+                    <input type="radio" name="key" value="describe">描述</li>
+                  <li>
+                    <input type="submit" value="GO" class="myBtnStyle">
+                  </li>
+                </form>
+              </ul>
+            </div>
+            <div id="main4">
+              <!--用户登录-->
+              <ul>
+                <form>
+                  <li>用户名:
+                    <input type="text" name="id" class="myTxtStyle">
+                    <input type="submit" value="登录" class="myBtnStyle">
+                  </li>
+                  <li>密　码:
+                    <input type="password" name="passwd" class="myTxtStyle">
+                    <input type="button" value="注册" class="myBtnStyle">
+                  </li>
+                </form>
+              </ul>
+            </div>
+            <div id="main5">
+              <!--样式推荐-->
+              <ul>
+                <li><a href="#">突厥系列之一_突厥,突厥人</a>&nbsp;<a href="#" class="author2">vivids</a></li>
+                <li><a href="#">姐姐说 坚强的就是快乐的...</a>&nbsp;<a href="#" class="author2">cyber</a></li>
+                <li><a href="#">在linux下使用NOR flash存...</a>&nbsp;<a href="#" class="author2">alvin</a></li>
+                <li><a href="#">景致南浔</a>&nbsp;<a href="#" class="author2">amandavela</a></li>
+                <li><a href="#">Windows快捷键大全</a>&nbsp;<a href="#" class="author2">inming</a></li>
+                <li><a href="#">地铁发飙记</a>&nbsp;<a href="#" class="author2">jennifer</a></li>
+                <li><a href="#">2006发生的事</a>&nbsp;<a href="#" class="author2">xfavorx</a></li>
+                <li><a href="#">姐姐说 坚强的就是快乐的...</a>&nbsp;<a href="#" class="author2">cyber</a></li>
+                <li><a href="#">突厥系列之一_突厥,突厥人</a>&nbsp;<a href="#" class="author2">vivids</a></li>
+                <li><a href="#">在linux下使用NOR flash存...</a>&nbsp;<a href="#" class="author2">alvin</a></li>
+                <li><a href="#">姐姐说 坚强的就是快乐的...</a>&nbsp;<a href="#" class="author2">cyber</a></li>
+              </ul>
+            </div>
+            <div id="main6">
+              <!--最新更新-->
+              <ul>
+                <li>[<a href="#">托波索的小屋</a>]&nbsp;<a href="#">等我考完试了</a></li>
+                <li>[<a href="#">长不大的小孩儿</a>]&nbsp;<a href="#">上完了最后一节严宣申老师...</a></li>
+                <li>[<a href="#">詹尼花儿</a>]&nbsp;<a href="#">一句话</a></li>
+                <li>[<a href="#">长不大的小孩儿</a>]&nbsp;<a href="#">看了一个比较崇拜的ss师兄...</a></li>
+                <li>[<a href="#">长不大的小孩儿</a>]&nbsp;<a href="#">突然想起了鲁迅的一句话</a></li>
+                <li>[<a href="#">E心E意W36</a>]&nbsp;<a href="#">呵呵，做版主被弹劾了</a></li>
+                <li>[<a href="#">Beyond Paradise</a>]&nbsp;<a href="#">偶尔也要更新一下～</a></li>
+                <li>[<a href="#">詹尼花儿</a>]&nbsp;<a href="#">痛苦啊</a></li>
+                <li>[<a href="#">加州旅馆</a>]&nbsp;<a href="#">寻找局部最优</a></li>
+                <li>[<a href="#">星天的博客</a>]&nbsp;<a href="#">冒着大风出去自习</a></li>
+                <li>[<a href="#">星天的博客</a>]&nbsp;<a href="#">卷首语</a></li>
+                <li>[<a href="#">个人文集</a>]&nbsp;<a href="#">发篇文章真难</a></li>
+                <li>[<a href="#">E心E意W36</a>]&nbsp;<a href="#">假期将至！</a></li>
+                <li>[<a href="#">长不大的小孩儿</a>]&nbsp;<a href="#">今天……</a></li>
+                <li>[<a href="#">蓝色天际/blueheaven</a>]&nbsp;<a href="#">没课了</a></li>
+                <li>[<a href="#">长不大的小孩儿</a>]&nbsp;<a href="#">才看到有意思的东西</a></li>
+                <li>[<a href="#">长不大的小孩儿</a>]&nbsp;<a href="#">又要放假了</a></li>
+                <li>[<a href="#">蓝空霞彩</a>]&nbsp;<a href="#">读书人的出世与入世1</a></li>
+                <li>[<a href="#">倏忽一年，花开两边</a>]&nbsp;<a href="#">期末临近</a></li>
+        <!--        <li>[<a href="#">倏忽一年，花开两边</a>]&nbsp;<a href="#">小小学术之winpcap(自力更...</a></li>-->
+              </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="foot">
+    	<p>
+        	<a href="#">博客首页</a> | <a href="#">博客论坛</a> | <a href="#">用户列表</a> | <a href="#">自由推荐</a> | <a href="#">最新日志</a> | <a href="#">最新评论</a> | <a href="#">热门排行</a> | <a href="#">日志搜索</a> | <a href="#">立即申请</a>
+        </p>
+        <p>版权所有：*******科技有限公司 风格切换：<a href="index.html?css=jhgc">交河故城</a> | <a href="index.html?css=lsjd">蓝色经典</a> | <a href="index.html?css=qmsht">清明上河图</a>
+        </p>
+    </div>
+    
+</div>
+
+</body>
+</html>

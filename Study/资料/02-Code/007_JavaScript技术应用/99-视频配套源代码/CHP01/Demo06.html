@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选择分支结构</title>
+	</head>
+	<body>
+	<script type="text/javascript">
+		//获取当前日期，判断当前日期是否为自己的生日，如果是则提示"生日快乐"
+		//假设生日就是6.1
+//		var now = new Date();
+//		var nowMonth = now.getMonth(); //月份从0开始编号
+//		var nowDay = now.getDate();
+//		//alert(nowMonth);
+//		//alert(nowDay);
+//		if(nowMonth+1 == 6 && nowDay == 1)
+//			alert('生日快乐！');
+			
+		//获取当前时间，判断是否为星期六，星期日，
+		//如果是提示"我要出去浪",否则提示"努力工作"
+//		var now = new Date();
+//		var nowWeek = now.getDay();
+//		if(nowWeek == 0 || nowWeek == 6)
+//			alert('我要出去浪');
+//		else
+//			alert('努力工作');
+
+		//获取当前时间，
+		//如果0点-12点提示：早上好；
+		//如果12点-14点提示：中午好；
+		//如果14点-18点提示：下午好；
+		//剩下时间提示：晚上好。
+//		var now = new Date();
+//		var nowHour = now.getHours();
+//		if(nowHour < 12)
+//			alert('早上好!');
+//		else if(nowHour < 14)
+//			alert('中午好!');
+//		else if(nowHour < 18)
+//			alert('下午好!');
+//		else
+//			alert('晚上好!');
+
+//		获取当前时间：
+//		如果是工作日（星期一到星期五）
+//​			10点之前提示："开会中..."    10点之后提示:"努力敲代码中..."
+//		如果是双休日（星期六星期天）
+//​			10点之前提示："还在睡梦中..."  10点之后提示:"游戏中..."
+//		var now = new Date();
+//		var nowWeek = now.getDay();
+//		var nowHour = now.getHours();
+//		if(nowWeek == 0 || nowWeek == 6) //双休日
+//		{
+//			if(nowHour < 10)
+//				alert('还在睡梦中....');
+//			else
+//				alert('游戏中...');
+//		}
+//		else  //工作日
+//		{
+//			if(nowHour < 10)
+//				alert('开会中...');
+//			else
+//				alert('努力敲代码中...');			
+//		}
+
+//		获取当前时间星期几，自动提示当天的课表信息，课表如下：
+//		星期一：语文、体育、英语
+//		星期二：数学、化学、计算机
+//		星期三：政治、历史、物理
+//		星期四：语文、数学、英语
+//		星期五：计算机、英语、美术
+//		星期六和星期天：休息
+		var now = new Date();
+		var nowWeek = now.getDay();		
+		switch(nowWeek)
+		{
+			case 1:
+				alert('语文、体育、英语'); break;
+			case 2:
+				alert('数学、化学、计算机'); break;
+			case 3:
+				alert('政治、历史、物理'); break;
+			case 4:
+				alert('语文、数学、英语'); break;
+			case 5:
+				alert('计算机、英语、美术'); break;
+			case 6:
+			case 0:
+				alert('休息'); break;
+		}
+		
+		
+	</script>
+	</body>
+</html>

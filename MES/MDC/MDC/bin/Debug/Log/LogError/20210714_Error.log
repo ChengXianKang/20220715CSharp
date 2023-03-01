@@ -1,0 +1,190 @@
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 11:50:29,136 
+异常级别：ERROR
+异常内容：给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+System.ArgumentException: 给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 395
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 11:50:32,332 
+异常级别：ERROR
+异常内容：打开扫描设备失败!
+System.Exception: 串口打开失败
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 408
+   在 MDC.Program.OpenDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 274
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:19:57,825 
+异常级别：ERROR
+异常内容：给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+System.ArgumentException: 给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 395
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:20:00,415 
+异常级别：ERROR
+异常内容：打开扫描设备失败!
+System.Exception: 串口打开失败
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 408
+   在 MDC.Program.OpenDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 274
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:20:04,445 
+异常级别：ERROR
+异常内容：登录失败在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 26 - 定位指定的服务器/实例时出错)
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 26 - 定位指定的服务器/实例时出错)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 YJ.Data.SqlServerProvider.PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, CommandType cmdType, String cmdText, DbParameter[] cmdParms)
+   在 YJ.Data.SqlServerProvider.ExecuteDataTable(String sql, DbParameter[] par, DbTransaction trans, String DBName, Int32 time)
+   在 YJ.Data.SqlServerProvider.ExecuteDataTable(String sql, String DBName)
+   在 MDC.BaseUI.Login(String account, String password) 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\BaseUI.cs:行号 251
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:20:04,963 
+异常级别：ERROR
+异常内容：关闭扫描设备失败!串口关闭时发生错误
+System.Exception: 串口关闭时发生错误
+   在 Utils.AutoSerialPort.ClosePort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 437
+   在 MDC.Program.CloseDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 291
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:21:11,079 
+异常级别：ERROR
+异常内容：给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+System.ArgumentException: 给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 395
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:21:13,056 
+异常级别：ERROR
+异常内容：打开扫描设备失败!
+System.Exception: 串口打开失败
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 408
+   在 MDC.Program.OpenDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 274
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:21:36,731 
+异常级别：ERROR
+异常内容：关闭扫描设备失败!串口关闭时发生错误
+System.Exception: 串口关闭时发生错误
+   在 Utils.AutoSerialPort.ClosePort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 437
+   在 MDC.Program.CloseDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 291
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:26:22,508 
+异常级别：ERROR
+异常内容：给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+System.ArgumentException: 给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 395
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:26:24,184 
+异常级别：ERROR
+异常内容：打开扫描设备失败!
+System.Exception: 串口打开失败
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 408
+   在 MDC.Program.OpenDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 274
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:52:20,239 
+异常级别：ERROR
+异常内容：给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+System.ArgumentException: 给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 395
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 14:52:28,021 
+异常级别：ERROR
+异常内容：打开扫描设备失败!
+System.Exception: 串口打开失败
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 408
+   在 MDC.Program.OpenDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 274
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 15:15:03,676 
+异常级别：ERROR
+异常内容：关闭扫描设备失败!串口关闭时发生错误
+System.Exception: 串口关闭时发生错误
+   在 Utils.AutoSerialPort.ClosePort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 437
+   在 MDC.Program.CloseDeviceCom()
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 15:46:07,423 
+异常级别：ERROR
+异常内容：给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+System.ArgumentException: 给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 395
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 15:46:09,313 
+异常级别：ERROR
+异常内容：打开扫描设备失败!
+System.Exception: 串口打开失败
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 408
+   在 MDC.Program.OpenDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 274
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 15:55:04,240 
+异常级别：ERROR
+异常内容：给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+System.ArgumentException: 给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 395
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 15:55:07,544 
+异常级别：ERROR
+异常内容：打开扫描设备失败!
+System.Exception: 串口打开失败
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 408
+   在 MDC.Program.OpenDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 274
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2021-07-14 16:00:19,251 
+异常级别：ERROR
+异常内容：关闭扫描设备失败!串口关闭时发生错误
+System.Exception: 串口关闭时发生错误
+   在 Utils.AutoSerialPort.ClosePort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 437
+   在 MDC.Program.CloseDeviceCom() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\MDC\Program.cs:行号 291

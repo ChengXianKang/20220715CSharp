@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取父节点和子节点</title>
+		<style type="text/css">
+			#father{ width: 1000px; height: 600px; margin: 0px auto; 
+			border: solid 10px red; text-align: center; }
+			#mySelf{ width: 800px; height: 400px; margin: 0px auto; 
+			border: solid 10px red; text-align: center;}
+			#son1,#son2{width: 300px; height: 300px; float: left; margin-left: 50px; 
+			border: solid 10px red; text-align: center;}
+		</style>
+		<script type="text/javascript">
+			function setFather(objId)
+			{
+				var obj = document.getElementById(objId);
+				var objFather = obj.parentNode;
+				objFather.style.borderColor = "green";
+			}
+			function setSon(objId)
+			{
+				var obj = document.getElementById(objId);
+				var objSons = obj.childNodes;
+				for(var i=0;i<objSons.length;i++)
+				{
+					if(objSons[i].nodeType == 1) //判断是否为标签元素节点
+						objSons[i].style.borderColor = "green";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div style="height: 30px; line-height: 30px; text-align: center;">
+			<!--<input type="color" id="myColor">-->
+			<input type="button" value="设置爸爸边框颜色" onclick="setFather('mySelf')"  />
+			<input type="button" value="设置儿子边框颜色" onclick="setSon('mySelf')"  />
+		</div>
+		<div id="father">
+			<h2>爸爸</h2>
+			<div id="mySelf">
+				<h2>我自己</h2>
+				<div id="son1">
+					<h2>大儿子</h2>
+				</div>
+				<div id="son2">
+					<h2>二儿子</h2>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

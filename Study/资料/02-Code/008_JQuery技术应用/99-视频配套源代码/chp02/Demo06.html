@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文本框文字显示和消失-placeholder</title>
+		<style type="text/css">
+			#txtAccount{ color: gray;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#txtAccount").focus(function(){
+					var acc = $(this).val();
+					if(acc == "例如:example@163.com")
+					{
+						$(this).val("");
+						$(this).css("color","black");
+					}
+				});
+				$("#txtAccount").blur(function(){
+					var acc = $(this).val();
+					if(acc == "")
+					{
+						$(this).val("例如:example@163.com");
+						$(this).css("color","gray");
+					}
+					else
+					{
+						$(this).css("color","black");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form action="#">
+			邮箱:<input type="text" id="txtAccount" value="例如:example@163.com"><br><br>
+			密码:<input type="password" id="txtPwd"><br><br>
+				<input type="submit" value="登录">
+				<a href="#">立即注册</a>
+		</form>		
+	</body>
+</html>

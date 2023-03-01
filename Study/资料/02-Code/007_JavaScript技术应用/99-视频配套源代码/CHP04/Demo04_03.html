@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JSON实现二级联动</title>
+		<script type="text/javascript">
+			//var jsonobj = {"stuno":"001","stuname":"张三","stusex":"男"};
+//			var arrJson = [
+//						{"stuno":"001","stuname":"张三","stusex":"男"},
+//						{"stuno":"002","stuname":"李四","stusex":"男"},
+//						{"stuno":"003","stuname":"王五","stusex":"男"}
+//						];
+//			alert(arrJson[1].stuname);
+
+			var arrPro =[
+				{"id":"1","name":"湖北"},
+				{"id":"2","name":"湖南"},
+				{"id":"3","name":"河南"}];
+			var arrCity=[
+				{"id":"1","parentid":"1","name":"武汉"},
+				{"id":"2","parentid":"1","name":"宜昌"},
+				{"id":"3","parentid":"1","name":"十堰"},
+				{"id":"4","parentid":"2","name":"长沙"},
+				{"id":"5","parentid":"2","name":"岳阳"},
+				{"id":"6","parentid":"2","name":"常德"},
+				{"id":"7","parentid":"3","name":"郑州"},
+				{"id":"8","parentid":"3","name":"洛阳"},
+				{"id":"9","parentid":"3","name":"开封"}]
+			function BindPro()
+			{
+				var obj = document.getElementById("province");
+				var optDefault = document.createElement("option");
+				optDefault.value = "";
+				optDefault.text = "--请选择--";
+				obj.appendChild(optDefault);
+				for(var i = 0; i< arrPro.length;i++)
+				{
+					var opt = document.createElement("option");
+					opt.value = arrPro[i].id;
+					opt.text = arrPro[i].name;
+					obj.appendChild(opt);
+				}
+			}
+			function BindCity()
+			{
+				var obj = document.getElementById("city");
+				var opt = document.createElement("option");
+				opt.value = "";
+				opt.text = "--请选择--";
+				obj.appendChild(opt);
+			}
+			function ChangeCity()
+			{
+				var obj = document.getElementById("city");
+				obj.innerHTML = "";
+				var optDefault = document.createElement("option");
+				optDefault.value = "";
+				optDefault.text = "--请选择--";
+				obj.appendChild(optDefault);
+				var selPro = document.getElementById("province").value;
+				if(selPro.length == 0)
+					return;
+				for(var i = 0 ; i< arrCity.length;i++)
+				{
+					if(arrCity[i].parentid == selPro)
+					{
+						var opt = document.createElement("option");
+						opt.value = arrCity[i].id;
+						opt.text = arrCity[i].name;
+						obj.appendChild(opt);
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<select id="province" onchange="ChangeCity();"></select>
+		<select id="city"></select>
+	</body>
+	<script type="text/javascript">
+		BindPro();
+		BindCity();
+	</script>
+</html>

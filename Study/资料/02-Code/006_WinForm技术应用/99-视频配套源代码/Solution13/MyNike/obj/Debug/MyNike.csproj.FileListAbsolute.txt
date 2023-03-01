@@ -1,0 +1,17 @@
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\bin\Debug\MyNike.exe.config
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\bin\Debug\MyNike.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\bin\Debug\MyNike.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.FrmLogin.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.Properties.Resources.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.csproj.GenerateResource.Cache
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.FrmMain.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.Basic.FrmType.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.Basic.FrmSaleMan.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.Erp.FrmGoodView.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.Erp.FrmGoodPutIn.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.Erp.FrmCash.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.DataSelect.FrmSalary.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.DataSelect.FrmSales.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution13\MyNike\obj\Debug\MyNike.csprojResolveAssemblyReference.cache

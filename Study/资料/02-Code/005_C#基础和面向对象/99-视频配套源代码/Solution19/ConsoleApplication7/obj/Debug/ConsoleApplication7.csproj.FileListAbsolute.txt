@@ -1,0 +1,10 @@
+D:\temp\Solution19\ConsoleApplication7\bin\Debug\ConsoleApplication7.exe.config
+D:\temp\Solution19\ConsoleApplication7\bin\Debug\ConsoleApplication7.exe
+D:\temp\Solution19\ConsoleApplication7\bin\Debug\ConsoleApplication7.pdb
+D:\temp\Solution19\ConsoleApplication7\obj\Debug\ConsoleApplication7.exe
+D:\temp\Solution19\ConsoleApplication7\obj\Debug\ConsoleApplication7.pdb
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication7\bin\Debug\ConsoleApplication7.exe.config
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication7\obj\Debug\ConsoleApplication7.exe
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication7\obj\Debug\ConsoleApplication7.pdb
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication7\bin\Debug\ConsoleApplication7.exe
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication7\bin\Debug\ConsoleApplication7.pdb

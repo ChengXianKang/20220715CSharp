@@ -1,0 +1,101 @@
+<!--
+模拟后端数据：www.fastmock.site
+返回数据为：
+get方式：
+{
+  "result":function({_req, Mock})
+  {
+	let body = _req.query;
+	if(body.acc=="zhoujielun")
+	  return "0";
+	else
+	  return "1";
+  }
+}
+或
+post方式：
+{
+  "result":function({_req, Mock})
+  {
+  	let body = _req.body;
+  	if(body.acc=="zhoujielun")
+  	  return "0";
+  	else
+  	  return "1";
+  }
+}
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ajax检查用户名是否存在</title>
+		<script src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				$("#btCheck").click(function(){
+					// var acc = $("#txtAccount").val();
+					// $.ajax({
+					//    type: "post",
+					//    url: "https://www.fastmock.site/mock/06492f38e791d869ea222ba9698d7a5e/API/ck2",
+					//    data: "acc="+acc,
+					//    success: function(json){
+					// 	 if(json.result == "1")
+					// 		alert("恭喜，该用户名可以使用!");
+					// 	 else
+					// 		alert("对不起，该用户名被占用!");
+					//    }
+					// });
+					
+					// var acc = $("#txtAccount").val();
+					// $.get("https://www.fastmock.site/mock/06492f38e791d869ea222ba9698d7a5e/API/ck1", 
+					// 	  { "acc": acc},
+					//       function(json){
+					// 	 if(json.result == "1")
+					// 		alert("恭喜，该用户名可以使用!");
+					// 	 else
+					// 		alert("对不起，该用户名被占用!");					         
+					// });
+					
+					var acc = $("#txtAccount").val();
+					$.post("https://www.fastmock.site/mock/06492f38e791d869ea222ba9698d7a5e/API/ck2", 
+							{ "acc": acc},
+							  function(json){
+							 if(json.result == "1")
+								alert("恭喜，该用户名可以使用!");
+							 else
+								alert("对不起，该用户名被占用!");	
+				    },"json");					
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<form action="#" id="myForm">
+		<table width="1000" align="center">
+			<caption>用户注册</caption>
+			<tr>
+				<td width="300" align="right" height="30">用户名:</td>
+				<td width="700">
+					<input type="text" id="txtAccount" name="acc">
+					<input id="btCheck" type="button" value="检查用户名是否存在">
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">密码:</td>
+				<td width="700">
+					<input type="password" id="txtPwd">
+				</td>
+			</tr>
+			<tr>
+				<td width="300" align="right" height="30">&nbsp;</td>
+				<td width="700">
+					<input type="submit" value="注册" />
+					<input type="reset" value="取消" />
+				</td>
+			</tr>
+		</table>
+		</form>			
+	</body>
+</html>

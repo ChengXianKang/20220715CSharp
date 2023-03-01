@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A604AA66-C997-4560-9311-615D8D70807C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDC</RootNamespace>
+    <AssemblyName>MDC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mes72.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cognex.DataMan.SDK.Discovery.PC">
+      <HintPath>C:\Program Files (x86)\Cognex\DataMan\DataMan Software v5.7.1\Cognex.DataMan.SDK.Discovery.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.DataMan.SDK.PC">
+      <HintPath>C:\Program Files (x86)\Cognex\DataMan\DataMan Software v5.7.1\Cognex.DataMan.SDK.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\Utils\DLL\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utils\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Framework, Version=2021.323.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YJ.Common">
+      <HintPath>..\Utils\DLL\YJ.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="YJ.Data">
+      <HintPath>..\Utils\DLL\YJ.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseUI.cs" />
+    <Compile Include="DAL\DAL_DataPush.cs" />
+    <Compile Include="DAL\DAL_TPL_Glass_Delivery.cs" />
+    <Compile Include="dlgMaterialSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgMaterialSelect.Designer.cs">
+      <DependentUpon>dlgMaterialSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgMouldCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgMouldCode.Designer.cs">
+      <DependentUpon>dlgMouldCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgOrder.Designer.cs">
+      <DependentUpon>dlgOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPSW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPSW.Designer.cs">
+      <DependentUpon>dlgPSW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgStorageConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgStorageConfig.Designer.cs">
+      <DependentUpon>dlgStorageConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FixtureRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixtureRepair.Designer.cs">
+      <DependentUpon>FixtureRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuto.Designer.cs">
+      <DependentUpon>frmAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutoPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutoPackage.Designer.cs">
+      <DependentUpon>frmAutoPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutoScanConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutoScanConfig.Designer.cs">
+      <DependentUpon>frmAutoScanConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBinding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBinding.Designer.cs">
+      <DependentUpon>frmBinding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataPush.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataPush.Designer.cs">
+      <DependentUpon>frmDataPush.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataPushConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataPushConfig.Designer.cs">
+      <DependentUpon>frmDataPushConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeliveryBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeliveryBoard.Designer.cs">
+      <DependentUpon>frmDeliveryBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHBase.Designer.cs">
+      <DependentUpon>frmHBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfo.Designer.cs">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLCDPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLCDPrinter.Designer.cs">
+      <DependentUpon>frmLCDPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOlded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOlded.Designer.cs">
+      <DependentUpon>frmOlded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManualScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualScan.Designer.cs">
+      <DependentUpon>frmManualScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaterialConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaterialConfig.Designer.cs">
+      <DependentUpon>frmMaterialConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaterialProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaterialProgress.Designer.cs">
+      <DependentUpon>frmMaterialProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitor.Designer.cs">
+      <DependentUpon>frmMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNGReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNGReview.Designer.cs">
+      <DependentUpon>frmNGReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNGRework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNGRework.Designer.cs">
+      <DependentUpon>frmNGRework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNGReworkScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNGReworkScan.Designer.cs">
+      <DependentUpon>frmNGReworkScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNGScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNGScan.Designer.cs">
+      <DependentUpon>frmNGScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderException.Designer.cs">
+      <DependentUpon>frmOrderException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderStock.Designer.cs">
+      <DependentUpon>frmOrderStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOTP.Designer.cs">
+      <DependentUpon>frmOTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReworkInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReworkInput.Designer.cs">
+      <DependentUpon>frmReworkInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStorage.Designer.cs">
+      <DependentUpon>frmStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTpTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTpTest.Designer.cs">
+      <DependentUpon>frmTpTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWarnConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWarnConfig.Designer.cs">
+      <DependentUpon>frmWarnConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmGlassDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlassDelivery.Designer.cs">
+      <DependentUpon>frmGlassDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderStockSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderStockSub.Designer.cs">
+      <DependentUpon>frmOrderStockSub.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dlgMaterialSelect.resx">
+      <DependentUpon>dlgMaterialSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgMouldCode.resx">
+      <DependentUpon>dlgMouldCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgOrder.resx">
+      <DependentUpon>dlgOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPSW.resx">
+      <DependentUpon>dlgPSW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgStorageConfig.resx">
+      <DependentUpon>dlgStorageConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FixtureRepair.resx">
+      <DependentUpon>FixtureRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuto.resx">
+      <DependentUpon>frmAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutoPackage.resx">
+      <DependentUpon>frmAutoPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutoScanConfig.resx">
+      <DependentUpon>frmAutoScanConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBinding.resx">
+      <DependentUpon>frmBinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataPush.resx">
+      <DependentUpon>frmDataPush.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataPushConfig.resx">
+      <DependentUpon>frmDataPushConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeliveryBoard.resx">
+      <DependentUpon>frmDeliveryBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHBase.resx">
+      <DependentUpon>frmHBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfo.resx">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLCDPrinter.resx">
+      <DependentUpon>frmLCDPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOlded.resx">
+      <DependentUpon>frmOlded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualScan.resx">
+      <DependentUpon>frmManualScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaterialConfig.resx">
+      <DependentUpon>frmMaterialConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaterialProgress.resx">
+      <DependentUpon>frmMaterialProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMonitor.resx">
+      <DependentUpon>frmMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNGReview.resx">
+      <DependentUpon>frmNGReview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNGRework.resx">
+      <DependentUpon>frmNGRework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNGReworkScan.resx">
+      <DependentUpon>frmNGReworkScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNGScan.resx">
+      <DependentUpon>frmNGScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderException.resx">
+      <DependentUpon>frmOrderException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderStock.resx">
+      <DependentUpon>frmOrderStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOTP.resx">
+      <DependentUpon>frmOTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReworkInput.resx">
+      <DependentUpon>frmReworkInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStorage.resx">
+      <DependentUpon>frmStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTpTest.resx">
+      <DependentUpon>frmTpTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWarnConfig.resx">
+      <DependentUpon>frmWarnConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmGlassDelivery.resx">
+      <DependentUpon>frmGlassDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderStockSub.resx">
+      <DependentUpon>frmOrderStockSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mssccprj.scc" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="vssver2.scc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="code48px.ico" />
+    <Content Include="img\Login.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\Main.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MDC.csproj.vspscc" />
+    <Content Include="mes72.ico" />
+    <Content Include="Note.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UpdateList.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MDCAutoUpdate\MDCAutoUpdate.csproj">
+      <Project>{0B66E679-07CE-49C2-89B8-F7ACBD91F0A3}</Project>
+      <Name>MDCAutoUpdate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{8DA3E54A-8A90-4D91-9033-0DDBF1C9FCE5}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

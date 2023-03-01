@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用eval函数实现计算器</title>
+		<script type="text/javascript">
+			function compute()
+			{
+				var obj = document.getElementById("txtContent");
+				var result = eval(obj.value);
+				document.getElementById("txtResult").value = result;
+			}
+		</script>
+	</head>
+	<body>
+		请输入算术内容:
+		<input type="text" id="txtContent">
+		<input type="button" value="计算" onclick="compute();">
+		<input type="text" id="txtResult">
+	</body>
+</html>

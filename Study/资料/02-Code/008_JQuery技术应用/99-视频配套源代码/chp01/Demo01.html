@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>$(document).ready的使用</title>
+		<style type="text/css">
+			#myImg{display: none;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			//1-JS代码位置放到Img标签之后
+			//2-将代码变成function,在body的onload事件中去调用
+			//3-使用Jquery。
+			
+			// function showImg()
+			// {
+			// 	document.getElementById("myImg").style.display = "block";
+			// }
+			
+			//$(document).ready():网页结构全部加载完成之后
+			// $(document).ready(function(){
+			// 	//document.getElementById("myImg").style.display = "block";
+			// 	//$("#myImg").css("display","block");
+			// 	$("#myImg").show(1000);
+			// });
+			
+			$(function(){
+				$("#myImg").show(1000);
+			});
+			
+		</script>
+	</head>
+	<body>		
+		<img id="myImg" src="img/glm1.jpg">
+	</body>
+</html>

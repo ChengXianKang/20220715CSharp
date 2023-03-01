@@ -1,0 +1,5 @@
+    	<p>
+        	<a href="#">博客首页</a> | <a href="#">博客论坛</a> | <a href="#">用户列表</a> | <a href="#">自由推荐</a> | <a href="#">最新日志</a> | <a href="#">最新评论</a> | <a href="#">热门排行</a> | <a href="#">日志搜索</a> | <a href="#">立即申请</a>
+        </p>
+        <p>版权所有：*******科技有限公司 风格切换：<a href="index.html?css=jhgc">交河故城</a> | <a href="index.html?css=lsjd">蓝色经典</a> | <a href="index.html?css=qmsht">清明上河图</a>
+        </p>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>利用滑动的效果轮播4幅图片</title>
+		<style type="text/css">
+			*{ margin: 0px; padding: 0px; list-style-type: none;}
+			#imgarea li{ font-size: 0px;}
+			#main{ margin: 10px; width: 500px; height: 300px; overflow: hidden; 
+			position: relative;}
+			#imgID { position: absolute; right: 5px; bottom: 5px;}
+			#imgID li{ float: left; width: 16px; height: 16px; line-height: 16px;
+			text-align: center; font-size: 12px; background-color: white;
+			border:solid 1px #0000FF; margin-left: 5px; cursor: pointer;}
+			#imgID li.active{background-color: #0000FF; color: white;}
+		</style>
+		<script src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				var $index = 1;  //记录当前播放图片的索引（小图标的索引）
+				var $imgHeight = $("#main").height();
+				var $pageList = $("#imgID li");
+				var $stop = false; //false:自动播放，true:手动播放
+				setInterval(function(){
+					if($stop == true)
+						return;
+					$("#imgarea").stop(true,true)
+					.animate({"marginTop":-$index*$imgHeight},1000);
+					$pageList.eq($index).addClass("active").siblings().removeClass("active");
+					$index++;
+					if($index >= $pageList.length)
+						$index = 0;
+				},3000);
+				
+				$pageList.mouseover(function(){
+					$stop = true;
+					$index = $pageList.index($(this));
+					$("#imgarea").stop(true,true)
+					.animate({"marginTop":-$index*$imgHeight},1000);
+					$pageList.eq($index).addClass("active").siblings().removeClass("active");					
+				})
+				$pageList.mouseout(function(){
+					$stop = false;
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+	  <div id="main" >
+	    <ul id="imgarea" >
+	      <li><a href="#"><img src="img/list1.jpg"  width="500" height="300"/></a></li>
+	      <li><a href="#"><img src="img/list2.jpg"  width="500" height="300"/></a></li>
+	      <li><a href="#"><img src="img/list3.jpg"  width="500" height="300"/></a></li>
+	      <li><a href="#"><img src="img/list4.jpg"  width="500" height="300"/></a></li>
+	    </ul>
+	    <ul id="imgID" >
+	      <li class="active">1</li>
+	      <li>2</li>
+	      <li>3</li>
+		  <li>4</li>
+	    </ul>
+	  </div>
+	</body>
+</html>

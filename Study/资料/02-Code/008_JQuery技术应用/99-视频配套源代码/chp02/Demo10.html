@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>替换节点</title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#myUl").on("click","li",function(){
+					$("#txtPos").val($(this).index());
+				});
+				$("#bt1").click(function(){
+					var li = $("<li><a href=\"javascript:void(0);\">"+$("#txtContent").val()+"</a></li>");
+					var myIndex = $("#txtPos").val();
+					$("#myUl li").eq(myIndex).replaceWith(li);
+					//li.replaceAll($("#myUl li").eq(myIndex));
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<h2>班级通讯录</h2>
+		当前位置:<input id="txtPos" type="text" size="5"  />
+		姓名电话:<input id="txtContent" type="text"  /><br /><br />
+		<input id="bt1" type="button" value="替换当前元素"  />
+		<ul id="myUl">
+			<li><a href="javascript:void(0);">刘德华-13558785478</a></li>
+			<li><a href="javascript:void(0);">张学友-13558785478</a></li>
+		</ul>
+	</body>
+</html>

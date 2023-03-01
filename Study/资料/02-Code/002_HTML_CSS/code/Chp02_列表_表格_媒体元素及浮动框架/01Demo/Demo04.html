@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>video播放视频</title>
+	</head>
+	<body>
+		<!--由于视频格式问题，此种方式可能在某些浏览器不兼容-->
+		<!--<video src="video/hxn.mp4" autoplay="autoplay" muted="muted" controls="controls">
+		</video>	-->
+		<!--<video src="video/hxn.webm" autoplay="autoplay" muted="muted" controls="controls">
+		</video>-->
+		
+		<video controls="controls" autoplay="autoplay" muted="muted">
+		    <source src="video/hxn.webm" type="video/webm"/>
+		    <source src="video/hxn.mp4" type="video/mp4"/>
+		    你的浏览器不支持video元素			
+		</video>
+	</body>
+</html>

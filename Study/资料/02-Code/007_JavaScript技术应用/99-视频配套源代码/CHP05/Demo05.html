@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>String对象replace方法</title>
+</head>
+<body style="text-align: center;">
+	<textarea id="txt" style=" width: 80%; height: 100px;"></textarea>
+	<br /><br />
+	<input type="button" value="测  试" onclick="MyTest();">
+</body>
+</html>
+<script type="text/javascript">
+	//replace:匹配成功，匹配到的字符串用新的字符串进行替换
+	//支持全局匹配
+	//(1)如果不是全局匹配，替换第一个匹配成功的字符串
+	//(2)如果是全局匹配，替换所有匹配成功的字符串
+	
+	//过滤替换敏感字符（将敏感字符替换成****）
+	// function MyTest()
+	// {
+	// 	var str = document.getElementById("txt").value;
+	// 	var exp = /fuck|垃圾|笨蛋/ig;
+	// 	var result = str.replace(exp,"****");
+	// 	document.getElementById("txt").value = result;
+	// }
+	
+	//删除用户输入的空格和.
+	function MyTest()
+	{
+		var str = document.getElementById("txt").value;
+		var exp = /[\. ]/ig;
+		var result = str.replace(exp,"");
+		document.getElementById("txt").value = result;
+	}	
+</script>

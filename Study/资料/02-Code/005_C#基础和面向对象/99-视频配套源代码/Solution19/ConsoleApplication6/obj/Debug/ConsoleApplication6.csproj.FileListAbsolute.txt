@@ -1,0 +1,12 @@
+D:\temp\Solution19\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe.config
+D:\temp\Solution19\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe
+D:\temp\Solution19\ConsoleApplication6\bin\Debug\ConsoleApplication6.pdb
+D:\temp\Solution19\ConsoleApplication6\obj\Debug\ConsoleApplication6.exe
+D:\temp\Solution19\ConsoleApplication6\obj\Debug\ConsoleApplication6.pdb
+D:\temp\Solution19\ConsoleApplication6\obj\Debug\ConsoleApplication6.csprojResolveAssemblyReference.cache
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe.config
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication6\obj\Debug\ConsoleApplication6.exe
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication6\obj\Debug\ConsoleApplication6.pdb
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication6\bin\Debug\ConsoleApplication6.pdb
+E:\教学资料V3.0\KGExampleV3.0\005_C#基础和面向对象\99-视频配套源代码\Solution19\ConsoleApplication6\obj\Debug\ConsoleApplication6.csprojResolveAssemblyReference.cache

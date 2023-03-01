@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实现两个数字加减乘除的计算器</title>
+		<script type="text/javascript">
+			function compute()
+			{
+				var num1 = document.getElementById("txt1").value;
+				var num2 = document.getElementById("txt2").value;
+				var fuhao = document.getElementById("fuhao").value;
+				if(isNaN(num1) || isNaN(num2))
+				{
+					alert("请输入数字进行运算");
+					return;
+				}
+				if(fuhao == "")
+				{
+					alert("请选择符号!");
+					return;
+				}
+				var result = 0;
+				num1 = parseFloat(num1);
+				num2 = parseFloat(num2);
+				if(fuhao == "+")
+					result = num1 + num2;
+				if(fuhao == "-")
+					result = num1 - num2;
+				if(fuhao == "*")
+					result = num1 * num2;
+				if(fuhao == "/")
+					result = num1 / num2;
+				document.getElementById("txtResult").value = result;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1">
+		<select id="fuhao">
+			<option value="">请选择符号</option>
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<input type="text" id="txt2">
+		<input type="button" value="计算" onclick="compute();">
+		<input type="text" id="txtResult">		
+	</body>
+</html>

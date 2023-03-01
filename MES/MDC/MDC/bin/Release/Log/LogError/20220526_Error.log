@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------------------------------
+
+异常时间：2022-05-26 16:06:51,215 
+异常级别：ERROR
+异常内容：给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+System.ArgumentException: 给定的端口名称未以 COM/com 开头或未解析为有效的串行端口。
+参数名: portName
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 Utils.AutoSerialPort.OpenPort() 位置 E:\创维MES项目\程序\数据采集\生产数据采集程序\MDC\Utils\Common\AutoSerialPort.cs:行号 395

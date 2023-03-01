@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>循环机构</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//while循环和do...while循环
+			//while循环打印1-10
+//			var i = 1;
+//			while(i<=10)
+//			{
+//				document.write(i+" ");
+//				i++;
+//			}
+
+			//do...while循环打印1-10
+//			var i = 1;
+//			do
+//			{
+//				document.write(i+" ");
+//				i++;
+//			}while(i<=10);
+			//while和do...while的区别：
+			//[1]while先判断，在执行，do...while先执行，后判断
+			//[2]while循环有可能一次都不执行的，do...while至少执行一次
+			//如果修改代码，var i=11;while一次都不执行，do...while执行一次
+			
+			//假设迟到一次罚款10元，第二次罚款20元，第三次40元，
+			//依次翻倍罚款，计算迟到第几次的时候总罚款金额会超过10000元,
+			//并显示总罚款金额。
+//			var fakuan = 10;  //第一次罚款金额
+//			var sum = 10;  //罚款总金额
+//			var i = 1;
+//			do
+//			{
+//				i++;
+//				fakuan = fakuan*2;
+//				sum = sum + fakuan;
+//			}while(sum < 10000);
+//			alert("第" + i + "次罚款操作10000元，罚款金额为:"+sum);
+			
+//			var fakuan = 10;  //第一次罚款金额
+//			var sum = 10;  //罚款总金额
+//			var i = 1;
+//			while(sum < 10000)
+//			{
+//				i++;
+//				fakuan = fakuan*2;
+//				sum = sum + fakuan;
+//			}
+//			alert("第" + i + "次罚款操作10000元，罚款金额为:"+sum);
+
+			//for循环（打印1-10）
+//			for(var i = 1;i<=10;i++)
+//			{
+//				document.write(i+" ");
+//			}
+			
+			//使用for循环打印九九乘法表
+//			for(var i = 1;i<=9;i++)
+//			{
+//				for(var j = 1;j<=i;j++)
+//				{
+//					document.write(i+"*"+j+"="+(i*j) + "&nbsp;&nbsp;");
+//					if(i*j<=9)
+//						document.write("&nbsp;&nbsp;");
+//				}
+//				document.write("<br />");
+//			}
+
+			//break和continue
+			//【1】break退出整个循环
+			//【2】continue代表退出本次循环，马上进入到下一次循环
+//			for(var i = 1;i<=10;i++)
+//			{
+//				if(i == 5)
+//					break;
+//				document.write(i+" ");
+//			}
+
+//			for(var i = 1;i<=10;i++)
+//			{
+//				if(i == 5)
+//					continue;
+//				document.write(i+" ");
+//			}
+			//1-100之间偶数相加，求加到几的时候和超过1000：
+//			var sum = 0;
+//			for(var i = 2;i<=100;i=i+2)
+//			{
+//				sum = sum + i;
+//				if(sum > 1000)
+//				{
+//					alert("加到:" + i + "的时候，和超过1000，结果为：" + sum);
+//					break;
+//				}
+//			}
+//			
+			//1-100之间偶数相加，能被7整除的数字不参加累加运算，求和
+			var sum = 0;
+			for(var i = 2;i<=100;i=i+2)
+			{
+				if(i%7==0)
+					continue;
+				sum = sum + i;
+			}
+			alert("结果为:" + sum);
+			
+		</script>
+	</body>
+</html>

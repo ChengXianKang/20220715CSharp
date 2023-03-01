@@ -1,0 +1,7 @@
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyDAL\bin\Debug\MyDAL.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyDAL\bin\Debug\MyDAL.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyDAL\bin\Debug\MyEntity.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyDAL\bin\Debug\MyEntity.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyDAL\obj\Debug\MyDAL.csprojResolveAssemblyReference.cache
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyDAL\obj\Debug\MyDAL.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyDAL\obj\Debug\MyDAL.pdb

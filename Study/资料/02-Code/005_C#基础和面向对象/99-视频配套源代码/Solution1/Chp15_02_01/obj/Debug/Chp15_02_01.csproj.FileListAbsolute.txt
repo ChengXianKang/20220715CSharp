@@ -1,0 +1,6 @@
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp15_02_01\bin\Debug\Chp15_02_01.exe.config
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp15_02_01\bin\Debug\Chp15_02_01.exe
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp15_02_01\bin\Debug\Chp15_02_01.pdb
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp15_02_01\obj\Debug\Chp15_02_01.csprojResolveAssemblyReference.cache
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp15_02_01\obj\Debug\Chp15_02_01.exe
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp15_02_01\obj\Debug\Chp15_02_01.pdb

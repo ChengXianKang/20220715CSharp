@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Math对象</title>
+		<script type="text/javascript">
+			
+			function MyAbs(objId)
+			{
+				var obj = document.getElementById(objId);
+				obj.value = Math.abs(obj.value);
+			}
+			function myRound(objId)
+			{
+				var obj = document.getElementById(objId);
+				obj.value = Math.round(obj.value);
+			}
+			function myCeil(objId)
+			{
+				var obj = document.getElementById(objId);
+				obj.value = Math.ceil(obj.value);
+			}
+			function myFloor(objId)
+			{
+				var obj = document.getElementById(objId);
+				obj.value = Math.floor(obj.value);
+			}
+			function myMax(objId)
+			{
+				var obj = document.getElementById(objId);
+				var arr = obj.value.split(',');
+				obj.value=Math.max(arr[0],arr[1]);
+			}	
+			function myMin(objId)
+			{
+				var obj = document.getElementById(objId);
+				var arr = obj.value.split(',');
+				obj.value=Math.min(arr[0],arr[1]);				
+			}	
+			function myPow(objId)
+			{
+				var obj = document.getElementById(objId);
+				var arr = obj.value.split(',');
+				var x = arr[0];
+				var y = arr[1];
+				obj.value = Math.pow(x,y);
+			}
+			function myRandom(objId)
+			{
+				var obj = document.getElementById(objId);
+				obj.value = Math.random();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1"> 
+		<input type="button" value="求绝对值" onclick="MyAbs('txt1')" />
+		<br /><br />
+		<input type="text" id="txt2"> 
+		<input type="button" value="四舍五入取整" onclick="myRound('txt2')" />
+		正数四舍五入，负数五舍六入
+		<br /><br />		
+		<input type="text" id="txt3"> 
+		<input type="button" value="向上取整" onclick="myCeil('txt3')" />
+		<br /><br />
+		<input type="text" id="txt4"> 
+		<input type="button" value="向下取整" onclick="myFloor('txt4')" />
+		<br /><br />
+		<input type="text" id="txt5">
+		<input type="button" value="求较大值" onclick="myMax('txt5');" />
+		两个数字用英文逗号分开
+		<br /><br />
+		<input type="text" id="txt6">
+		<input type="button" value="求较小值" onclick="myMin('txt6');" />
+		两个数字用英文逗号分开
+		<br /><br />
+		<input type="text" id="txt7">
+		<input type="button" value="X的Y次幂" onclick="myPow('txt7')" />
+		两个数字用英文逗号分开
+		<br /><br />
+		<input type="text" id="txt8"> 
+		<input type="button" value="生成随机数" onclick="myRandom('txt8')" />
+		<br /><br />
+	</body>
+</html>

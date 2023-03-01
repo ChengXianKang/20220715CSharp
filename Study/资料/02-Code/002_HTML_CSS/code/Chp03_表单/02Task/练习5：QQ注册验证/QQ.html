@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>QQ注册</title>
+	</head>
+	<body>
+		<img src="img/bg.jpg">
+		<!--
+			action:表单的提交地址
+			name:给表单起名字
+			method:(get,post)表单的提交方式
+			       get: 明码,数据长度有限制，效率高
+			       post:暗码，数据长度无限制，效率低
+        -->
+		<form action="#" name="frm1" method="post">
+			<table border="0" width="800" align="center">
+				<tr height="30">
+					<td width="200" align="right">邮箱账号</td>
+					<td width="600">
+						<input type="text" name="account">
+						<select>
+							<option>@qq.com</option>
+							<option>@163.com</option>
+						</select>
+					</td>					
+				</tr>
+				<tr height="30">
+					<td width="200" align="right">昵称</td>
+					<td width="600">
+						<input type="text">
+					</td>					
+				</tr>
+				<tr height="30">
+					<td width="200" align="right">密码</td>
+					<td width="600">
+						<input type="password">
+					</td>					
+				</tr>
+				<tr height="30">
+					<td width="200" align="right">确认密码</td>
+					<td width="600">
+						<input type="password">
+					</td>
+				</tr>
+				<tr height="30">
+					<td width="200" align="right">性别</td>
+					<td width="600">
+						<input type="radio" name="sex">男
+						<input type="radio" name="sex">女
+					</td>					
+				</tr>
+				<tr height="30">
+					<td width="200" align="right">爱好</td>
+					<td width="600">
+						<input type="checkbox"/>抽烟
+						<input type="checkbox"/>喝酒
+						<input type="checkbox"/>烫头发
+						<input type="checkbox"/>王者
+						<input type="checkbox"/>吃鸡
+					</td>					
+				</tr>
+				<tr height="30">
+					<td width="200" align="right">生日</td>
+					<td width="600">
+						<!--<input type="date" />-->
+						<select>
+							<option>2000年</option>
+							<option>2001年</option>
+						</select>
+						<select>
+							<option>1月</option>
+							<option>2月</option>
+						</select>
+						<select>
+							<option>1日</option>
+							<option>2日</option>
+						</select>
+					</td>	
+				</tr>				
+				<tr height="30">
+					<td width="200" align="right">自我介绍</td>
+					<td width="600">
+						<textarea rows="10" cols="60"></textarea>
+					</td>	
+				</tr>
+				<tr height="30">
+					<td width="200" align="right">验证码</td>
+					<td width="600">
+						<input type="text"> <img src="img/check.jpg"  height="30"/>
+					</td>	
+				</tr>
+				<tr height="30">
+					<td width="200"></td>
+					<td width="600">
+						<input type="checkbox">我已阅读相关条款
+					</td>	
+				</tr>
+				<tr height="30">
+					<td width="200"></td>
+					<td width="600">
+						<input type="image" src="img/btn.jpg">
+					</td>	
+				</tr>
+				<tr height="30">
+					<td width="200"></td>
+					<td width="600">
+						<input type="submit" value="立即注册">
+						<input type="reset" value="重写">	
+						<input type="button" value="立即充值">
+					</td>	
+				</tr>
+			</table>
+		</form>
+
+	</body>
+</html>

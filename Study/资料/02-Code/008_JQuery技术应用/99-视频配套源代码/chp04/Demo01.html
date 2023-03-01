@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>show()方法与hide()方法与toggle()方法</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				$("#myButton").click(function(){
+					//show和hide来实现
+					// if($(this).val() == "显示")
+					// {
+					// 	$("#myImg").show(2000,function(){
+					// 		$(this).css("border","solid 1px gray");
+					// 		$(this).css("padding","3px");
+					// 	});
+					// 	$(this).val("隐藏");
+					// }
+					// else
+					// {
+					// 	$("#myImg").hide(2000);
+					// 	$(this).val("显示");						
+					// }
+					
+					//toggle来实现
+					$("#myImg").toggle(2000,function(){
+						$(this).css("border","solid 1px gray");
+						$(this).css("padding","3px");
+						if($("#myButton").val() == "显示")
+							$("#myButton").val("隐藏");
+						else
+							$("#myButton").val("显示");	
+					});
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<img id="myImg" src="img/two.jpg" style="display: none;"  /><br/>
+		<input id="myButton" type="button" value="显示"  />
+	</body>
+</html>

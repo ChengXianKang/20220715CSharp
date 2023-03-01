@@ -1,0 +1,11 @@
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication5.exe.config
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication5.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication5.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication5.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication5.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication5.FrmAdd.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication5.FrmEdit.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication5.FrmSelect.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication5.Properties.Resources.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution9\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache

@@ -1,0 +1,1 @@
+参照Demo中的例子，video播放视频,audio播放音频

@@ -1,0 +1,10 @@
+E:\Demos\winForm小程序\Server\bin\Debug\Server.exe.config
+E:\Demos\winForm小程序\Server\bin\Debug\Server.exe
+E:\Demos\winForm小程序\Server\bin\Debug\Server.pdb
+E:\Demos\winForm小程序\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+E:\Demos\winForm小程序\Server\obj\Debug\Server.Form1.resources
+E:\Demos\winForm小程序\Server\obj\Debug\Server.Properties.Resources.resources
+E:\Demos\winForm小程序\Server\obj\Debug\Server.csproj.GenerateResource.cache
+E:\Demos\winForm小程序\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+E:\Demos\winForm小程序\Server\obj\Debug\Server.exe
+E:\Demos\winForm小程序\Server\obj\Debug\Server.pdb

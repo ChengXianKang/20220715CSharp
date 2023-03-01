@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>删除节点</title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#myUl li").click(function(){
+					$("#txtPos").val($(this).index());
+				})
+				$("#bt1").click(function(){
+					var myIndex = $("#txtPos").val();
+					$("#myUl li").eq(myIndex).remove();
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<h2>班级通讯录</h2>
+		当前位置:<input id="txtPos" type="text" size="5"  />
+		<input id="bt1" type="button" value="删除当前元素"  />
+		<ul id="myUl">
+			<li><a href="javascript:void(0);">刘德华-13558785478</a></li>
+			<li><a href="javascript:void(0);">张学友-13558785478</a></li>
+			<li><a href="javascript:void(0);">周杰伦-13558785478</a></li>
+			<li><a href="javascript:void(0);">孙燕姿-13558785478</a></li>
+			<li><a href="javascript:void(0);">桂纶镁-13558785478</a></li>
+		</ul>
+	</body>
+</html>

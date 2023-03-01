@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>animation制作自定义动画</title>
+		<style type="text/css">
+			#myImg{ position: absolute;
+			animation: myKey 5s linear;
+			}
+			
+			@keyframes myKey{
+				0%{ width: 180px; top: 0px; left: 0px;
+				transform: rotate(0deg);}
+				25%{width: 180px; top: 200px; left: 250px;
+				transform: rotate(45deg);}
+				50%{width: 180px; top: 400px; left: 500px;
+				transform: rotate(0deg);}
+				75%{width: 180px; top: 200px; left: 750px;
+				transform: rotate(-45deg);}
+				100%{width: 180px; top: 0px; left: 1000px;
+				transform: rotate(0deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<img id="myImg" src="img/plane.jpg" width="180" />
+	</body>
+</html>

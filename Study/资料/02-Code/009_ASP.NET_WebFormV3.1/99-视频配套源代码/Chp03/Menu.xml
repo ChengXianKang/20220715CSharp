@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu url="#" title="后台管理">
+    <menu url="#" title="用户管理">
+        <menu url="#" title="用户查询" />
+        <menu url="#" title="用户添加" />
+    </menu>
+    <menu url="#" title="商品管理">
+        <menu url="#" title="商品查询" />
+        <menu url="#" title="商品添加" />
+    </menu>
+</menu>

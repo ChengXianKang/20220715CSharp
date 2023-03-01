@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>fadeTo使用</title>
+		<script src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				$("#mySel").change(function(){
+					$("#myImg").fadeTo(2000,$(this).val());
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<img id="myImg" src="img/two.jpg"  /><br/>
+		<select id="mySel">
+			<option value="1">1</option>
+			<option value="0.8">0.8</option>
+			<option value="0.6">0.6</option>
+			<option value="0.4">0.4</option>
+			<option value="0.2">0.2</option>
+			<option value="0">0</option>
+		</select>
+	</body>
+</html>

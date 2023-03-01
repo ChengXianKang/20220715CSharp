@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>百度一下</title>
+	    <style type="text/css">
+	        body {
+	            /*清除body默认的外边距与内边距*/
+	            margin:0px;
+	            padding:0px;
+	            font-size:12px;/*设置网页中一般的字体为12px大小*/
+	          
+	         }
+	        p {
+	          /*清除p标签默认的外边距与内边距*/
+	           margin:0px;
+	           padding:0px;
+	        }
+	
+	       #top {
+	            text-align:right;/*顶端的登录、注册右边对齐*/
+	            margin:15px;/*顶端布局层与上下左右的外边距为15px*/
+	        }
+	       #top a {
+	           /*顶端层中超链接的字体大小与颜色*/
+	           font-size:12px;
+	           color:#00c;
+	       }
+	
+	
+	        #mid a {
+	             /*中间层中超链接的字体大小与颜色*/
+	              color:#00c;
+	              font-size:14px;
+	              margin:0px 5px;
+	        }
+	
+	 
+	        .center {
+	        text-align:center; /*居中*/
+	        }
+	        /*中间层*/
+	        #mid {
+	           text-align:center; /*设置内容居中*/
+	        }
+	
+	        /*导航样式*/
+	       #nav {
+	             margin-bottom: 5px; /*下面外边距为5px*/
+	             padding-right:80px; /*右边填充80px*/
+	       }
+	       /*百度搜索输入框*/
+	        #txtInput {
+	            width:418px;/*输入框的宽度*/
+	            height:30px;/*输入框的高度*/
+	            border:1px solid #ccc; /*边框的宽度，样式，颜色*/
+	            font-size:15px;/*输入字体的大写*/
+	        }
+	        /*设置图片按钮样式*/
+	        .btn {
+	            height:32px;
+	            width:95px;
+	            background-image:url(images/bd_btn.png);
+	            background-repeat:no-repeat;
+	            margin:0px;
+	            padding:0px;
+	            border:0px;
+	            margin-left:10px;
+	        }
+	        /*设置选中后的效果*/
+	        #focus {
+	            text-decoration:none;/*超链接无下划线*/
+	            font-weight:bold;/*字体加粗*/
+	            color:#000;/*字体颜色*/
+	        }
+	
+	        #nav2 {
+	            /*顶端外边距为25px*/
+	            margin-top:25px;
+	        }
+	
+	        /*底部的层*/
+	        #footer {
+	            margin-top:200px;
+	            text-align:center;
+	           
+	        }
+	
+	        /*设置超链接的样式*/
+	            #footer a {
+	              color:#00c;
+	              font-size:12px;
+	              margin:0px 5px;
+	            }
+	
+	            #footer p {
+	                margin-top:10px;/*设置段落的顶端外边距为10px*/
+	            }
+	
+	        #copyright {
+	         color:#666; /*设置字体颜色为灰色*/
+	        }
+	            #copyright a {
+	                 color:#666; 
+	            }
+	    </style>
+
+	</head>
+	<body>
+	     <div id="top"> 
+	         <a href="#">搜索设置</a>  | <a href="login.html">登录</a>  <a href="reg.html">注册</a>
+	     </div>
+	     <div id="mid"> 
+	         <p><img src="images/logo.gif" /></p>
+	         <p id="nav">
+	             <a href="#">新 闻</a><a href="#" id="focus">网 页</a>   
+	             <a href="#">贴 吧</a><a href="#">知 道</a><a href="#">音 乐</a><a href="#">图 片</a>   
+	             <a href="#">视 频</a><a href="#">地 图</a>
+	         </p>
+	         <p>
+	             <form action="#" method="get">
+	                 <input type="text" id="txtInput" /><input type="submit" class="btn" value="百度一下" />
+	             </form>
+	         </p>
+	         <p id="nav2">
+	              <a href="#">百科</a><a href="#">文库</a><a href="#">hao123 </a>|<a href="#">更多>></a>
+	         </p>
+	     </div>
+	     <div id="footer"> 
+	         <p>
+	              <a href="#">把百度设为主页</a>　 <a href="#">安装百度浏览器</a>　
+	         </p>
+	         <p>
+	             <a href="#">加入百度推广</a>　 | <a href="#">搜索风云榜</a>　|
+	             <a href="#">关于百度</a>　 | <a href="#">About Baidu</a>
+	         </p>
+	        <p id="copyright">&copyright;2013 Baidu <a href="#">使用百度前必读</a> 京ICP证030173号<img src="images/gs.gif" /> </p>
+	     </div>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+              <ul>
+                <form>
+                  <li>ÓÃ»§Ãû:
+                    <input type="text" name="id" class="myTxtStyle">
+                    <input type="submit" value="µÇÂ¼" class="myBtnStyle">
+                  </li>
+                  <li>ÃÜ¡¡Âë:
+                    <input type="password" name="passwd" class="myTxtStyle">
+                    <input type="button" value="×¢²á" class="myBtnStyle">
+                  </li>
+                </form>
+              </ul>

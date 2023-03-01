@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>子元素过滤选择器</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+
+		<script type="text/javascript">
+			
+			$(function(){
+				
+				
+				//$("div p:first-child").css("backgroundColor","red");
+
+				
+				$("div p:first-of-type").css("backgroundColor","red");
+
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<div>我是第一个DIV内容</div>
+			<p>我是第一个段落</p>
+			<p>我是第二个段落</p>
+			<p>我是第三个段落</p>
+			<p>我是第四个段落</p>
+			<p>我是第五个段落</p>
+			<p>我是第六个段落</p>
+		</div>
+		
+	</body>
+</html>
+

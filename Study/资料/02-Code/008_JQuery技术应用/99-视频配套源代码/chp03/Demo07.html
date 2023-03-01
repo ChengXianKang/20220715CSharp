@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>验证邮箱</title>
+		<style type="text/css">
+			.errInfo{ color: red; font-size: 14px;}
+			#myDiv{ width: 600px; height: 30px; line-height: 30px;}
+			.divFocus{ background-color: #FFC0CB;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script>
+			$(function(){
+				//获得焦点
+				$("#myTxt").focus(function(){
+					$(this).parent().addClass("divFocus");
+				})
+				//失去焦点
+				$("#myTxt").blur(function(){
+					$(this).parent().removeClass("divFocus");
+					var emailExp = /^\w+@\w+\.[a-zA-Z]{2,3}(\.[a-zA-Z]{2,3})?$/;
+					if(!emailExp.test($(this).val()))
+					{
+						$("#mySpan").css("color","red");
+						$("#mySpan").html("<img src=\"img/li_err.gif\" /> 邮箱地址输入有错误!");
+					}
+					else
+					{
+						$("#mySpan").css("color","green");
+						$("#mySpan").html("<img src=\"img/li_ok.gif\" /> 正确!");						
+					}
+				})				
+			});
+		</script>
+	</head>
+	<body>
+		<div id="myDiv">
+			邮箱:<input type="text" id="myTxt" placeholder="例如:example@qq.com" />
+			<span id="mySpan" class="errInfo">邮箱地址必填</span>
+		</div>
+		
+	</body>
+</html>

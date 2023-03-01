@@ -1,0 +1,16 @@
+              <ul>
+                <form>
+                  <li>²©¿ÍËÑË÷:
+                    <input name="keyword" type="text" class="myTxtStyle">
+                  </li>
+                  <li>
+                    <input type="radio" name="key" value="id" checked>ID</li>
+                  <li>
+                    <input type="radio" name="key" value="name">Ãû³Æ</li>
+                  <li>
+                    <input type="radio" name="key" value="describe">ÃèÊö</li>
+                  <li>
+                    <input type="submit" value="GO" class="myBtnStyle">
+                  </li>
+                </form>
+              </ul>

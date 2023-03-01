@@ -1,0 +1,5 @@
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp17\bin\Debug\Chp17.exe.config
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp17\bin\Debug\Chp17.exe
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp17\bin\Debug\Chp17.pdb
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp17\obj\Debug\Chp17.exe
+E:\教学视频V3.0\004_C#\99-视频配套源代码\Solution1\Chp17\obj\Debug\Chp17.pdb

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>toggleClass与toggle的使用</title>
+		<style type="text/css">
+			#myTitle a{ text-decoration: none;}
+			.redFont{ color: red;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#myTitle a").mouseover(function(){
+					$(this).toggleClass("redFont");
+				});
+				$("#myTitle a").mouseout(function(){
+					$(this).toggleClass("redFont");
+				});
+				$("#myTitle").click(function(){
+					$(this).next("ul").toggle(500);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3 id="myTitle"><a href="#">个人信息维护</a></h3>
+		<ul>
+		   	<li>基本信息维护</li>
+		   	<li>密码管理</li>
+		   	<li>头像管理</li>
+		   	<li>收货地址管理</li>
+		</ul>
+	</body>
+</html>

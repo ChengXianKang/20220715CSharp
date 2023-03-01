@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Date对象</title>
+		<script type="text/javascript">
+			function ShowTime()
+			{    
+				var myDate=new Date();   //获取系统时间
+				
+				var myYear= myDate.getFullYear();  //取年
+				var myMonth=myDate.getMonth()+1; //取月
+				var myDay= myDate.getDate(); //取日
+				
+				var myHour = myDate.getHours(); //时
+				var myMinute = myDate.getMinutes(); //分
+				var mySeconds = myDate.getSeconds(); //秒
+				
+				var myWeekDay=myDate.getDay();  //取星期
+				if(myWeekDay == 0)  myWeekDay=" 星期日 "; 
+				else if(myWeekDay == 1)  myWeekDay=" 星期一 "; 
+				else if(myWeekDay == 2)  myWeekDay=" 星期二 "; 
+				else if(myWeekDay == 3)  myWeekDay=" 星期三 "; 
+				else if(myWeekDay == 4)  myWeekDay=" 星期四 "; 
+				else if(myWeekDay == 5)  myWeekDay=" 星期五 "; 
+				else if(myWeekDay == 6)  myWeekDay=" 星期六 "; 
+				document.getElementById("lblTime").innerHTML = myYear+"年"+myMonth+"月"+myDay+"日" 
+				+ "  " + myWeekDay + " "+ myHour + ":" + myMinute + ":" + mySeconds;
+			}
+			setInterval("ShowTime()",1000);
+			//备注:setInterval和setTimeout如果要调用有参数的函数,如果传入的参数是常量,可以直接传递;
+			//但是如果传递的参数是变量,则需要将变量变成全局的才能正常调用
+		</script>
+	</head>
+	<body>
+		<h1 id="lblTime">当前时间:</h1>
+	</body>
+</html>

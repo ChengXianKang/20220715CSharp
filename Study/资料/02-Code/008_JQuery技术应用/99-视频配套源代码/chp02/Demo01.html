@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JavaScript获取DOM元素和JQuery获取DOM元素的区别</title>
+		<style type="text/css">
+			#one,#two{width: 200px; height: 200px; 
+			line-height: 200px; background-color:deeppink;
+			margin: 20px; text-align: center;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			function UpdateDivOne()
+			{
+				var obj =document.getElementById("one");
+				obj.style.backgroundColor = "green";
+				obj.innerHTML = "JavaScript";
+			}
+			$(function(){
+				$("#bt2").click(function(){
+					var obj = $("#two");
+					obj.css("backgroundColor","green");
+					obj.html("Jquery");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<input id="bt1" type="button" value="使用JavaScript修改第一个DIV背景颜色,并修改DIV内部文本内容" onclick="UpdateDivOne();" />
+			<input id="bt2" type="button" value="使用JQuery修改第二个DIV背景颜色,并修改DIV内部文本内容" />
+		</div>
+		<div id="one">
+			第一个div
+		</div>
+		<div id="two">
+			第二个div
+		</div>
+	</body>
+</html>

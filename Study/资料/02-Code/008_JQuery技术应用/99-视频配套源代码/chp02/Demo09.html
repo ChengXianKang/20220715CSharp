@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>元素外部插入同辈节点</title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				// $("#myUl li").click(function(){
+				// 	$("#txtPos").val($(this).index());
+				// });
+				
+				$("#myUl").on("click","li",function(){
+					$("#txtPos").val($(this).index());
+				})
+				
+				$("#bt1").click(function(){
+					var li = $("<li><a href=\"javascript:void(0);\">"+$("#txtContent").val()+"</a></li>");
+					var myIndex = $("#txtPos").val();
+					//方案一：
+					$("#myUl li").eq(myIndex).after(li);
+					//方案二：
+					//li.insertAfter($("#myUl li").eq(myIndex));
+				})
+				$("#bt2").click(function(){
+					var li = $("<li><a href=\"javascript:void(0);\">"+$("#txtContent").val()+"</a></li>");
+					var myIndex = $("#txtPos").val();
+					//方案一：
+					$("#myUl li").eq(myIndex).before(li);
+					//方案二：
+					//li.insertBefore($("#myUl li").eq(myIndex));					
+				})
+			});
+		</script>
+		
+	</head>
+	<body>
+		<h2>班级通讯录</h2>
+		当前位置:<input id="txtPos" type="text" size="5"  />
+		姓名电话:<input id="txtContent" type="text"  /><br /><br />
+		<input id="bt1" type="button" value="在当前元素之后插入元素"  />
+		<input id="bt2" type="button" value="在当前元素之前插入元素"  />
+		<ul id="myUl">
+			<li><a href="javascript:void(0);">刘德华-13558785478</a></li>
+			<li><a href="javascript:void(0);">张学友-13558785478</a></li>
+		</ul>
+	</body>
+</html>

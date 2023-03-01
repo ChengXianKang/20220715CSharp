@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网页整体布局</title>
+	    <style type="text/css">
+	        /*去掉所有标签默认的外边距与内边距*/
+	        * {
+	            margin:0px;
+	            padding:0px;
+	        }
+	        #header, #menu,#slideshow, #content,#footer {
+	            border:1px solid black; /*显示层的外框*/
+	            margin:0px auto; /*居中*/
+	            width:960px; /*宽度统一为980px*/
+	        }
+	        /*顶部*/
+	        #header {
+	            margin-top:10px;
+	            height:103px; /*顶部的高度136px*/
+	        }
+	
+	        #menu {
+	            /* height:400px;主体部分的高度400px*/
+	            height:36px;
+	        }
+	
+	        #slideshow {
+	            height:200px;
+	        }
+	
+	        #footer {
+	            height:100px; /*底部的高度100px*/
+	        }
+	        /**/
+	        #content {
+	           height:auto;
+	        }
+	        /*四列新闻样式*/
+	        #news1, #news2, #news3, #news4 {
+	            border:1px solid red;
+	            float:left;
+	            width:221px;
+	            height:238px;
+	            margin:5px;
+	        }
+	
+	
+	        /*清除浮动的类样式*/
+	        .clear {
+	            clear:both;
+	        }
+	    </style>
+
+	</head>
+	<body>
+    <div id="container">
+        <div id="header">顶部</div>
+        <div id="menu">菜单</div>
+        <div id="slideshow">图片</div>
+        <div id="content">
+            <div id="news1">第一列新闻</div>
+            <div id="news2">第二列新闻</div>
+            <div id="news3">第三列新闻</div>
+            <div id="news4">第四列新闻</div>
+            <div class="clear"></div>
+        </div>
+        <div id="footer">底部</div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组应用</title>
+		<script type="text/javascript">
+			//var arr = new Array(10);
+			//var arr = ["jack","rose","hohn","mike"];
+			//var arr = new Array("jack","rose","hohn","mike")
+			function myFun()
+			{
+				//定义数组并且赋值
+				var arr = new Array(10);
+				for(var i = 0;i< arr.length;i++)
+				{
+					arr[i] = parseFloat(document.getElementById("txt"+(i+1)).value);
+				}
+				var max = arr[0]; //最大值
+				var min = arr[0]; //最小值
+				var sum = 0;  //和
+				var avg = 0;  //平均值
+				for(var i = 0;i< arr.length;i++)
+				{
+					if(arr[i] > max)
+						max = arr[i];
+					if(arr[i] < min)
+						min = arr[i];
+					sum = sum + arr[i];	
+				}
+				avg = sum/arr.length;
+				
+				//arr.sort(); //排序，按照字符串方式进行排序
+				arr.sort(function(a,b){return a-b}); //数字排序
+				document.getElementById("txtMax").value = max
+				document.getElementById("txtMin").value = min
+				document.getElementById("txtSum").value = sum
+				document.getElementById("txtAvg").value = avg
+				document.getElementById("txtSort").value = arr;
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" size="5" id="txt1">
+		<input type="text" size="5" id="txt2">
+		<input type="text" size="5" id="txt3">
+		<input type="text" size="5" id="txt4">
+		<input type="text" size="5" id="txt5">
+		<input type="text" size="5" id="txt6">
+		<input type="text" size="5" id="txt7">
+		<input type="text" size="5" id="txt8">
+		<input type="text" size="5" id="txt9">
+		<input type="text" size="5" id="txt10">
+		<br /><br />
+		<input type="button" value="计算结果" onclick="myFun();">
+		<br /><br />
+		最大值:<input type="text" id="txtMax" /><br /><br />
+		最小值:<input type="text" id="txtMin" /><br /><br />
+		求和:<input type="text" id="txtSum" /><br /><br />
+		平均值:<input type="text" id="txtAvg" /> <br /><br />
+		排序后结果:<input type="text" id="txtSort" size="50" /><br /><br />		
+	</body>
+</html>

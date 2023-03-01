@@ -1,0 +1,8 @@
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution11\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution11\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution11\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution11\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form1.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution11\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution11\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution11\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution11\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb

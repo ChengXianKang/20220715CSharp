@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态添加和删除节点</title>
+		<script type="text/javascript">
+			var newNode = document.createElement("div");
+			function createNode()
+			{				
+				newNode.style.border = "solid 3px red";
+				newNode.innerHTML = "我是JS代码创建的DIV节点";
+				document.body.appendChild(newNode);
+			}
+			function removeNode()
+			{
+				document.body.removeChild(newNode);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="添加DIV节点" onclick="createNode();"  />
+		<input type="button" value="删除DIV节点" onclick="removeNode();"  />
+		
+	</body>
+</html>

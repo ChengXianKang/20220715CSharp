@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>过滤筛选</title>
+		<style type="text/css">
+			div{margin: 0px; padding: 0px; height: auto; overflow: auto; text-align: center;}
+			.team{clear: both; border: solid 1px black; background-color: pink;}
+			.liubei,.caocao,.sunquan{ width: 250px; height: 100px; margin: 20px; float: left;
+			border: solid 1px black; line-height: 30px; background-color: pink;}
+			#myButtons{line-height: 30px;}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#bt1").click(function(){
+					//选择器
+					// if($("#guanyu[title=guanyu]").length > 0)
+					// 	alert("是");
+					// else
+					// 	alert("否");
+					//使用is方法
+					if($("#guanyu").is("[title=guanyu]"))
+						alert("是");
+					else
+						alert("否");						
+				});
+				$("#bt2").click(function(){
+					//选择器
+					// if($("#lbUl>div.caocao").length > 0)
+					// 	alert("有");
+					// else
+					// 	alert("没有");
+					//hasClass方法
+					if($("#lbUl>div").hasClass("caocao"))
+						alert("有");
+					else
+						alert("没有");
+				});	
+				$("#bt3").click(function(){
+					$("*").removeAttr("style");
+					//选择器
+					//$("div:has(.caocao)").css("backgroundColor","green");
+					//使用has函数实现
+					$("div").has(".caocao").css("backgroundColor","green");
+				});
+				$("#bt4").click(function(){
+					$("*").removeAttr("style");
+					//选择器
+					//$("div.caocao:eq(2)").css("backgroundColor","green");
+					
+					$("div.caocao").eq(2).css("backgroundColor","green");
+				});	
+				$("#bt5").click(function(){
+					$("*").removeAttr("style");
+					//选择器
+					//$("div:contains('张飞'),div:contains('典韦'),div:contains('太史慈')").css("backgroundColor","green");
+					//使用filter函数
+					$("div").filter(":contains('张飞'),:contains('典韦'),:contains('太史慈')").css("backgroundColor","green");
+				});
+				$("#bt6").click(function(){
+					$("*").removeAttr("style");
+					//选择器
+					//$("div:contains('张飞'):not(.team),div:contains('典韦'):not(.team),div:contains('太史慈'):not(.team)").css("backgroundColor","green");
+					//使用filter和not函数
+					$("div").filter(":contains('张飞'),:contains('典韦'),:contains('太史慈')").not(".team").css("backgroundColor","green");
+				});
+				$("#bt7").click(function(){
+					$("*").removeAttr("style");
+					//选择器
+					//$("div.team>:first-child").css("backgroundColor","green");
+					//使用filter函数
+					$("div.team>*").filter(":first-child").css("backgroundColor","green");
+				});
+				$("#bt8").click(function(){
+					$("*").removeAttr("style");
+					//选择器
+					//$("div.caocao:gt(0):lt(3)").css("backgroundColor","green");
+					//使用slice
+					$("div.caocao").slice(1,4).css("backgroundColor","green");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="myButtons">
+			<input type="button" id="bt1" value="判断id为guanyu的title是否也为guanyu">
+			<input type="button" id="bt2" value="判断id为lbUl的子元素div中有没有class叫caocao">
+			<input type="button" id="bt3" value="获取子元素中有类名为caocao的div父元素">
+			<input type="button" id="bt4" value="获取第3个类名为caocao的div元素">
+			<input type="button" id="bt5" value="获取div元素中文本有张飞、典韦、太史慈的div元素">	
+			<input type="button" id="bt6" value="获取div元素中文本有张飞、典韦、太史慈的div元素(只包括上一级div,不包括更上级div)">
+			<input type="button" id="bt7" value="获取class为team的div元素中子元素div的第1个">
+			<input type="button" id="bt8" value="获取所有div的class为caocao的元素中的第2到4个">
+		</div>
+		<h2>刘备军团(h2标签)</h2>
+			<div id="lbUl" class="team">
+				<div id="guanyu" class="liubei" title="guanyu">关羽<br>(id=guanyu,class=liubei)</div>
+				<div id="zhangfei" class="liubei">张飞<br>(id=zhangfei,class=liubei)</div>
+				<div id="zhaoyun" class="liubei">赵云<br>(id=zhaoyun,class=liubei)</div>
+				<div id="machao" class="liubei">马超<br>(id=machao,class=liubei)</div>
+			</div>
+		<h2>曹操军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="dianwei" class="caocao">典韦<br>(id=dianwei,class=caocao)</div>
+				<div id="caopi" class="caocao">曹丕<br>(id=caopi,class=caocao)</div>
+				<div id="caozhi" class="caocao">曹植<br>(id=caozhi,class=caocao)</div>
+				<div id="caoren" class="caocao">曹仁<br>(id=caoren,class=caocao)</div>
+				<div id="xiahou" class="caocao">夏侯敦<br>(id=caoren,class=caocao)</div>
+			</div>
+		<h2>孙权军团(h2标签)</h2>
+			<div id="ccUl" class="team">
+				<div id="huanggai" class="sunquan">黄盖<br>(id=huanggai,class=sunquan)</div>
+				<div id="zhouyu" class="sunquan">周瑜<br>(id=zhouyu,class=sunquan)</div>
+				<div id="lusu" class="sunquan">鲁肃<br>(id=lusu,class=sunquan)</div>
+				<div id="taishici" class="sunquan">太史慈<br>(id=taishici,class=sunquan)</div>			
+			</div>			
+	</body>
+</html>
+

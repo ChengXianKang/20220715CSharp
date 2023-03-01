@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.myArea{ width: 100%; height: 80px;}
+			.myDiv{ line-height: 30px;}
+		</style>
+		<script type="text/javascript">
+			var workIndex = 1;
+			function AddRow()
+			{
+				workIndex++;
+				var obj = document.createElement("div");
+				obj.className = "myDiv";
+				obj.id = "div"+workIndex;
+				obj.innerHTML = "公司名称:<input type=\"text\" />";
+				obj.innerHTML += "职位:<input type=\"text\" />";
+				obj.innerHTML += "<a href=\"javascript:RemoveRow('div"+workIndex+"')\">删除工作经历</a>";
+				obj.innerHTML += "<br />";
+				obj.innerHTML += "工作职责及工作内容描述:";
+				obj.innerHTML += "<textarea class=\"myArea\"></textarea>";
+				obj.innerHTML += "<hr />";
+				var objContainer = document.getElementById("myContainer");
+				objContainer.appendChild(obj);
+			}
+			function RemoveRow(objId)
+			{
+				var obj = document.getElementById(objId); 
+				var objContainer = document.getElementById("myContainer");
+				objContainer.removeChild(obj);
+			}
+		</script>
+	<body>
+		<h2>工作经历</h2>
+		<hr/>
+		<div id="myContainer">
+			<div class="myDiv" id="div1">
+				公司名称:<input type="text" />
+				职位:<input type="text" />
+				<a href="javascript:RemoveRow('div1')">删除工作经历</a>
+				<br />
+				工作职责及工作内容描述:
+				<textarea class="myArea"></textarea>
+				<hr />
+			</div>
+
+		</div>
+		
+		<div style="line-height: 30px; text-align: right;">
+			<a href="javascript:AddRow();">添加工作经历</a>
+		</div>
+	</body>
+</html>

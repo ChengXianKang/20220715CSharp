@@ -1,0 +1,8 @@
+            <ul>
+              <li><a href="#">首页</a></li>
+              <li><a href="#">论坛</a></li>
+              <li><a href="#">推荐</a></li>
+              <li><a href="#">最新日志</a></li>
+              <li><a href="#">最新评论</a></li>
+              <li><a href="#">尚未登录</a></li>
+            </ul> 

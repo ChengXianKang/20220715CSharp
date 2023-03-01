@@ -1,0 +1,17 @@
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\bin\Debug\MyUI.exe.config
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\bin\Debug\MyUI.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\bin\Debug\MyUI.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\obj\Debug\MyUI.Properties.Resources.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\obj\Debug\MyUI.csproj.GenerateResource.Cache
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\obj\Debug\MyUI.exe
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\obj\Debug\MyUI.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\obj\Debug\MyUI.csprojResolveAssemblyReference.cache
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\bin\Debug\MyBLL.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\bin\Debug\MyEntity.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\bin\Debug\MyDAL.dll
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\bin\Debug\MyBLL.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\bin\Debug\MyEntity.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\bin\Debug\MyDAL.pdb
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\obj\Debug\MyUI.FrmSelect.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\obj\Debug\MyUI.FrmAdd.resources
+E:\教学视频V3.0\006_WinForm技术应用\99-视频配套源代码\Solution12\MyUI\obj\Debug\MyUI.FrmEdit.resources

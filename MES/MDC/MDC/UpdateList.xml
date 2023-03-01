@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="gb2312"?>
+<AutoUpdater>
+  <description>Application autoUpdate</description>
+  <Updater>
+    <Url>http://172.20.23.230:6605/MDCAutoUpdate/</Url>
+    <!--<Url>http://192.168.47.200:8085/MDCAutoUpdate/</Url>-->
+    <LastUpdateTime>2022-08-08</LastUpdateTime>
+  </Updater>
+  <Application applicationId="MDC">
+    <EntryPoint>MDC.exe</EntryPoint>
+    <Location>.</Location>
+    <Version>2.7.22.808</Version>
+  </Application>
+  <Files>
+    <File Ver="2.7.22.808" Name="MDC.exe" />
+    <File Ver="2.7.22.808" Name="MDC.Utils.dll" />
+    <File Ver="2.7.22.808" Name="Note.txt" />
+    <File Ver="1.40.0.0" Name="Dapper.dll" />
+    <File Ver="15.0.4795.1000" Name="Microsoft.Office.Interop.Excel.dll" />
+    <File Ver="0.86.0.518" Name="ICSharpCode.SharpZipLib.dll" />
+    <File Ver="2.4.1.0" Name="NPOI.dll" />
+    <File Ver="2.4.1.0" Name="NPOI.OOXML.dll" />
+    <File Ver="2.4.1.0" Name="NPOI.OpenXml4Net.dll" />
+    <File Ver="2.4.1.0" Name="NPOI.OpenXmlFormats.dll" />
+    <File Ver="1.2.10.0" Name="log4net.dll" />
+    <File Ver="4.5.6.14930" Name="Newtonsoft.Json.dll" />
+    <File Ver="0.11.0.1" Name="Thrift.dll" />
+    <File Ver="1.0.0.0" Name="YJ.Log.dll" />
+    <File Ver="1.0.0.0" Name="YJ.Common.dll" />
+    <File Ver="1.0.0.0" Name="YJ.Config.dll" />
+    <File Ver="1.0.0.0" Name="YJ.Data.dll" />
+    <File Ver="1.0.0.0" Name="log4net.config" />
+    <File Ver="1.0.0.0" Name="\\Pic\\成功.wav" />
+    <File Ver="1.0.0.0" Name="\\Pic\\警告.wav" />
+    <File Ver="1.0.0.0" Name="\\Pic\\失败.wav" />
+    <File Ver="1.0.0.0" Name="\\img\\Login.png" />
+    <File Ver="1.0.0.0" Name="\\img\\Main.png" />
+  </Files>
+</AutoUpdater>
